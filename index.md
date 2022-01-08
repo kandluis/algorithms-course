@@ -1,10 +1,10 @@
 ---
 layout: home
-title: Just the Class
+title: COMP 285 - Analysis of Algorithms
 nav_exclude: true
 seo:
   type: Course
-  name: Just the Class
+  name: COMP 285 - Analysis of Algorithms
 ---
 
 # {{ site.tagline }}
