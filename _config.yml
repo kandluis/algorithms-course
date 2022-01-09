@@ -28,8 +28,15 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
-  # Kevin Lin:
-  #  - 'https://kevinl.info'
+  Blackboard:
+    - 'https://blackboard.ncat.edu/webapps/blackboard/execute/modulepage/view?course_id=_3567742_1'
+  Piazza:
+    - 'https://piazza.com/north_carolina_at_state_university/spring2022/comp285/home'
+  Gradescope:
+    - 'https://www.gradescope.com/courses/350304'
+  Feedback:
+    - 'https://forms.office.com/r/Z2dBW4Xn2L'
+
 footer_content:
 
 # Collections for website data
