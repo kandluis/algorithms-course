@@ -17,49 +17,28 @@ seo:
 [Announcements](announcements.md){: .btn .btn-outline .fs-3 }
 {% endif %}
 
-## Just the Class
+## Course Information
 
-Just the Class is a GitHub Pages template developed for the purpose of quickly deploying course websites. In addition to serving plain web pages and files, it provides a boilerplate for:
+**Instructors:** Luis A. Perez
 
-- a [course calendar](calendar.md),
-- a [staff](staff.md) page,
-- and a weekly [schedule](schedule.md).
+**Time:** Mon, Wed & Fri 12:00 pm - 12:50 pm
 
-Just the Class is a set of customizations on top of the popular [Just the Docs](https://github.com/pmarsceill/just-the-docs) theme, which provides a robust and thoroughly-tested foundation that makes it easy to extend for your own special use cases. These foundational features include:
+**Course Description:** This course covers analysis of efficient algorithms for sorting, searching, dynamic structure manipulation, path-finding, fast multiplication, and other problems. It introduces algorithmic techniques such as recursion, divide-and-conquer, and dynamic programming. It develops the following tools for algorithmic analysis: correctness proofs, algorithm synthesis, and discusses issues in non-computability. This course also overviews non-deterministic algorithms, and develops techniques to classify computationally hard problems. The concept of non-deterministic polynomial (NP)-completeness is introduced, and basic issues related to NP-completeness are discussed. 
 
-- automatic [navigation structure](https://pmarsceill.github.io/just-the-docs/docs/navigation-structure/),
-- instant, full-text [search](https://pmarsceill.github.io/just-the-docs/docs/search/) and page indexing,
-- and a small but powerful set of [UI components](https://pmarsceill.github.io/just-the-docs/docs/ui-components) and authoring [utilities](https://pmarsceill.github.io/just-the-docs/docs/utilities).
+**Prerequisites:** COMP 280, MATH 131.
 
-## Getting Started
+## Staff Contact
 
-Getting started with Just the Class is simple.
+- The best way to reach the staff is by making a private post on [Piazza](https://piazza.com/north_carolina_at_state_university/spring2022/comp285/home).
+- You may also reach Professor Perez by emailing him directly at [laperez@ncat.edu](mailto:laperez@ncat.edu) with any questions or concerns that you do not with to post to [Piazza](https://piazza.com/north_carolina_at_state_university/spring2022/comp285/home).
 
-1. Create a [new repository based on Just the Class](https://github.com/kevinlin1/just-the-class/generate).
-1. Update `_config.yml` and `index.md` with your course information. Be sure to update the `baseurl` and `url` to the appropriate paths (eg. "/20au" and "https://courses.cs.washington.edu/", respectively.).
-1. Configure a [publishing source for GitHub Pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages). Your course website is now live!
-1. Edit and create `.md` [Markdown files](https://guides.github.com/features/mastering-markdown/) to add your content.
+**Course Grade:** The course grade will be based on the following components:
 
-Just the Class has been used by instructors at Stanford University ([CS 161](https://stanford-cs161.github.io/winter2021/)), UC Berkeley ([Data 100](https://ds100.org/fa21/)), UC Santa Barbara ([DS1](https://ucsb-ds.github.io/ds1-f20/)), Northeastern University ([CS4530/5500](https://neu-se.github.io/CS4530-CS5500-Spring-2021/)), and Carnegie Mellon University ([17-450/17-950](https://cmu-crafting-software.github.io/)). For a few open-source examples, see the following course websites and their source code.
+- 13 Homework assignments: 40% (that is 3.636% per homework, see below)
+  - The lowest **2** homework scores will be dropped, so each of your 11 graded assignments compromize 3.636% of the course grade.
+- 1 Midterm Exam: 20%
+- 1 Final Exam: 25%
+- Participation/In-Class Exercises: 5%
+- Weekly Quizzes: 10%
+- Extra Credit: ~5%
 
-- [CSE 390HA](https://courses.cs.washington.edu/courses/cse390ha/20au/) ([source code](https://gitlab.cs.washington.edu/cse390ha/20au/website)) is an example of a single-page website that centers modules.
-- [CSE 143](https://courses.cs.washington.edu/courses/cse143/20au/) ([source code](https://gitlab.cs.washington.edu/cse143/20au/website)) hosts an entire online textbook with full-text search.
-- [CSE 373](https://courses.cs.washington.edu/courses/cse373/21su/) ([source code](https://gitlab.cs.washington.edu/cse373-root/21su/website)) is an example of a simple website combining Markdown pages with generated HTML files.
-
-Share your course website and find more examples in the [show and tell discussion](https://github.com/kevinlin1/just-the-class/discussions/categories/show-and-tell)!
-
-Continue reading to learn how to setup a development environment on your local computer. This allows you to make incremental changes without directly modifying the live website.
-
-### Local development environment
-
-Just the Class is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special Jekyll plugins and can run on GitHub Pages' standard Jekyll compiler.
-
-1. Follow the GitHub documentation for [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll).
-1. Start your local Jekyll server.
-```bash
-$ bundle exec jekyll serve
-```
-1. Point your web browser to [http://localhost:4000](http://localhost:4000)
-1. Reload your web browser after making a change to preview its effect.
-
-For more information, refer to [Just the Docs](https://pmarsceill.github.io/just-the-docs/).
