@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Weekly Schedule
+title: Meeting Times
 description: The weekly event schedule.
 ---
 
