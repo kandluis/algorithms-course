@@ -2,5 +2,5 @@
 layout: page
 title: Homework
 description: Detailed homework information.
-nav_index: 2
+nav_order: 2
 ---
