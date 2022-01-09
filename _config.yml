@@ -17,7 +17,7 @@ title: 'COMP 285'
 tagline: 'Analysis of Algorithms'
 description: 'North Carolina A&T University, Spring 2022'
 author: Luis A. Perez
-baseurl: '/algorithms-course' # the subpath of your site, e.g. /blog
+baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://kandluis.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
