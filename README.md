@@ -16,3 +16,13 @@ $ bundle exec jekyll serve
 4. Reload your web browser after making a change to preview its effect.
 
 For more information, refer to [Just the Docs](https://pmarsceill.github.io/just-the-docs/).
+
+### Tips and Tricks
+
+I had to run `bundle update` first before I could successfully install the gems required to run `Jekyll` locally.
+
+When instally `Jekyll`, I installed locally using:
+
+```sh
+$ gem install --user-install bundler jekyll
+```
