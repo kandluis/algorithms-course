@@ -1,0 +1,137 @@
+ \documentclass [12pt]{article} 
+
+\usepackage {amsmath}
+\usepackage {amsthm}
+\usepackage {amssymb}
+\usepackage {graphicx} 
+\usepackage {float}
+\usepackage {multirow}
+\usepackage {xcolor}
+\usepackage {algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage {array} 
+\usepackage {booktabs} 
+\usepackage {url} 
+\usepackage {parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage {cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage {enumitem} 
+\usepackage {xparse} 
+\usepackage {verbatim}
+
+\DeclareTColorBox {Solution}{}{breakable, title={Solution}} \DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}} \DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt} \DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}} \DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+
+\begin {document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Homework 0} } 
+\vspace {1em} 
+\begin {Instruction} 
+
+\paragraph {Due.} Sunday, January 16th, 2022 @ 11:59 PM!
+\end {Instruction} 
+
+\vspace {1em} 
+\begin {Instruction} \paragraph {Homework Expectations:} Please see the \href{https://www.comp285.ml/homework/#general-homework-information}{Homework} part of the Course Website (\href{https://comp285.ml}{comp285.ml}) for guidance on what we are looking for in homework solutions. We will grade according to these standards, and you should cite all sources you used outside course material.
+
+\paragraph {What we expect:} Make sure to look at the ``\textbf {We are expecting}'' blocks below each problem to see what we will be grading for in each problem! \end {Instruction}
+
+\vspace {1em} 
+\begin {Instruction} 
+
+\paragraph {Exercises.} The following questions are exercises. We suggest you do these on your own. As with any homework question, though, you may ask the course staff for help.
+
+\paragraph {Points} This assignment is worth a total of 100 points.
+\end {Instruction} 
+
+
+\section {Exercise: Course Policies} 
+\Points {10} Have you thoroughly read the course policies on the webpage (\href{comp285.ml}{https://comp285.ml})? \\ 
+
+\Expecting {The answer ``yes.''} 
+ 
+\section {Exercise: Course Diagnostic} 
+\Points{20} We've prepared a course diagnostic to get a sense of where each of you is in the course. The course diagnostic is graded purely on completion (there are \textbf{no} wrong answers). 
+
+Go to \href{https://forms.office.com/r/Wc5TFTLrMe}{https://forms.office.com/r/Wc5TFTLrMe} to open the course diagnostic. After you submit, you should receive a thank you message on the page. What is the special word?
+
+\Expecting{The special word written out and the form to show as completed for you. When the form is submitted, it records your NCAT email. You can only respond once, so if you go to the form again, and it's available, you haven't submitted it.}
+
+\pagebreak
+\section{Interview Prep: Getting to know you}
+\Points{20} I'd like to get to know each of you a bit better. As part of this exercise, I'm going to ask you to fill out a survey with a few required questions as well as some cool, interesting details about you. 
+
+If you'd like to know about me, come to my office hours!
+
+Fill out the survey here: \href{https://forms.office.com/r/034SwHh7SG}{https://forms.office.com/r/034SwHh7SG}. After you've submitted, write down your favorite class here.
+
+\Expecting{The name of your favorite class written out, and the form to show as completed for you. When the form is submitted, it records your NCAT email. You can only respond once, so if you go to the form again, and it's still available, you haven't submitted it.}
+
+\section{Exercise: Provide Course Feedback}
+\Points{20} I love feedback, and would like to get a sense of how the course is going for you so far. By the time this homework is due, you'll have attended three lectures!
+
+Fill out the course feedback form (here: \href{https://forms.office.com/r/Z2dBW4Xn2L}{https://forms.office.com/r/Z2dBW4Xn2L}).
+
+What is the special word?
+
+\Expecting{The special word written out and the form to show as completed for you. When the form is submitted, it records your NCAT email. You can submit this form multiple times.}
+
+\pagebreak
+\section{Interview Prep: Getting Ready for the next step in your career!}
+\Points{20} I hope most of you are preparing yourselves for an amazing career - be it going to graduate school, getting a job in tech, or doing whatever makes the most sense for you (any entrepreneurs?).
+
+A critical component of making your next career step (trust, me I know - I've changed jobs three times) is creating a summary of your professional experience. Most people call these ``resumes'', which comes from Latin `re-` (back) `-sumere` (take).
+
+As part of this exercise, I'd like you to share your resume with me. The following must be true (and each part will be graded).
+
+\begin{itemize}
+    \item \Points{5} The resume must contain your technical experience.
+    \item \Points{5} The resume should include a section titled ``Relevant Coursework'' which must list ``Analysis of Algorithms''. 
+    \item \Points{5} The resume must be up-to-date, with your latest job/internship/experience.
+    \item \Points{5} The resume must fit on a single page. 
+\end{itemize}
+
+If you don't already have a resume document handy, feel free to use \href{http://hwpi.harvard.edu/files/ocs/files/template_bullet.doc}{this template} from Harvard! It got me my jobs/internships, and I still use it today, so it's pretty good.
+
+Please submit your resume to this form: \href{https://forms.office.com/r/ZJNydaDxdq}{https://forms.office.com/r/ZJNydaDxdq}
+
+\Expecting{Your resume should be submitted and should satisfy the standards outlined above.}
+
+\section{Exercise: Course Tools}
+\Points{10} In order to be successful in the course, you should get setup with the technologies we'll be using this semester. 
+
+One key technology is \href{https://piazza.com/north_carolina_at_state_university/spring2022/comp285/home}{Piazza}. I encourage all students to actively participate. As part of this exercise, do the following:
+
+\begin{itemize}
+    \item Head over to this \href{https://piazza.com/class/kx9c6qsst5i7mo?cid=10}{post on Piazza}. This will require that you already have a Piazza account and are registered for the course. If that's not true, make an account (using your @ncat.edu email) and  \href{https://piazza.com/north_carolina_at_state_university/spring2022/comp285}{register} for the course.
+    \item On the post, you should ``Start a new followup discussion''. If you're the first student to do this, should see one other follow-up discussion by Professor Perez above you. 
+    \item The content of your post comment should give a brief introduction about yourself, and also include one fun fact about you.
+    \item After you've successfully made your follow-up discussion, you should note the name of the student who posted before you. Include this name as the answer to this exercise.
+\end{itemize}
+
+\Expecting{ A name. Of course, your post should show-up on Piazza as well.}
+
+
+\section{Submission}
+
+You could say this question is worth all the credit, but basically, you have to submit your assignment. The assignment will be submitted through \href{https://www.gradescope.com/courses/350304}{Gradescope}. 
+
+If you don't already have a Gradescope account, do the below:
+\begin{itemize}
+    \item First, head over to the \href{https://gradescope.com}{Gradescope homepage}. 
+    \item Click on "Sign-up" near the top-right corner.
+    \item Select "Student" (\textbf{not} Instructor)
+    \item For "Course Entry Code" put \textbf{8637YE}
+    \item For school, search for "North Carolina Agricultural and Technical University" (it auto-completes).
+    \item Type in your name and NC A\&T email address.
+    \item Leave "Student ID" blank, and sign-up. You will receive an email with a link to set your password.
+\end{itemize}
+
+Once you have your account and are registered, simply upload your completed homework assignment to Gradescope by the deadline!
+
+\end {document} 

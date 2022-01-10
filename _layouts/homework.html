@@ -13,13 +13,16 @@
     {% endif %}
   </span>
   <div>
-    {%if page.pdf and page.tex %}
+    {%if page.pdf and page.tex and page.word %}
     <ul>
       <li>
-        Problems: [<a href="{{ page.pdf }}">PDF</a>]
+        Problems: [<a href="{{ page.pdf | base_url }}">PDF</a>]
       </li>
       <li>
-        LaTeX template: [<a href="{{ page.tex }}">TeX</a>]
+        LaTeX template: [<a href="{{ page.tex | base_url }}">TeX</a>]
+      </li>
+      <li>
+        Word Template: [<a href="{{ page.word | base_url }}">Word</a>]
       </li>
     </ul>
     {% endif %}
