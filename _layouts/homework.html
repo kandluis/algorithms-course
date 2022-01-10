@@ -1,5 +1,5 @@
 <div class="announcement">
-  <h2 id="{{ page.title | slugify }}">Homework {{ page.number }}: {{ page.title }}</h2>
+  <h2 id="{{ page.number | prepend: 'hw' | slugify }}">Homework {{ page.number }}: {{ page.title }}</h2>
   <span class="announcement-meta">
     {% if page.release and page.due %}
     {%- assign release_time = page.release | date: '%b %d, %l:%M %p' -%}
@@ -23,7 +23,7 @@
       </li>
     </ul>
     {% endif %}
-    
+
     {{ content }}
   </div>
 </div>

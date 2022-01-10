@@ -9,12 +9,12 @@ Mar 18
 : **Lecture**{: .label .label-purple}[Knapsack - Unbounded]({{"Knapsack - Unbounded" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Mar 20
-: **Homework Due @ 11:59pm**{: .label .label-red}[HW7](#)
+: **Homework Due @ 11:59pm**{: .label .label-red}[HW7]({{ "/homework/#hw7" | relative_url }})
 
 Mar 21
 : **Lecture**{: .label .label-purple}[Knapsack - 0/1]({{"Knapsack - 0/1" | slugify | prepend: "/lectures/#" | relative_url }})
   :
-: **HW8 released**{: .label .label-blue}[HW8](#)
+: **HW8 released**{: .label .label-blue}[HW8]({{ "/homework/#hw8" | relative_url }})
 
 Mar 23
 : **Lecture**{: .label .label-purple}[Bellman-Ford, Recursion, Graph Connections]({{"Bellman-Ford, Recursion, Graph Connections" | slugify | prepend: "/lectures/#" | relative_url }})
@@ -23,8 +23,8 @@ Mar 25
 : **Lecture**{: .label .label-purple}[Fulkerson, Further Graphs]({{"Fulkerson, Further Graphs" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Mar 27
-: **Homework Due @ 11:59pm**{: .label .label-red}[HW8](#)
+: **Homework Due @ 11:59pm**{: .label .label-red}[HW8]({{ "/homework/#hw8" | relative_url }})
 
 Mar 28
 : **Lecture**{: .label .label-purple}[Review & Problem Solving]({{"Review & Problem Solving" | slugify | prepend: "/lectures/#" | relative_url }})
-: **HW9 released**{: .label .label-blue}[HW9](#)
+: **HW9 released**{: .label .label-blue}[HW9]({{ "/homework/#hw9" | relative_url }})
