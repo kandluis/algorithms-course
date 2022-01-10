@@ -7,7 +7,21 @@ description: A listing of all the course staff members.
 ## Student Hours
 
 - Student hours schedule can be found on the [COMP 285 Calendar](https://calendar.google.com/calendar/embed?src=m5m78scf7panucng0a3fpdstik%40group.calendar.google.com&ctz=America%2FNew_York).
-- Student hours will take place mostly in-person, on-campus. However, a few select office hours will be made available through Zoom
+- Student hours will take place mostly in-person, on-campus. However, a few select office hours will be made available through [Zoom](https://ncat.zoom.us/j/7927890938).
+
+
+Given the restrictions to ERIC, all student hours for Week 0-4 will be held over [Zoom](https://ncat.zoom.us/j/7927890938)!
+
+This includes the normally "in-person" student hours of:
+
+- Monday: 1:30pm - 2:30pm in Room 2.
+- Wednesday: 1:30pm - 2:30pm in Room 1.
+- Friday: 1:30pm - 2:30pm in Room 1.
+
+Additional online-only student hours are:
+
+- Tuesday: 3:30 pm - 4:30pm
+- Thursday: 3:30 pm - 4:30pm
 
 
 ### Regular Student Hours

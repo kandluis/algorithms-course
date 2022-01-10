@@ -4,7 +4,7 @@ week: 0
 date: 2022-01-10
 ---
 
-#### Week 0 Student Hours
+#### Week 0-4 Student Hours
 
 Given the restrictions to ERIC, all student hours for Week 0-4 will be held over [Zoom](https://ncat.zoom.us/j/7927890938)!
 
@@ -15,6 +15,10 @@ This includes the normally "in-person" student hours of:
 - Wednesday: 1:30pm - 2:30pm in Room 1.
 - Friday: 1:30pm - 2:30pm in Room 1.
 
+Additional online-only student hours are:
+
+- Tuesday: 3:30 pm - 4:30pm
+- Thursday: 3:30 pm - 4:30pm
 
 #### Important action items this week!
 
