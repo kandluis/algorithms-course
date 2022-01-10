@@ -83,6 +83,11 @@ defaults:
       type: lectures
     values:
       layout: lecture
+  - scope:
+      path: ''
+      type: homework
+    values:
+      layout: homework
 
 compress_html:
   clippings: all

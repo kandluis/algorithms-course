@@ -1,0 +1,29 @@
+<div class="announcement">
+  <h2 id="{{ page.title | slugify }}">Homework {{ page.number }}: {{ page.title }}</h2>
+  <span class="announcement-meta">
+    {% if page.release and page.due %}
+    {%- assign release_time = page.release | date: '%b %d, %l:%M %p' -%}
+    {%- assign due_time = page.due | date: '%b %d, %l:%M %p' -%}
+
+    Release: <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ start_time | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+      {{ release_time }}
+    </a> - Due: <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ end_time | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+      {{ due_time }}
+    </a>
+    {% endif %}
+  </span>
+  <div>
+    {%if page.pdf and page.tex %}
+    <ul>
+      <li>
+        Problems: [<a href="{{ page.pdf }}">PDF</a>]
+      </li>
+      <li>
+        LaTeX template: [<a href="{{ page.tex }}">TeX</a>]
+      </li>
+    </ul>
+    {% endif %}
+    
+    {{ content }}
+  </div>
+</div>
