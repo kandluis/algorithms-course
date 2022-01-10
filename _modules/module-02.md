@@ -7,10 +7,10 @@ Jan 17
 : **HW1 released**{: .label .label-blue}[HW1](#)
 
 Jan 19
-: **Lecture**{: .label .label-purple}[Measuring Performance I: Time Complexity](#)
+: **Lecture**{: .label .label-purple}[Measuring Performance I: Time Complexity]({{"Measuring Performance I: Time Complexity" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Jan 21
-: **Lecture**{: .label .label-purple}[Measuring Performance II: Space Complexity](#)
+: **Lecture**{: .label .label-purple}[Measuring Performance II: Space Complexity]({{"Measuring Performance II: Space Complexity" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Jan 23
 : **Homework Due @ 11:59pm**{: .label .label-red}[HW1](#)
