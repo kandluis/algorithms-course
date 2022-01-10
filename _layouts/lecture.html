@@ -1,0 +1,48 @@
+<div class="announcement">
+  <h2 id="{{ page.title | slugify }}">Lecture {{ page.number }}: {{ page.title }}</h2>
+  <span class="announcement-meta">
+    {% if page.time %}
+    {%- assign lecture_length = 50 | times: 60 -%}
+    {%- assign start_time = page.time | date: '%b %d, %l:%M %p' -%}
+    {%- assign end_time = page.time | date: '%s' | plus: lecture_length | date: '%l:%M %p' -%}
+
+    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ start_time | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+      {{ start_time }}
+    </a> &middot;
+    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ end_time | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+      {{ end_time }}
+    </a>
+    {% endif %}
+    {% if page.location %}
+    ({{ page.location }}; In Person)
+    {% endif %}
+  </span>
+  <div>
+    {%if page.notes and page.slides_pdf and page.slides_ppt %}
+    <h5 id="{{ page.title | append: 'lecture-resources' | slugify }}">Lecture resources</h5>
+    <ul>
+      <li>
+        Lecture notes: [<a href="{{ page.notes }}">PDF</a>]
+      </li>
+      <li>
+        Slides: [<a href="{{ page.slides_pdf }}">PDF</a>][<a href="{{ page.slides_ppt }}">PPT</a>]
+      </li>
+      {% if page.textbook %}
+      <li>
+        Additional reading: {{ page.textbook }}
+      </li>
+      {% endif %}
+    </ul>
+    {% endif %}
+
+    {% if page.recording %}
+    <h5 id="{{ page.title | append: 'recording' | slugify }}">Recording</h5>
+    <ul>
+      <li>
+        Video: [<a href="{{ page.recording }}">Zoom</a>]
+      </li>
+    </ul>
+    {% endif %}
+    {{ content }}
+  </div>
+</div>
