@@ -6,10 +6,10 @@
     {%- assign start_time = page.time | date: '%b %d, %l:%M %p' -%}
     {%- assign end_time = page.time | date: '%s' | plus: lecture_length | date: '%l:%M %p' -%}
 
-    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ start_time | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ start_time | date: '%Y-%m-%dT%H:%M:%S' }}&p1=747">
       {{ start_time }}
     </a> &middot;
-    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ end_time | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ end_time | date: '%Y-%m-%dT%H:%M:%S' }}&p1=747">
       {{ end_time }}
     </a>
     {% endif %}

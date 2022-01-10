@@ -3,7 +3,7 @@ title: Introduction to Algorithmic Analysis
 ---
 
 Jan 10
-: **Lecture**{: .label .label-purple}[Introductions, Expectations, Class Tools]({{"Introductions, Expectations, Class Tools" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Why are we here?]({{"Why are we here?" | slugify | prepend: "/lectures/#" | relative_url }})
 : **HW0 released**{: .label .label-blue}[HW0]({{ "/homework/#hw0" | relative_url }})
 
 Jan 12
