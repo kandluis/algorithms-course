@@ -37,7 +37,15 @@ aux_links:
   Feedback:
     - 'https://forms.office.com/r/Z2dBW4Xn2L'
 
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
 footer_content:
+
+# Footer last edited timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
 # Collections for website data
 collections:
@@ -45,6 +53,8 @@ collections:
   modules:
   schedules:
   announcements:
+  lectures:
+  homework:
 # Default layouts for each collection type
 defaults:
   - scope:
@@ -68,6 +78,11 @@ defaults:
       type: announcements
     values:
       layout: announcement
+  - scope:
+      path: ''
+      type: lectures
+    values:
+      layout: lecture
 
 compress_html:
   clippings: all
