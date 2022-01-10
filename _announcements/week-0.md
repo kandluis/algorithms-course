@@ -6,7 +6,10 @@ date: 2022-01-10
 
 #### Week 0 Student Hours
 
-In-person student hours for Week 0 will be held in Blueford Library ! 
+Given the restrictions to ERIC, all student hours for Week 0-4 will be held over [Zoom](https://ncat.zoom.us/j/7927890938)!
+
+
+This includes the normally "in-person" student hours of:
 
 - Monday: 1:30pm - 2:30pm in Room 2.
 - Wednesday: 1:30pm - 2:30pm in Room 1.
