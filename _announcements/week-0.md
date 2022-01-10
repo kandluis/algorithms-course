@@ -4,6 +4,10 @@ week: 0
 date: 2022-01-10
 ---
 
+#### HW0 Relased
+
+See [Homework 0: Getting to Know You]({{ "/homework/#hw0" | base_url }}) for the full details!
+
 #### Week 0-4 Student Hours
 
 Given the restrictions to ERIC, all student hours for Week 0-4 will be held over [Zoom](https://ncat.zoom.us/j/7927890938)!
