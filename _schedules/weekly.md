@@ -32,8 +32,8 @@ schedule:
   - name: Tuesday
     events:
       - name: Student Hours
-        start: 3:30 PM
-        end: 4:30 PM
+        start: 3:00 PM
+        end: 4:00 PM
         location: Zoom
   - name: Wednesday
     events:
@@ -48,8 +48,8 @@ schedule:
   - name: Thursday
     events:
       - name: Student Hours
-        start: 3:30 PM
-        end: 4:30 PM
+        start: 3:00 PM
+        end: 4:00 PM
         location: Zoom
   - name: Friday
     events:

@@ -20,8 +20,8 @@ This includes the normally "in-person" student hours of:
 
 Additional online-only student hours are:
 
-- Tuesday: 3:30 pm - 4:30pm
-- Thursday: 3:30 pm - 4:30pm
+- Tuesday: 3:00 pm - 4:00pm
+- Thursday: 3:00 pm - 4:00pm
 
 
 ### Regular Student Hours
