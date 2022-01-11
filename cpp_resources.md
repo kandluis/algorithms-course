@@ -9,7 +9,7 @@ description: Resources for C++.
 A few of you asked during lecture for resources to brush up on some of the data structures that we will use in this class. Here's a few pointers that I've found particularly helpful.
 
 - <2 minute video intros to [stacks](https://www.youtube.com/watch?v=CgFVgp_VCN8) and [queues](https://www.youtube.com/watch?v=ligWuGbhUMY)
--  [Data Structures & Algorithms in C++](http://160592857366.free.fr/joe/ebooks/ShareData/Data%20Structures%20and%20Algorithms%20in%20C++%202e%20By%20Michael%20Goodrich,%20Roberto%20Tamassia%20and%20David%20Mount.pdf)
+- [Data Structures & Algorithms in C++](http://160592857366.free.fr/joe/ebooks/ShareData/Data%20Structures%20and%20Algorithms%20in%20C++%202e%20By%20Michael%20Goodrich,%20Roberto%20Tamassia%20and%20David%20Mount.pdf)
   - Section 5.1 covers stacks
   - Section 5.2 covers queues
   - Section 9.1 covers maps
