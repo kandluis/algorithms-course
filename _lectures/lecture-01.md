@@ -1,5 +1,5 @@
 ---
-title: Karatsuba's Algorithm, Recurrence Relations 101
+title: Karatsuba's Algorithm & Pseudocode Practice
 number: 1
 time: 2022-01-12 12:00
 location: Graham Hall 210

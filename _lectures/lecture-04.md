@@ -1,5 +1,5 @@
 ---
-title: Measuring Performance II - Space Complexity
+title: Recurrence Relations and Master's Theorem
 number: 4
 time: 2022-01-21 12:00
 location: Graham Hall 210

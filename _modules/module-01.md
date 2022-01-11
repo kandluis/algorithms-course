@@ -8,10 +8,10 @@ Jan 10
 : **HW0 released**{: .label .label-blue}[HW0]({{ "/homework/#hw0" | relative_url }})
 
 Jan 12
-: **Lecture**{: .label .label-purple}[Career-Prep, and Interview Prep & Practice Problems]({{"Career-Prep, and Interview Prep & Practice Problems" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Karatsuba's Algorithm & Pseudocode Practice]({{"Karatsuba's Algorithm & Pseudocode Practice" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Jan 14
-: **Lecture**{: .label .label-purple}[Proofs & Sneak Peak at Big-O]({{"Proofs & Sneak Peak at Big-O" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Correctness and Running Time of Sorting Algorithms]({{"Correctness and Running Time of Sorting Algorithms" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Jan 16
 : **Homework Due @ 11:59pm**{: .label .label-red}[HW0]({{ "/homework/#hw0" | relative_url }})

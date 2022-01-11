@@ -1,5 +1,5 @@
 ---
-title: Proofs & Sneak Peak at Big-O
+title: Correctness and Running Time of Sorting Algorithms
 number: 2
 time: 2022-01-14 12:00
 location: Graham Hall 210
