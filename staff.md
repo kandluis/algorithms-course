@@ -14,9 +14,9 @@ Given the restrictions to ERIC, all student hours for Week 0-4 will be held over
 
 This includes the normally "in-person" student hours of:
 
-- Monday: 1:30pm - 2:30pm in Room 2.
-- Wednesday: 1:30pm - 2:30pm in Room 1.
-- Friday: 1:30pm - 2:30pm in Room 1.
+- Monday: 1:30pm - 2:30pm in ERIC 313.
+- Wednesday: 1:30pm - 2:30pm in ERIC 313.
+- Friday: 1:30pm - 2:30pm in ERIC 313.
 
 Additional online-only student hours are:
 
