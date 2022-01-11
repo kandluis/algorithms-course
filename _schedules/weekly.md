@@ -28,7 +28,7 @@ schedule:
       - name: Student Hours
         start: 1:30 PM
         end: 2:30 PM
-        location: ERIC 313
+        location: ERIC 331 (Temporarily on Zoom)
   - name: Tuesday
     events:
       - name: Student Hours
@@ -44,7 +44,7 @@ schedule:
       - name: Student Hours
         start: 1:30 PM
         end: 2:30 PM
-        location: ERIC 313
+        location: ERIC 331 (Temporarily on Zoom)
   - name: Thursday
     events:
       - name: Student Hours
@@ -60,5 +60,5 @@ schedule:
       - name: Student Hours
         start: 1:30 PM
         end: 2:30 PM
-        location: ERIC 313
+        location: ERIC 331 (Temporarily on Zoom)
 ---
