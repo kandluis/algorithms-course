@@ -1,6 +1,6 @@
 ---
 title: Min-Cut Karger's Algorithm Review
-number: 28
+number: 27
 time: 2022-04-01 12:00
 location: Graham Hall 210
 notes:
