@@ -14,5 +14,5 @@ textbook: CLRS 1.1, 1.2
 - [Why Study Algorithms? (Section 1.1)](https://www.youtube.com/watch?v=yRM3sc57q0c&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=2)
 - [Integer Multiplication (Section 1.2)](https://www.youtube.com/watch?v=6u0Vaj4nn54&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=2)
 
-##### Sneak Peak
+##### Sneak Peak at Next Lecture
 - [Karatsuba Multiplication (Section 1.3)](https://www.youtube.com/watch?v=JCbZayFr9RE&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=3)
