@@ -20,6 +20,7 @@ author: Luis A. Perez
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://www.comp285.ml' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+ga_tracking: G-87Q4Z33975
 
 # Theme settings
 remote_theme: pmarsceill/just-the-docs@v0.3.3
@@ -38,6 +39,8 @@ aux_links:
     - 'https://ncat.zoom.us/s/99432621515?pwd=WmNzUWp4N1liSGZzWTBrQWZOMUlhZz09'
   Feedback:
     - 'https://forms.office.com/r/Z2dBW4Xn2L'
+
+aux_links_new_tab: true
 
 # Back to top link
 back_to_top: true
