@@ -3,7 +3,7 @@ title: Karatsuba's Algorithm & Pseudocode Practice
 number: 1
 time: 2022-01-12 12:00
 location: Graham Hall 210
-notes: "/assets/lectures/lecture1.tex"
+notes: "/assets/lectures/lecture1.pdf"
 notes_source: "/assets/lectures/lecture1.tex"
 slides_pdf: "https://drive.google.com/file/d/100S4VGYuakQYG2a8gxY_8TVD3BAb8h7m/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/1ByjtrcGFGgLWTY-boIUsDhjXT0GiUMTfajdoMO2Rp_Q/edit?usp=sharing"

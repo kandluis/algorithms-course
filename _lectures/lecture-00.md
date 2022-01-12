@@ -3,8 +3,8 @@ title: Why are we here?
 number: 0
 time: 2022-01-10 12:00
 location: Graham Hall 210
-notes: 'assets/lectures/lecture0.pdf'
-notes_source: 'assets/lectures/lecture0.tex'
+notes: '/assets/lectures/lecture0.pdf'
+notes_source: '/assets/lectures/lecture0.tex'
 slides_ppt: https://docs.google.com/presentation/d/1Q2W8Vkdc99bpGUGB_lstG29KOR-Lt8Fw4rzyr-XnkC0/edit?usp=sharing
 slides_pdf: https://drive.google.com/file/d/1-ka9eOHef-p3-4kD-rcUbELHi_P1XKuG/view?usp=sharing
 textbook: CLRS 1.1, 1.2
