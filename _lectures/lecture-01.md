@@ -16,7 +16,7 @@ youtube: "https://youtu.be/MpqUQtAshaU"
 - [C++ Resources]({{ "/cpp_resources" | base_url }})
 - [Karatsuba Multiplication (Section 1.3)](https://www.youtube.com/watch?v=JCbZayFr9RE&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=3)
 
-##### Sneak Peak at Next Lecture
+##### Additional Divide & Conquer Algorithm
 
 - [MergeSort: Motivation and Example (Section 1.4, part 1)](https://www.youtube.com/watch?v=kiyRJ7GVWro&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=4)
 - [MergeSort: Pseudocode (Section 1.4, part 2)](https://www.youtube.com/watch?v=rBd5w0rQaFo&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=5)
