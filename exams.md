@@ -10,11 +10,11 @@ We will have two exams this semester. The midterm will make up 20% of the total 
 
 ## Midterm
 
-The midterm will take place in-class, during lecture.
+The midterm will take place in-class, during lecture. It is a 50-minute exam.
 
 </div>
 ```markdown
-12:00pm on March 4th.
+12:00pm - 12:50pm on March 4th.
 ```
 
 
@@ -22,9 +22,9 @@ The midterm will take place in-class, during lecture.
 
 ## Final Exam
 
-The final exam will be in person. Location is TBD.
+The final exam will be in person. The location of the final exam will be Graham Hall 210 (same room as lecture).
 
 </div>
 ```markdown
-TBD
+12:00pm - 2:00pm on Wednesday, May 12th.
 ```
