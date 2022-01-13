@@ -13,13 +13,13 @@ textbook: CLRS 2.1, 2.2, 2.3, 3.1
 - [C++ Coding Example for InsertionSort](https://onlinegdb.com/udJ5LxCab)
 
 #### Video Resources
-[Guiding Principles for the Analysis of Algorithms (Section 1.6)](https://www.youtube.com/watch?v=-yP11jqilwM&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=7)
-[Asymptotic Notation: The Gist (Section 2.1)](https://www.youtube.com/watch?v=l-cNaKGc-yY&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=8)
-[Big-O Notation (Section 2.2)](https://www.youtube.com/watch?v=QfRSeibcugw&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=9)
-[Basic Examples (Section 2.3)](https://www.youtube.com/watch?v=5rZCkblZFZM&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=10)
+- [Guiding Principles for the Analysis of Algorithms (Section 1.6)](https://www.youtube.com/watch?v=-yP11jqilwM&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=7)
+- [Asymptotic Notation: The Gist (Section 2.1)](https://www.youtube.com/watch?v=l-cNaKGc-yY&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=8)
+- [Big-O Notation (Section 2.2)](https://www.youtube.com/watch?v=QfRSeibcugw&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=9)
+- [Basic Examples (Section 2.3)](https://www.youtube.com/watch?v=5rZCkblZFZM&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=10)
 
 
 ##### Sneak Peak at Next Lecture
 
-[Big-Omega and Big-Theta Notation (Section 2.4)](https://www.youtube.com/watch?v=-IanHYk6tU4&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=11)
-[Additional Examples (Section 2.5)](https://www.youtube.com/watch?v=VXQ2p6V5ccQ&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=12)
+- [Big-Omega and Big-Theta Notation (Section 2.4)](https://www.youtube.com/watch?v=-IanHYk6tU4&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=11)
+- [Additional Examples (Section 2.5)](https://www.youtube.com/watch?v=VXQ2p6V5ccQ&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=12)
