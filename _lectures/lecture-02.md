@@ -3,15 +3,14 @@ title: Insertion Sort, Proofs, and Formal Big-Oh
 number: 2
 time: 2022-01-14 12:00
 location: Graham Hall 210
-notes:
+notes: "/assets/lectures/lecture2.tex"
 slides_pdf: https://drive.google.com/file/d/103O_1yp73_ZDctwLhfIbYDwmzvDr-gZF/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1dyxQVgRnZX1C1UMkoxdPFQbItSSKCWpScSNs0tl_pkI/edit?usp=sharing
 textbook: CLRS 2.1, 2.2, 2.3, 3.1
 ---
 
 ##### More Resources
-- [C++ Coding Example for InsertionSort](https://onlinegdb.com/udJ5LxCab)
-- [Proof Handout](#)
+- C++ Coding Example for InsertionSort [[Online](https://onlinegdb.com/udJ5LxCab)][[Source]({{ "/assets/code/lecture2.cpp" | base_url }})]
 
 ##### Video Resources
 - [Guiding Principles for the Analysis of Algorithms (Section 1.6)](https://www.youtube.com/watch?v=-yP11jqilwM&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=7)
