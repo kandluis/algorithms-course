@@ -5,14 +5,15 @@ time: 2022-01-14 12:00
 location: Graham Hall 210
 notes:
 slides_pdf: https://drive.google.com/file/d/103O_1yp73_ZDctwLhfIbYDwmzvDr-gZF/view?usp=sharing
-slide_ppt: https://docs.google.com/presentation/d/1dyxQVgRnZX1C1UMkoxdPFQbItSSKCWpScSNs0tl_pkI/edit?usp=sharing
+slides_ppt: https://docs.google.com/presentation/d/1dyxQVgRnZX1C1UMkoxdPFQbItSSKCWpScSNs0tl_pkI/edit?usp=sharing
 textbook: CLRS 2.1, 2.2, 2.3, 3.1
 ---
 
 ##### More Resources
 - [C++ Coding Example for InsertionSort](https://onlinegdb.com/udJ5LxCab)
+- [Proof Handout](#)
 
-#### Video Resources
+##### Video Resources
 - [Guiding Principles for the Analysis of Algorithms (Section 1.6)](https://www.youtube.com/watch?v=-yP11jqilwM&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=7)
 - [Asymptotic Notation: The Gist (Section 2.1)](https://www.youtube.com/watch?v=l-cNaKGc-yY&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=8)
 - [Big-O Notation (Section 2.2)](https://www.youtube.com/watch?v=QfRSeibcugw&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=9)
