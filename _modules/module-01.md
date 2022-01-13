@@ -11,7 +11,7 @@ Jan 12
 : **Lecture**{: .label .label-purple}[Karatsuba's Algorithm & Pseudocode Practice]({{"Karatsuba's Algorithm & Pseudocode Practice" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Jan 14
-: **Lecture**{: .label .label-purple}[Correctness and Running Time of Sorting Algorithms]({{"Correctness and Running Time of Sorting Algorithms" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Insertion Sort, Proofs, and Formal Big-Oh]({{"Insertion Sort, Proofs, and Formal Big-Oh" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Jan 16
 : **Homework Due @ 11:59pm**{: .label .label-red}[HW0]({{ "/homework/#hw0" | relative_url }})
