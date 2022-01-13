@@ -3,7 +3,8 @@ title: Insertion Sort, Proofs, and Formal Big-Oh
 number: 2
 time: 2022-01-14 12:00
 location: Graham Hall 210
-notes: "/assets/lectures/lecture2.tex"
+notes: "/assets/lectures/lecture2.pdf"
+notes_tex: "/assets/lectures/lecture2.tex"
 slides_pdf: https://drive.google.com/file/d/103O_1yp73_ZDctwLhfIbYDwmzvDr-gZF/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1dyxQVgRnZX1C1UMkoxdPFQbItSSKCWpScSNs0tl_pkI/edit?usp=sharing
 textbook: CLRS 2.1, 2.2, 2.3, 3.1
