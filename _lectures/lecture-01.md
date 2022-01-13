@@ -8,6 +8,8 @@ notes_source: "/assets/lectures/lecture1.tex"
 slides_pdf: "https://drive.google.com/file/d/100S4VGYuakQYG2a8gxY_8TVD3BAb8h7m/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/1ByjtrcGFGgLWTY-boIUsDhjXT0GiUMTfajdoMO2Rp_Q/edit?usp=sharing"
 recording: "https://ncat.zoom.us/rec/share/FaoNinJ7PjA5eQNmkUincCrmL4TWGVyX-5H8SV-5-rLB4bL4BPuYNb5X6o1BwMVf.w5K-Z8O01d0oaFqA?startTime=1642006641000"
+passcode: "MNEgt4**"
+youtube: "https://youtu.be/MpqUQtAshaU"
 ---
 
 ##### More Resources
