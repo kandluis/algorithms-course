@@ -9,6 +9,7 @@ description: A listing of all the course staff members.
 - Student hours schedule can be found on the [COMP 285 Calendar](https://calendar.google.com/calendar/embed?src=m5m78scf7panucng0a3fpdstik%40group.calendar.google.com&ctz=America%2FNew_York).
 - Student hours will take place mostly in-person, on-campus. However, a few select office hours will be made available through [Zoom](https://ncat.zoom.us/j/7927890938).
 
+## Professor Hours
 
 Given the restrictions to ERIC, all student hours for Week 0-4 will be held over [Zoom](https://ncat.zoom.us/j/7927890938)!
 
@@ -23,7 +24,7 @@ Additional online-only student hours are:
 - Tuesday: 3:00 pm - 4:00pm
 - Thursday: 3:00 pm - 4:00pm
 
-TA student hours are:
+## TA student hours are:
 
 - Monday: 1:00 pm - 2:00 pm Location: TBD
 - Wednesday: 1:00 pm - 2:00 pm Location: TBD
