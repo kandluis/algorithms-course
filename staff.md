@@ -24,7 +24,7 @@ Additional online-only student hours are:
 - Tuesday: 3:00 pm - 4:00pm
 - Thursday: 3:00 pm - 4:00pm
 
-## TA student hours are:
+## TA Student Hours
 
 - Monday: 1:00 pm - 2:00 pm Location: TBD
 - Wednesday: 1:00 pm - 2:00 pm Location: TBD
