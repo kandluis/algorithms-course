@@ -23,6 +23,12 @@ Additional online-only student hours are:
 - Tuesday: 3:00 pm - 4:00pm
 - Thursday: 3:00 pm - 4:00pm
 
+TA student hours are:
+
+- Monday: 1:00 pm - 2:00 pm Location: TBD
+- Wednesday: 1:00 pm - 2:00 pm Location: TBD
+- Friday: 1:00 pm - 2:00 pm Location: TBD
+
 
 ### Regular Student Hours
 TAs will open up their schedule to help students. Different TAs may have different ways of working through students (i.e., in groups or 1 at a time). If the location is getting too crowded, the TA may ask groups of students to work together and ask them to switch rooms. Students can work together while waiting for assistance during student hours.
