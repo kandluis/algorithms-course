@@ -4,7 +4,7 @@ week: 1
 date: 2022-01-17
 ---
 
-#### HW1 Relased
+#### HW1 Relased (a little early)
 
 See [Homework 1: Fun with Algorithms]({{ "/homework/#hw0" | base_url }}) for the full details! It is due Sunday 1/23 @ 11:59PM! This is **the first coding assignment** so *start early* to catch issues. If you have questions, please make a post on [Piazza](https://piazza.com/north_carolina_at_state_university/spring2022/comp285/home)!
 
