@@ -1,8 +1,9 @@
 ---
 number: 1
-title: A Journey in Algorithms
-release: 2022-01-17 17:00
+title: Fun with Algorithms
+release: 2022-01-17 08:00
 due: 2022-01-23 23:59
-pdf:
-tex:
+pdf: "/assets/homework/hw1/hw1.pdf"
+tex: "/assets/homework/hw1/hw1.tex"
+word: "/assets/homework/hw1/hw1.docx"
 ---
