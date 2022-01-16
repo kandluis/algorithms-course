@@ -70,4 +70,4 @@ Each class will include a daily in-class exercise that will require individual o
 
 ## Quiz Policy
 
-The first lecture of each week will also have a 10 minute mini-quiz on material from the previous week. We recognize it’s not ideal, but this will give us an indication on how well we taught each lecture’s topic, how everyone is doing, and whether or not we need to revisit certain topics. **The lowest 2 quizzes will be dropped from your grade**.
+The first lecture of each week will also have a 10 minute mini-quiz on material from the previous week. We recognize it’s not ideal, but this will give us an indication on how well we taught each lecture’s topic, how everyone is doing, and whether or not we need to revisit certain topics. **The lowest 4 quizzes will be dropped from your grade**.
