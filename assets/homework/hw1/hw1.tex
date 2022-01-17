@@ -36,7 +36,8 @@
 \DeclareTColorBox {Solution}{}{breakable, title={Solution}}
 \DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}}
 \DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
-\DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}} \DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+\DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
+\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
 
 \begin {document} 
 
@@ -406,7 +407,7 @@ Please note that this question is at the upper-end of the C++ intricacies we wil
 \Expecting{You should implement \texttt{add} in \texttt{answers.cpp} in your starter code.}
 
 \subsection{Runtime of Addition}
-The algorithm above forces you to implement addition the way you would normally do it by hand (eg, add numbers and carry when they add to more than 10). In this context, let us define ``operation'' as being a 1-digit addition. What is the big-Oh running time of this algorithm, in terms of $n$ where $n$ is the length of the input lists (eg, numbers).
+\Points{10} The algorithm above forces you to implement addition the way you would normally do it by hand (eg, add numbers and carry when they add to more than 10). In this context, let us define ``operation'' as being a 1-digit addition. What is the big-Oh running time of this algorithm, in terms of $n$ where $n$ is the length of the input lists (eg, numbers).
 
 \Expecting{A single answer in the form $O(\dots)$ where you've filled in $\dots$. No need to prove or argue this is correct, simply provide your answer.}
 
