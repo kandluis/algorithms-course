@@ -13,5 +13,22 @@ See [Homework 1: Fun with Algorithms]({{ "/homework/#hw0" | base_url }}) for the
 
 Our first Quiz, [Quiz 0](https://forms.gle/FDs43PEM22sBhpc28) will be released at the start of Lecture on Wednesday 1/19! It will close by end of day on Wednesday - you are required to fill it out! See our [Quiz Policy]({{ "/policies/#quiz-policy" | base_url }}) for details on how each quiz impact your grade.
 
+#### Week 0-4 Student Hours
+
+Given the restrictions to ERIC, all student hours for Week 0-4 will be held over [Zoom](https://ncat.zoom.us/j/7927890938)!
+
+
+This includes the normally "in-person" student hours of:
+
+- Monday: 1:30pm - 2:30pm in ERIC 331.
+- Wednesday: 1:30pm - 2:30pm in ERIC 331.
+- Friday: 1:30pm - 2:30pm in ERIC 331.
+
+Additional online-only student hours are:
+
+- Tuesday: 3:00 pm - 4:00pm
+- Thursday: 3:00 pm - 4:00pm
+
+
 
 {: .fs-5 }
