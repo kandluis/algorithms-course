@@ -10,7 +10,7 @@ slides_ppt: https://docs.google.com/presentation/d/1uapBhfGxFL6NguZhODbcmuRv5x0Y
 textbook: CLRS 3.1, 3.2
 recording: "https://ncat.zoom.us/rec/share/Tm0scY3yfLU4JkfzHQXO5yx-DGvlc392Pn3H389asnagaSaRH-DNZajDA3If8K0z.m145bekTumTMwRF7"
 passcode: "3PyHh@X3"
-youtube: "#"
+youtube: "https://youtu.be/yOE-IOVTvtc"
 ---
 
 ##### More Resources
