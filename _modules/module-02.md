@@ -10,7 +10,7 @@ Jan 19
 : **Lecture**{: .label .label-purple}[Asymptotics and Worst-Case Analysis]({{"Asymptotics and Worst-Case Analysis" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Jan 21
-: **Lecture**{: .label .label-purple}[Recurrence Relations and Master's Theorem]({{"Recurrence Relations and Master's Theorem" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[MergeSort and Introduction to Recurrence Relations]({{"MergeSort and Introduction to Recurrence Relations" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Jan 23
 : **Homework Due @ 11:59pm**{: .label .label-red}[HW1]({{ "/homework/#hw1" | relative_url }})
