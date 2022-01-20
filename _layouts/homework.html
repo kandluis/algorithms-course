@@ -5,9 +5,9 @@
     {%- assign release_time = page.release | date: '%b %d, %l:%M %p' -%}
     {%- assign due_time = page.due | date: '%b %d, %l:%M %p' -%}
 
-    Release: <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ release_time | date: '%Y-%m-%dT%H:%M:%S%z' }}&p1=747">
+    Release: <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ release_time | date: '%Y-%m-%dT%H:%M:%S' }}&p1=747">
       {{ release_time }}
-    </a> - Due: <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ due_time | date: '%Y-%m-%dT%H:%M:%S%z' }}&p1=747">
+    </a> - Due: <a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso={{ due_time | date: '%Y-%m-%dT%H:%M:%S' }}&p1=747">
       {{ due_time }}
     </a>
     {% endif %}
