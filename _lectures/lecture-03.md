@@ -3,8 +3,8 @@ title: Asymptotics and Worst-Case Analysis
 number: 3
 time: 2022-01-19 12:00
 location: Graham Hall 210
-notes: "assets/lectures/lecture3.pdf"
-notes_source: "assets/lectures/lecture3.tex"
+notes: "/assets/lectures/lecture3.pdf"
+notes_source: "/assets/lectures/lecture3.tex"
 slides_pdf: https://drive.google.com/file/d/103aLteDZrfpECDDLnrRqULgz2MtC2ZC-/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1uapBhfGxFL6NguZhODbcmuRv5x0Y9e85Ob0KmmLPSOI/edit?usp=sharing
 textbook: CLRS 3.1, 3.2
@@ -14,7 +14,7 @@ youtube: "https://youtu.be/yOE-IOVTvtc"
 ---
 
 ##### More Resources
-- C++ Coding Example for MergeSort [[Online](https://onlinegdb.com/bojiILd6t)][[Source]({{ "assets/code/lecture3.cpp" | base_url }})]
+- C++ Coding Example for MergeSort [[Online](https://onlinegdb.com/bojiILd6t)][[Source]({{ "/assets/code/lecture3.cpp" | absolute_url }})]
 
 ##### Video Resources
 - [Big-Omega and Big-Theta Notation (Section 2.4)](https://www.youtube.com/watch?v=-IanHYk6tU4&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=11)

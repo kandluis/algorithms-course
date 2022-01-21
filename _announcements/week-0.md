@@ -6,7 +6,7 @@ date: 2022-01-10
 
 #### HW0 Relased
 
-See [Homework 0: Getting to Know You]({{ "homework/#hw0" | base_url }}) for the full details!
+See [Homework 0: Getting to Know You]({{ "/homework/#hw0" | absolute_url }}) for the full details!
 
 #### Week 0-4 Student Hours
 
@@ -30,7 +30,7 @@ Additional online-only student hours are:
   - If you're not already registered, self register [here](http://piazza.com/north_carolina_at_state_university/spring2022/comp285)!
 
 - Create a [Gradescope](https://www.gradescope.com/courses/350304) account and submit HW0 by Sunday, 1/16 @ 11:59 pm. 
-  - See syllabus on [Blackboard](https://blackboard.ncat.edu/webapps/blackboard/execute/modulepage/view?course_id=_3567742_1) or [HW0](({{ "homework/#hw0" | base_url }})) for access code if needed!
+  - See syllabus on [Blackboard](https://blackboard.ncat.edu/webapps/blackboard/execute/modulepage/view?course_id=_3567742_1) or [HW0](({{ "/homework/#hw0" | absolute_url }})) for access code if needed!
 
 #### Welcome to COMP 285! 
 

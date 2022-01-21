@@ -22,7 +22,7 @@
     <h5 id="{{ page.title | append: 'lecture-resources' | slugify }}">Lecture resources</h5>
     <ul>
       <li>
-        Lecture notes: [<a href="{{ page.notes | base_url }}">PDF</a>][<a href="{{ page.notes_source | base_url }}">TeX</a>]
+        Lecture notes: [<a href="{{ page.notes | absolute_url }}">PDF</a>][<a href="{{ page.notes_source | absolute_url }}">TeX</a>]
       </li>
       <li>
         Slides: [<a href="{{ page.slides_pdf }}">PDF</a>][<a href="{{ page.slides_ppt }}">PPT</a>]

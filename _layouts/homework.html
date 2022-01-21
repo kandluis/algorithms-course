@@ -16,13 +16,13 @@
     {%if page.pdf and page.tex and page.word %}
     <ul>
       <li>
-        Problems: [<a href="{{ page.pdf | base_url }}">PDF</a>]
+        Problems: [<a href="{{ page.pdf | absolute_url }}">PDF</a>]
       </li>
       <li>
-        LaTeX template: [<a href="{{ page.tex | base_url }}">TeX</a>]
+        LaTeX template: [<a href="{{ page.tex | absolute_url }}">TeX</a>]
       </li>
       <li>
-        Word Template: [<a href="{{ page.word | base_url }}">Word</a>]
+        Word Template: [<a href="{{ page.word | absolute_url }}">Word</a>]
       </li>
     </ul>
     {% endif %}
