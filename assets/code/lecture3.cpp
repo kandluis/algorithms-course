@@ -18,7 +18,7 @@ std::vector<int> merge(const std::vector<int>& left, const std::vector<int>& rig
     while (i < left.size()) {
         merged.push_back(left[i++]);
     }
-    while (j < left.size()) {
+    while (j < right.size()) {
         merged.push_back(right[j++]);
     }
     return merged;
