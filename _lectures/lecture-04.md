@@ -3,8 +3,8 @@ title: MergeSort and Introduction to Recurrence Relations
 number: 4
 time: 2022-01-21 12:00
 location: Graham Hall 210
-notes: "/assets/lectures/lecture3.pdf"
-notes_source: "/assets/lectures/lecture3.tex"
+notes: "assets/lectures/lecture3.pdf"
+notes_source: "assets/lectures/lecture3.tex"
 slides_pdf: https://drive.google.com/file/d/10uMuMslgpg13jAxBxYtQvCxMFci_9W9D/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1NsSxpneGAlXM4YTysbrq14KHGuhVzn3Lp3c-Us9e0bg/edit?usp=sharing
 textbook: CLRS 3.1, 3.2
@@ -15,7 +15,7 @@ youtube: "https://youtu.be/AaOCkmVe4u4"
 
 
 ##### More Resources
-- C++ Coding Example for MergeSort [[Online](https://onlinegdb.com/bojiILd6t)][[Source]({{ "/assets/code/lecture3.cpp" | base_url }})]
+- C++ Coding Example for MergeSort [[Online](https://onlinegdb.com/bojiILd6t)][[Source]({{ "assets/code/lecture3.cpp" | base_url }})]
 
 ##### Video Resources
 - [MergeSort: Motivation and Example (Section 1.4, part 1)](https://www.youtube.com/watch?v=kiyRJ7GVWro&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=4)
