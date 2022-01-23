@@ -3,8 +3,8 @@ title: MergeSort and Introduction to Recurrence Relations
 number: 4
 time: 2022-01-21 12:00
 location: Graham Hall 210
-notes: "/assets/lectures/lecture3.pdf"
-notes_source: "/assets/lectures/lecture3.tex"
+notes: "/assets/lectures/lecture4.pdf"
+notes_source: "/assets/lectures/lecture4.tex"
 slides_pdf: https://drive.google.com/file/d/10uMuMslgpg13jAxBxYtQvCxMFci_9W9D/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1NsSxpneGAlXM4YTysbrq14KHGuhVzn3Lp3c-Us9e0bg/edit?usp=sharing
 textbook: CLRS 3.1, 3.2

@@ -163,18 +163,4 @@ Importantly, we can see that the work done at Level $i$ is independent of $i - i
 \end{align*}
 This proves the claim, and we’re done!
 
-\section{Introduction to Recurrences}
-
-Recall that divide and conquer algorithms divide up a problem into a number of subproblems that are the smaller instances of the same problem, solve those problems recursively, and combine the solutions to the subproblems into a solution for the original problem. When a subproblem size is small enough, the subproblem is solved in a straightforward manner. In the past lectures we have seen two examples of divide and conquer algorithms: \texttt{MergeSort} and \texttt{Karatsuba}’s algorithm for integer multiplication.
-
-The running time of divide and conquer algorithms can be naturally expressed in terms of the running time of smaller inputs. Today we will show two techniques for solving these recurrences. The first is called the master method to solve these recurrences. This method can only be used when the size of all the subproblems is the same (as was the case in the examples).
-
-\section{Recurrences}
-Stated more technically, a divide and conquer algorithm takes an input of size $n$ and does some operations all running in $O(f (n))$ time for some $f$ and runs itself recursively on $k \geq 1$ instances of size $n_1, n_2, \dots n_k$ , where $n_i < n$ for all $i$. To talk about what the runtime of such an algorithm is, we can write a runtime \textbf{recurrence}. Recurrences are functions defined in terms of themselves with smaller arguments, as well as one or more base cases. We can
-define a recurrence more formally as follows:
-
-Let $T(n)$ be the worst-case runtime on instances of size $n$. If we have $k$ recursive calls on a given step (of sizes $n_i$) and each step takes time $O(f (n))$, then we can write the runtime as $T(n) \leq c \cdot f (n) + \sum_{i=1}^k T(n_i)$ for some constant $c$, where our base case is $T(c') \leq O(1)$.
-
-Next lecture, we'll try to find the recurrence of some of the divide-and-conquer algorithms we've seen so far!
-
 \end{document}
