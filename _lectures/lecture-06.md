@@ -1,5 +1,5 @@
 ---
-title: Insertion Sort, Selection Sort
+title: Substitution Method and Selection Problem Intro.
 number: 6
 time: 2022-01-26 12:00
 location: Graham Hall 210

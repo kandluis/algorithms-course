@@ -1,5 +1,5 @@
 ---
-title: Heaps & Heap Sort
+title: Median Selection
 number: 7
 time: 2022-01-28 12:00
 location: Graham Hall 210
