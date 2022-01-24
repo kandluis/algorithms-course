@@ -7,7 +7,7 @@ notes: "/assets/lectures/lecture5.pdf"
 notes_source: "/assets/lectures/lecture5.tex"
 slides_pdf: https://drive.google.com/file/d/11ZYte88qG3XlEDagrfYdg4ImCi9DZ9pq/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1DxbaYa_SCUGXW9bhG26v0VAKgK85kXA97_4QMP3sM6g/edit?usp=sharing
-textbook: CLRS 4.5, 4.6
+textbook: CLRS 4.4, 4.5, 4.6
 ---
 
 ##### Video Resources

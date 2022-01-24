@@ -1,0 +1,120 @@
+ \documentclass [12pt]{article} 
+
+\usepackage {amsmath}
+\usepackage {amsthm}
+\usepackage {amssymb}
+\usepackage {graphicx} 
+\usepackage {float}
+\usepackage {multirow}
+\usepackage {xcolor}
+\usepackage {algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage {array} 
+\usepackage {booktabs} 
+\usepackage {url} 
+\usepackage {parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage {cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage {enumitem} 
+\usepackage {xparse} 
+\usepackage {verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\footnotesize,% basic font setting
+}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+
+
+\DeclareTColorBox {Solution}{}{breakable, title={Solution}} \DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}} \DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt} \DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}} \DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+
+\begin {document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Lecture 6} } 
+\vspace {1em} 
+\begin {Instruction} 
+
+Adapted From Virginia Williams' lecture notes. Additional credits: J. Su, W. Yang, Gregory Valiant, Mary Wootters, Aviad Rubinstein, Sami Alsheikh.
+\end {Instruction} 
+
+\begin{centering}
+\section*{Substitution Method \& k-Select Problem}
+\end{centering}
+
+\section{Introduction}
+In the last lecture, we covered the Master Theorem to solve \textbf{recurrence relations}. This method works well in cases where the sub-problems are of equal size (which is most of the time). In this lecture, we'll cover a more advanced method for solving more complicated recurrence relations. 
+
+This method is required to understand and proof the running time of the $k$-Select Problem, which we will also introduce.
+
+\section{The Subtitution Method}
+Recurrence trees can get quite messy when attempting to solve complex recurrences. With the substitution method, we can guess what the runtime is, plug it in to the recurrence and see if it works out.
+
+Given a recurrence $T(n) \leq f (n) + \Sigma^{k}_{i=1}T(n_i)$, we can guess that the solution to the recurrence is
+\begin{align*}
+    T(n) \leq \begin{cases}
+        d \cdot g(n_0) \text{ if } n = n_0 \\
+        d \cdot g(n) \text{ if } n > n_0
+    \end{cases}
+\end{align*}
+for some constants $d > 0$ and $n_0 \geq 1$ and a function $g(n)$. We are essentially guessing that $T(n) \leq O(g(n))$.
+
+For our base case we must show that you can pick some $d$ such that $T(n_0) \leq d \cdot g(n_0)$. For example, this can follow from our standard assumption that $T(1) = 1$.
+
+Next we assume that our guess is correct for everything smaller than n, meaning $T(n') \leq d \cdot g(n')$ for all $n' < n$. Using the inductive hypothesis, we prove the guess for $n$. We must pick some $d$ such that
+$$
+f(n) + \sum_{i=1}^k d \cdot g(n_i) \leq d \cdot g(n), \text{ whenever } n \geq n_0
+$$
+
+Typically the way this works is that you first try to prove the inductive step starting from the inductive hypothesis, and then from this obtain a condition that d needs to obey. Using this condition you try to figure out the base case, i.e., what $n_0$ should be.
+
+\section{Selection}
+The selection problem is to find the $k$th smallest number in an array $A$.
+
+\textbf{Input}: array $A$ of $n$ numbers, and an integer $k \in \{1, \cdot , n\}$.
+\textbf{Output}: the $k$-th smallest number in $A$.
+
+One approach is to sort the numbers in ascending order, and then return the $k$th number in the sorted list. This takes $O(n \log n)$ time, since it takes $O(n \log n)$ time for the sort (e.g. by \texttt{MergeSort}) and $O(1)$ time to return $k$th number.
+
+\subsection{Minimum Element}
+As always, we ask if we can do better (i.e. faster in big-O terms). In the special case where $k = 1$, selection is the problem of finding the minimum element. We can do this in $O(n)$ time by scanning through the array and keeping track of the minimum element so far. If the current element is smaller than the minimum so far, we update the minimum.
+
+\begin{algorithm}
+\caption{SelectMin(A)}\label{alg:min}
+\begin{algorithmic}
+\STATE $m \gets \infty$
+\STATE $n \gets $ length($A$)
+\FOR{$i=1$ to $n$}
+    \IF{$A[i] < m$}
+        \STATE $m \gets A[i]$
+    \ENDIF
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+In fact, this is the best running time we could hope for.
+
+\textbf{Definition.} A deterministic algorithm is one which, given a fixed input, always performs the same operations (as opposed to an algorithm which uses randomness).
+
+\textbf{Claim.} \textit{Any deterministic algorithm for finding the minimum has runtime $\Omega(n)$.}
+
+\begin{proof}
+Intuitively, the claim holds because any algorithm for the minimum must
+look at all the elements, each of which could be the minimum. Suppose a correct deterministic algorithm does not look at $A[i]$ for some $i$. Then the output cannot depend on $A[i]$, so the algorithm returns the same value whether $A[i]$ is the minimum element or the maximum element. Therefore the algorithm is not always correct, which is a contradiction. So there is no sublinear deterministic algorithm for finding the minimum.
+\end{proof}
+
+So for $k = 1$, we have an algorithm which achieves the best running time possible. By similar reasoning, this lower bound of $\Omega(n)$ applies to the general selection problem. So ideally we would like to have a linear-time selection algorithm in the general case.
+
+\subsection{Linear-Time Selection}
+In fact, a linear-time selection algorithm does exist, and we will cover it in next lecture.
+
+\end{document}
