@@ -15,7 +15,7 @@ Given the restrictions to ERIC, all student hours for Week 0-4 will be held over
 
 This includes the normally "in-person" student hours of:
 
-- Monday: 2:00pm - 3:00pm in ERIC 331.
+- Monday: 2:00pm - 3:00pm in ERIC 331. test test test
 - Wednesday: 2:00pm - 3:00pm in ERIC 331.
 - Friday: 2:00pm - 3:00pm in ERIC 331.
 
