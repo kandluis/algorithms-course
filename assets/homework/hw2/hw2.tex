@@ -1,0 +1,285 @@
+% !TEX options=--shell-escape
+\documentclass [12pt]{article} 
+
+\usepackage {amsmath}
+\usepackage {amsthm}
+\usepackage {amssymb}
+\usepackage {graphicx} 
+\usepackage {float}
+\usepackage {multirow}
+\usepackage {xcolor}
+\usepackage {algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage {array} 
+\usepackage {booktabs} 
+\usepackage {url} 
+\usepackage {parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage {cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage {enumitem} 
+\usepackage {xparse} 
+\usepackage {verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[cache=false]{minted}
+\usepackage{mdframed}
+\newtheorem{theorem}{Theorem}
+
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+
+\DeclareTColorBox {Solution}{}{breakable, title={Solution}}
+\DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}}
+\DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
+\DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
+\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+
+\begin {document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Homework 2} } 
+\vspace {1em} 
+\begin {Instruction} 
+
+\paragraph {Due.} Tuesday, February 1st, 2022 @ 11:59 PM!
+\end {Instruction} 
+
+\vspace {1em} 
+\begin {Instruction} \paragraph {Homework Expectations:} Please see the \href{https://www.comp285.ml/homework/#general-homework-information}{Homework} part of the Course Website (\href{https://www.comp285.ml/policies/#collaboration-policy-and-honor-code}{comp285.ml/policies}) for guidance on what we are looking for in homework solutions. We will grade according to these standards, and you should cite all sources you used outside course material.
+
+\paragraph {What we expect:} Make sure to look at the ``\textbf {We are expecting}'' blocks below each problem to see what we will be grading for in each problem! \end {Instruction}
+
+\vspace {1em} 
+\begin {Instruction} 
+
+\paragraph {Exercises} The following questions are exercises. We encourage you to work with a group and discuss solutions to make sure you understand the material.
+
+\paragraph {Points} This assignment is graded out of 100 points. However, you can get up to 120 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
+
+\end {Instruction} 
+
+\begin{centering}
+\section*{Formal Fun with Recursion and Big-Oh}
+\end{centering}
+
+\begin{Instruction}
+
+\paragraph{Written Problems} The following questions are to be submitted in written/typed form to gradescope.
+
+\end{Instruction}
+
+\section{Exercise: Getting Basic with Big-Oh}
+\Points{20}
+Dr. Wang is is preparing for a review lecture for the students who want to get a bit more confortable with big-Oh notation. given how studious you've been, she asks for your help on a few questions.
+
+\subsection{Can you identify big-Oh?}
+\Points{10} Write the functions below that are $O(n^2)$?
+
+You don't need to provde a prove or explanation, but you probably want to convince yourself you're right.
+
+\begin{enumerate}
+    \item $g_1(n) = 4n + 10$
+    \item $g_2(n) = 4n^2 + 10$
+    \item $g_3(n) = 4n^3 + 10$
+    \item $g_4(n) = n \log n$
+    \item $g_5(n) = \sin(n) + 5$
+    \item $g_6(n) = 4^n$
+    \item $g_7(n) = (285^3)^4$
+\end{enumerate}
+
+\Expecting{A list of which functions are $O(n^2)$. No explanation is required.}
+
+\subsection{Formal Definition of Big-Oh}
+\Points{10} Serena is having a great time on COMP 285! She wants to prove, from the definition of big-Oh, that $f(n) = O(g(n))$, where $f (n) = 6n$ and $g(n) = n^2 - 3n$.
+
+As a reminder, here is the formal definition of big-Oh is:
+\begin{align*}
+f(n) &= O(g(n)) \\
+&\iff \\
+\exists c, n_0 \text{ such that } &\forall n > n_0, f(n) \leq c \cdot g(n)
+\end{align*}
+
+
+\subsubsection{First proof...}
+\Points{5} Serena claims she has a proof in the definition above where $c = 1$. Give a possible proof using $c=1$.
+
+\subsubsection{Second proof...}
+\Points{5} Serena realizes that she'll never get inputs to her algorithm that are smaller than $4$. As such, she says she wants $n_0 = 4$. Give a possible proof using $n_0 = 4$.
+
+\Expecting{For both parts, a short but complete proof. That is, write out the formal definition of big-Oh plugging in the values for $f(n), g(n), n_0$ and $c$ as given in the problem statement and that you chose.}
+
+
+\pagebreak
+\section{Interview Practice: Comparing Big-Oh, Big-Omega, and Big-Theta}
+\Points{10} In industry, it's quite common that you have to compare the running times of different algorithms you're implementing {\footnote{If you'd like specific examples, come to my student hours!}}. In this exercise, we'll practice a few common running times (I've personally seen all of these show-up on interviews) and compare them.
+
+For each blank below, indicate whether $A_i$ is in $O$, $\Omega$, or $\Theta$ of $B_i$
+. More than one space per row can be valid.
+
+\Expecting{All spaces in the below table should have an 'x' if $A_i$ is big-[COLUMN] of $B_i$}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{A} & \textbf{B} & $O$ & $\Omega$ & $\Theta$ \\ \hline
+    $\log n$       &      $n$      &  &  &  \\ \hline
+     $2n^3$      &  $2^n$         &  &  &  \\ \hline
+       $\log_10 n$    &  $\log_2 n$          &  &  &  \\ \hline
+    $n^{0.1}$    &  $(0.1)^n$          &  &  &  \\ \hline
+    $n^2$    &  $4^{\log_2 n}$          &  &  &  \\ \hline
+\end{tabular}
+\end{table}
+
+
+\pagebreak
+\section{Exercise: Practice with Recurrence Relations}
+\Points{10} After settling down after her fourth move (joining us in Greensboro), Sloane wants to practice some \textbf{recurrence relations} with you. To refresh your memory, she jots down the \textbf{Master Theorem} below:
+
+\begin{theorem}[Master Theorem]
+Let $T(n) = a \cdot T\left(\frac{n}{b}\right) + O(n^d)$ be a recurrence where $a, b > 1$, Then,
+\begin{align*}
+T(n) &= \begin{cases}
+    O(n^d \log n) & \text{if } a = b^d \\
+    O(n^d) & \text{if } a < b^d \\
+    O(n^{\log_b a}) & \text{if } a > b^d
+\end{cases}
+\end{align*}
+
+
+For each of the below, provide the big-Oh running time:
+\begin{enumerate}[label=(\alph*)]
+    \item \Points{4} $T(n) = 18T\left(\frac{n}{9} \right) + O(\sqrt{n})$
+    \item \Points{2} $T(n) = 5T\left(\frac{n}{4} \right) + O(n^2)$
+    \item \Points{3} $T(n) = 16T\left(\frac{n}{2} \right) + O(n^4)$
+    \item \Points{1} $T(n) = 4T\left(\frac{n}{3} \right) + O(n)$
+\end{enumerate}
+\end{theorem}
+
+\Expecting{Use Master Theorem to calculate the tigheter upper bound for each of these recurrence relations in big-Oh notation.}
+
+
+\pagebreak
+\section{Interview Practice: Modified MergeSort}
+\Points{10} In most interviews, you won't be asked to reproduce algorithms we've learned in class. Instead, you'll be asked to implement modifications of these algorithms. In this exercise, we'll see how changing the size of the subproblems affects MergeSort.
+
+Your friend Malia gives you a new version of \texttt{MergeSort} that she coded after class. She claims this runs asymtotically better than the version we coded.
+
+This is her code, where \texttt{merge} is left unchanged.
+
+\vspace{2em}
+\begin{minted}[linenos=true]{cpp}
+// MergeSort algorithm!
+std::vector<int> mergeSortThirds(const std::vector<int>& input) {
+    const std::size_t n = input.size();
+    if (n <= 1) {
+        return input;
+    }
+    const std::vector<int> left = mergeSortThirds(
+        {input.begin(), input.begin() + n / 3});
+    const std::vector<int> middle = mergeSortThirds(
+        {input.begin() + n / 3, input.begin() + 2*n / 3})
+    const std::vector<int> right = mergeSortThirds(
+        {input.begin() + 2*n / 3, input.end()});
+    const std::vector<int> temp = merge(L, M);
+    return merge(temp, right);
+}
+\end{minted}
+
+Write down the recurrence relation and runtime for this version of \texttt{MergeSort}.
+
+\Expecting{A recurrence relation for the runtime, as well as the closed-form big-Oh runtime.\footnote{Once you have the recurrence relation, you can probably use the Master Theorem.}}
+ 
+
+\pagebreak
+\section{Industry Practice: What's the big-Oh of code?}
+\Points{20} In industry, you'll often times be expected to analyze existing code. In this question, you'll get a bit of practice looking at unfamiliar C++ code and identifying the running time.
+
+
+\subsection{A loop that doubles each time!}
+\Points{5} Your friends Victor and Dezmon are working on their new internship. They show you the below code. What is the big-Oh running time? Please justify your answer.
+
+\vspace{2em}
+\begin{minted}[linenos=true]{cpp}
+void doSomething(const std::vector<int> input) {
+    for (int i = 1; i < input.size(); i *= 2) {
+        std::cout << input[i] << std::endl;
+    }
+}
+\end{minted}
+
+\Expecting{You should provide a big-Oh running time $O(\cdots)$ and a short sentence explaining why this is the running time.}
+
+\subsection{Counting down by 10...}
+\Points{5} Your friends Liam and Miah are working on their new jobs at Foogle. They show you the below code. What is the big-Oh running time? Please justify your answer.
+
+\vspace{2em}
+\begin{minted}[linenos=true]{cpp}
+void doSomethingElse(const std::vector<int> input) {
+    int z = input.size() - 1;
+    std::cout << z << std::endl;
+    while(z >= 10) {
+        std::cout << input[z] << std::endl;
+        z /= 10;
+    }
+}
+\end{minted}
+
+\Expecting{You should provide a big-Oh running time $O(\cdots)$ and a short sentence explaining why this is the running time.}
+
+\pagebreak
+\subsection{Fun with Recursion}
+\Points{10} Your friends Ryan and Jordan are working with the NSA. They show you the below code. What is the big-Oh running time? Please justify your answer.
+
+\vspace{2em}
+\begin{minted}[linenos=true]{cpp}
+void doSomethingSecret(const std::vector<int> input) {
+    if (input.size() % 7 == 0) {
+        return "Bzzzt!";
+    }
+    // Remove the last element in-place. This is O(1).
+    input.pop_back();
+    return doSomethingSecret(input);
+}
+\end{minted}
+
+\Expecting{You should provide a big-Oh running time $O(\cdots)$ and a short sentence explaining why this is the running time.}
+
+\pagebreak
+\begin{Instruction}
+
+\paragraph{Coding Problems} The following questions are to be submitted as a ".zip" file on Gradescope. For complete submissions instructions, please see HW1.
+
+\end{Instruction}
+
+\section{Coding}
+\Points{40} After completing the written portion of the assignment, you should submit to \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+You can get your starter code for the coding portion here:
+
+Note there are \textbf{two} coding questions. Each part is worth 20 points for correcness. Your code will also be reviewed for style (5 points) and documentation (5 ponts), totaling 50 points for the coding portion.
+
+Please reference the \texttt{README.md} included in your starter code for detailed instructions.
+
+\section*{Submitting the Assignment}
+
+This assignment is a combination of written and programming questions. Both portions of the assignment should be submitted through \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+The "Homework 2: Fun with Recursion and Big-Oh" assignment is the written portion, for which you should submit a \textbf{typed} response to the non-coding questions (questions 1-5). Each response should clearly be marked with its corresponding number. You are free to use the provided templates, print the questions and write your answers, or to simply type your responses on a blank document (whatever works for you).
+
+The "Homework 2: Coding" is the programming portion of the assignment. For this portion, download the ".zip" file from replit and upload this ".zip" file as your answer to \href{https://www.gradescope.com/courses/350304}{Gradescope}. You can upload the assignment as many times as you want.
+
+
+To summarize, do the following:
+\begin{enumerate}
+    \item Submit your \textbf{typed} responses to the non-coding portion of the assignment on Gradescope for "Homework 2: Fun with Recursion and Big-Oh"
+    \item Submit your \textbf{code files} as a ".zip" to Gradescope for "Homework 2: Coding".
+    \item Fill out this \textbf{Google Form} (\href{https://forms.gle/ELVUbA9Tawrr4oFU8}{https://forms.gle/ELVUbA9Tawrr4oFU8}) to help me track your thoughts on the homework.
+\end{enumerate}
+
+\end {document} 
