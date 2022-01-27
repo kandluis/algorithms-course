@@ -8,7 +8,7 @@ notes_source: "/assets/lectures/lecture2.tex"
 slides_pdf: https://drive.google.com/file/d/103O_1yp73_ZDctwLhfIbYDwmzvDr-gZF/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1dyxQVgRnZX1C1UMkoxdPFQbItSSKCWpScSNs0tl_pkI/edit?usp=sharing
 textbook: CLRS 2.1, 2.2, 2.3, 3.1
-recording: "https://ncat.zoom.us/rec/share/v_WcsVnhvaArLGrVKIiw6gRyp34Uk89WhJlJ7I4iuMPqaE-ItGKoJpmUvNmJuxsh.qC5lN9zB36F8"
+recording: "https://ncat.zoom.us/rec/share/v_WcsVnhvaArLGrVKIiw6gRyp34Uk89WhJlJ7I4iuMPqaE-ItGKoJpmUvNmJuxsh.qC5lN9zB36F8BRDZ"
 passcode: "e$VrY3Fg"
 youtube: "https://youtu.be/X8vLeq8lr7c"
 ---
