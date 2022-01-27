@@ -11,13 +11,13 @@ description: A listing of all the course staff members.
 
 ## Professor Hours
 
-Given the restrictions to ERIC, all student hours for Week 0-4 will be held over [Zoom](https://ncat.zoom.us/j/7927890938)!
+Given the restrictions to ERIC, all student hours for Week 0-5 will be held over [Zoom](https://ncat.zoom.us/j/7927890938)!
 
 This includes the normally "in-person" student hours of:
 
 - Monday: 2:00pm - 3:00pm in ERIC 331.
 - Wednesday: 2:00pm - 3:00pm in ERIC 331.
-- Friday: 2:00pm - 3:00pm in ERIC 331.
+- Friday: 3:30pm - 4:30pm in ERIC 331.
 
 Additional online-only student hours are:
 
