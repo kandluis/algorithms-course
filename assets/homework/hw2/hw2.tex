@@ -238,7 +238,7 @@ void doSomethingElse(const std::vector<int> input) {
 
 \vspace{2em}
 \begin{minted}[linenos=true]{cpp}
-void doSomethingSecret(const std::vector<int> input) {
+std::string doSomethingSecret(const std::vector<int> input) {
     if (input.size() % 7 == 0) {
         return "Bzzzt!";
     }
