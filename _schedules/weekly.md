@@ -58,7 +58,7 @@ schedule:
         end: 1:00 PM
         location: Graham Hall 210
       - name: Student Hours
-        start: 2:00 PM
-        end: 3:00 PM
+        start: 3:30 PM
+        end: 4:30 PM
         location: ERIC 331 (Temporarily on Zoom)
 ---
