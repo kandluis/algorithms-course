@@ -5,7 +5,7 @@ time: 2022-01-28 12:00
 location: Graham Hall 210
 notes: "/assets/lectures/lecture7.pdf"
 notes_source: "/assets/lectures/lecture7.tex"
-slides_pdf: https://drive.google.com/file/d/199bWw59bEx-XQ_PZTHb1EwtDqndcAWIo/view?usp=sharing
+slides_pdf: https://drive.google.com/file/d/12jhSM-NUDK2l9ncl0QLCsdOqV3YT6TU_/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1QI3iyy-3mbH9eQ6YmXzfL_8WTI4o8My3FKm3vNp_Xfs/edit?usp=sharing
 textbook: CLRS 9.1, 9.2, 9.3
 ---
