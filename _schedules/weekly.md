@@ -25,17 +25,17 @@ schedule:
         start: 12:00 PM
         end: 1:00 PM
         location: Graham Hall 210
-      - name: [TA] Student Hours
+      - name: TA Student Hours
         start: 1:00 PM
         end: 2:00 PM
         location: Zoom
-      - name: [Professor] Student Hours
+      - name: Professor Student Hours
         start: 2:00 PM
         end: 3:00 PM
         location: ERIC 331 (Temporarily on Zoom)
   - name: Tuesday
     events:
-      - name: [Professor] Student Hours
+      - name: Professor Student Hours
         start: 3:00 PM
         end: 4:00 PM
         location: Zoom
@@ -45,17 +45,17 @@ schedule:
         start: 12:00 PM
         end: 1:00 PM
         location: Graham Hall 210
-      - name: [TA] Student Hours
+      - name: TA Student Hours
         start: 1:00 PM
         end: 2:00 PM
         location: Zoom
-      - name: [Professor] Student Hours
+      - name: Professor Student Hours
         start: 2:00 PM
         end: 3:00 PM
         location: ERIC 331 (Temporarily on Zoom)
   - name: Thursday
     events:
-      - name: [Professor] Student Hours
+      - name: Professor Student Hours
         start: 3:00 PM
         end: 4:00 PM
         location: Zoom
@@ -65,11 +65,11 @@ schedule:
         start: 12:00 PM
         end: 1:00 PM
         location: Graham Hall 210
-      - name: [TA] Student Hours
+      - name: TA Student Hours
         start: 1:00 PM
         end: 2:00 PM
         location: Zoom
-      - name: [Professor] Student Hours
+      - name: Professor Student Hours
         start: 3:30 PM
         end: 4:30 PM
         location: ERIC 331 (Temporarily on Zoom)
