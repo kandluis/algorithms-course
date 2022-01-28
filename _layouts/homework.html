@@ -24,6 +24,11 @@
       <li>
         Word Template: [<a href="{{ page.word | absolute_url }}">Word</a>]
       </li>
+      {% if page.walkthrough %}
+      <li>
+        Walkthrough: [<a href="{{ page.walkthrough | absolute_url }}">YouTube</a>]
+      </li>
+      {% endif %}
       {% if page.solution %}
       <li>
         Solution: [<a href="{{ page.solution | absolute_url }}">Blackboard</a>]
