@@ -11,6 +11,7 @@ textbook: CLRS 3.1, 3.2
 recording: "https://ncat.zoom.us/rec/share/Tm0scY3yfLU4JkfzHQXO5yx-DGvlc392Pn3H389asnagaSaRH-DNZajDA3If8K0z.m145bekTumTMwRF7"
 passcode: "3PyHh@X3"
 youtube: "https://youtu.be/yOE-IOVTvtc"
+quiz: "https://docs.google.com/forms/d/e/1FAIpQLSfJ4QzJRR6i_7sjP15poq4pXh1S9ScCgEsQSLizSSuDZkxjEw/viewform?usp=sf_link"
 ---
 
 ##### More Resources

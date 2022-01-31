@@ -11,6 +11,7 @@ textbook: CLRS 4.4, 4.5, 4.6
 recording: "https://ncat.zoom.us/rec/share/l4o0mFOXc04ytOIM1w19eKhZV1FNrjeTxsle8fj8McQDn53GuccwRKLXvsfjDlvH.FpS7S0HP9DykBtxc"
 passcode: "Py0r&M1R"
 youtube: "https://youtu.be/AdJqYbGYuWc"
+quiz: "https://docs.google.com/forms/d/e/1FAIpQLSeYOMk-1zzXHZl2yAwgEQYmSeyBJB9d6f_1RSEqZVvAY4EluQ/viewform?usp=sf_link"
 ---
 
 ##### Video Resources
