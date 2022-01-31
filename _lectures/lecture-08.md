@@ -3,7 +3,7 @@ title: Median of Medians and Randomized Algorithms
 number: 8
 time: 2022-01-31 12:00
 location: Graham Hall 210
-quiz: "https://docs.google.com/forms/d/19CXiCiRG-ON4fAoknZ1hGpBw89diQ_endtG4d-DXT3s/edit"
+quiz: "https://forms.gle/bZeYyCUZufpZk5rV9"
 notes: "/assets/lectures/lecture8.pdf"
 notes_source: "/assets/lectures/lecture8.tex"
 slides_pdf: https://drive.google.com/file/d/12ynV3n5dCQt3nRk6JyQ7NprG830cmOKW/view?usp=sharing

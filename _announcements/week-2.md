@@ -4,6 +4,10 @@ week: 2
 date: 2022-01-24
 ---
 
+#### Quiz 2
+[Quiz 2](https://forms.gle/bZeYyCUZufpZk5rV9) will be released at the start of Lecture on Monday 1/24! It will close by end of day on Monday - you are required to fill it out! See our [Quiz Policy]({{ "/policies/#quiz-policy" | absolute_url }}) for details on how each quiz impact your grade.
+
+
 #### HW2 Relased 
 
 See [Homework 2: Fun with Algorithms]({{ "/homework/#hw2" | absolute_url }}) for the full details! It is due Tuesday 2/1 @ 11:59PM! This is **the first coding assignment** so *start early* to catch issues. If you have questions, please make a post on [Piazza](https://piazza.com/north_carolina_at_state_university/spring2022/comp285/home)!
