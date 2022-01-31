@@ -14,7 +14,7 @@ youtube: "https://youtu.be/jwyE5MBLtYw"
 ---
 
 #### Code Resources
-- [Solution to k-Select with different Pivots](https://replit.com/@laperez94/k-Select-With-Different-Pivots)
+- [k-Select with different Pivots](https://replit.com/@laperez94/k-Select-With-Different-Pivots)
 
 ##### Video Resources
 - [Partitioning Around a Pivot Element (Section 5.2)](https://www.youtube.com/watch?v=LYzdRN5iFdA&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=25)

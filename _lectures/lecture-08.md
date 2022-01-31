@@ -11,6 +11,10 @@ slides_ppt: https://docs.google.com/presentation/d/1u4kQ6nj5PyIPVngBqam8jsW5lOvQ
 textbook: CLRS 7.1, 9.1, 9.2, 9.3
 ---
 
+#### Code
+- [QuickSort Implementation](https://replit.com/@laperez94/QuickSort)
+- [k-Select with different Pivots](https://replit.com/@laperez94/k-Select-With-Different-Pivots)
+
 ##### Video Resources
 - [Quick Review of Discrete Probability (Appendix B)](https://www.youtube.com/watch?v=uLeIMwMHX5U&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=37)
 - [Partitioning Around a Pivot Element (Section 5.2)](https://www.youtube.com/watch?v=LYzdRN5iFdA&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=25)
