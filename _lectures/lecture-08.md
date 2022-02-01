@@ -1,5 +1,5 @@
 ---
-title: Median of Medians and Randomized Algorithms
+title: Median of Medians
 number: 8
 time: 2022-01-31 12:00
 location: Graham Hall 210
@@ -14,8 +14,7 @@ passcode: "0SM8z$=U"
 youtube: "https://youtu.be/N3UToxmdjqA"
 ---
 
-#### Code
-- [QuickSort Implementation](https://replit.com/@laperez94/QuickSort)
+##### Code
 - [k-Select with different Pivots](https://replit.com/@laperez94/k-Select-With-Different-Pivots)
 
 ##### Video Resources

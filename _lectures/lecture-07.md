@@ -13,7 +13,7 @@ passcode: "8cu?wy9U"
 youtube: "https://youtu.be/jwyE5MBLtYw"
 ---
 
-#### Code Resources
+##### Code Resources
 - [k-Select with different Pivots](https://replit.com/@laperez94/k-Select-With-Different-Pivots)
 
 ##### Video Resources

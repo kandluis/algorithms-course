@@ -38,12 +38,17 @@
 
 \DeclareTColorBox {Solution}{}{breakable, title={Solution}} \DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}} \DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt} \DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}} \DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
 
-\begin {document} 
+\begin {document}
+
+\vspace {1em} 
+\begin {Instruction} 
+Adapted From Virginia Williams' lecture notes.
+\end {Instruction}  
 
 {\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Lecture 8} } 
 
 \begin{centering}
-\section*{Median of Medians and Randomized Algorithms}
+\section*{Median of Medians}
 \end{centering}
 
 \section{Introduction}
@@ -67,8 +72,6 @@ We ended last lecture with a few ideas on how we could solve the kSelect problem
 \ENDIF
 \end{algorithmic}
 \end{algorithm}
-
-Lastly, we'll introduce \textit{randomized algorithms} and discuss a simple one used only for teaching purposes called \texttt{BogoSort}.
 
 
 \section{Choose a pivot ``close enough'' to the median}
@@ -210,21 +213,5 @@ Thus, in each of the three cases, \texttt{Select}($A, k$) returns the $k$-th sma
 \end{itemize}
 
 \textbf{Conclusion.} By induction, the inductive hypothesis holds for all $n \geq 1$. Thus, we conclude that Select($A, k$) returns the $k$-th smallest element of A on any array $A$, provided that $k \in \{1, \cdots , |A|\}$. That is, \texttt{Select} is correct, which is what we wanted to show.
-
-
-\section{Randomized Algorithms}
-
-We have already seen and discussed one option to selecting the pivot, which involves selecting it at random. This can be done in $O(1)$ time, and rather simply, leading to an algorithm that is almost always faster than even our complex version above.
-
-This idea of using randomization to improve the performence of algorithms in practice occurs often in algorithms. Frequently, introducing randomization makes the algorithm both (1) faster in practice and (2) simplifies the implementation. The only thing we trade-off is how confident we are in whether the algorithm is correct.
-
-Oftentime, randomized algorithms require a high-level of analysis to determine correctness, and also requires a significant amount of dedication to figure out their running times.
-
-\subsection{What happens when you introduce randomness?}
-
-There are two types of randomized algorithms. The first type is an algorithm that uses randomness internally, but always return the correct answer. The algorithm above using a random pivot is an example of this type of algorithm. The randomness itself does not effect the correctness of the algorithm, and instead affects the runtime of the algorithm.
-
-
-Another type of randomized algorithm, which we will cover later in the class, uses randomness internally but guarantees a particular runtime. These algorithms often sacrifice correctness (they're not correct all of the time), but their running time is not random.
 
 \end{document}
