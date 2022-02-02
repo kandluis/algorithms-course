@@ -1,0 +1,319 @@
+% !TEX options=--shell-escape
+\documentclass [12pt]{article} 
+
+\usepackage {amsmath}
+\usepackage {amsthm}
+\usepackage {amssymb}
+\usepackage {graphicx} 
+\usepackage {float}
+\usepackage {multirow}
+\usepackage {xcolor}
+\usepackage {algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage {array} 
+\usepackage {booktabs} 
+\usepackage {url} 
+\usepackage {parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage {cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage {enumitem} 
+\usepackage {xparse} 
+\usepackage {verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage[cache=false]{minted}
+\usepackage{mdframed}
+\newtheorem{theorem}{Theorem}
+
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+
+\DeclareTColorBox {Solution}{}{breakable, title={Solution}}
+\DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}}
+\DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
+\DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
+\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+
+\begin {document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Homework 3} } 
+\vspace {1em} 
+\begin {Instruction} 
+
+\paragraph {Due.} Tuesday, February 8th, 2022 @ 11:59 PM!
+\end {Instruction} 
+
+\vspace {1em} 
+\begin {Instruction} \paragraph {Homework Expectations:} Please see \href{https://www.comp285.ml/homework/#general-homework-information}{Homework}.
+\end {Instruction}
+
+\vspace {1em} 
+\begin {Instruction} 
+
+\paragraph {Exercises} The following questions are exercises. We encourage you to work with a group and discuss solutions to make sure you understand the material.
+
+\paragraph {Points} This assignment is graded out of 100 points. However, you can get up to 140 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
+
+\end {Instruction} 
+
+\begin{centering}
+\section*{Fun with Divide and Conquer, Sorting, and Medians}
+\end{centering}
+
+\begin{Instruction}
+
+\paragraph{Written Problems} The following questions are to be submitted in written/typed form to gradescope.
+
+\end{Instruction}
+
+\section{Exercise: A faster MergeSort? \Points{20}}
+Inspired by all of our discussion on recursion and sorting, Miah, Ryan, and Jordan get together to try and figure out a faster\footnote{We will not cover in class, but it has been proven that there is no deterministic algorithm faster than $\theta(n \log n)$ for sorting numbers using comparisons.} way to sort! After many attempts, they write down the following sorting function:
+
+\vspace{2em}
+\begin{minted}[linenos=true]{cpp}
+// MergeSort algorithm!
+std::vector<int> mergeSortN(const std::vector<int>& input) {
+    const std::size_t n = input.size();
+    if (n <= 1) {
+        return input;
+    }
+    std::vector<std::vector<int>> sortedSubvectors = {};
+    for (int i = 0; i < n; i++) {
+        std::vector<int> temp = mergeSortN(
+            {input.begin() + i, input.begin() + i + 1}
+        );
+        sortedSubvectors.push_back(temp);
+    }
+    std::vector<int> sortedA = {};
+    for (const std::vector<int> subVector : sortedSubvectors) {
+        sortedA = merge(sortedA, subVector);
+    }
+    return sortedA;
+}
+\end{minted}
+
+\subsection{What is this doing!? \Points{10} }
+In your own words, describe that the algorithm above is doing. This should not take more than a few sentences, but should highlight how this is different from the normal implementation of \texttt{MergeSort}.
+
+\Expecting{A few sentences describing, in plain English, what the algorithm above does.}
+
+\subsection{How fast is it?! \Points{10}}
+Jordan claims this version of \texttt{MergeSort} is much faster than any versions we've seen before. This is his argument:
+
+\begin{displayquote}
+    This modified \texttt{MergeSort} splits the array into $n$ subproblems of size $O(1)$ immediately. We therefore don’t waste time with the `$log(n)$ levels’ worth of splitting. Additionally, in this modified sort, we’re calling \texttt{Merge} on a bunch of subvectors of size $1$. Each merge would therefore take time
+
+    $$
+        O(\text{size of subvector A}) + O(\text{size of subvector B}) = O(1) + O(1) = O(1)
+    $$
+    That's contant time per merge! Yay! We therefore have an algorithm that sorts the input array in $O(n)$ time - $n$ merges of $O(1)$ each!
+\end{displayquote}
+
+Sadly, Jordan's analysis is \textbf{wrong}. It was a valiant try, though. Let's help Miah, Ryan, and Jordan out! What mistake are they making in their analysis above, and what is the true runtime of their modified \texttt{MergeSort}.
+
+\Expecting{An explanation (one sentence) that summarizes the mistake in the above reasoning and the correct runtime of \texttt{mergeSortN} along with an explanation (another sentence).} 
+
+
+\pagebreak
+\section{Interview Practice: Finding Matching Elements \Points{20}}
+Caleb is working on a ``search'' algorithm at Foogle. He is given an array \texttt{input} of $n$ integers that is sorted in ascending order and contains only unique elements. That is to say, if his array is
+$$
+a = [a_1, a_2, \cdots, a_{n-1}, a_n]
+$$
+
+then $a_1 < a_2 < \cdots < a_{n-1} < a_n$. 
+
+His project is to search the above array and find the element such that its index is equal to its value, or returns that such $i$ does not exist. That is to say, the algorithm finds $i$ such that $i = a_i$.
+
+\subsection{A first proposal. \Points{10}}
+\label{subsec:first_proposal}
+Caleb proposes the following pseudo-code for an algorithm that solves the problem described above.
+
+\begin{verbatim}
+Algorithm:
+    Input: A vector "input" sorted in ascending order with no duplicates.
+    Outputs: The index i such that the i-th index contains the value i.
+
+    n = len(input)
+    for i = 0 to i = n - 1
+        if (i == input[i]):
+            return i
+
+    throw "No such index exists"
+\end{verbatim}
+
+Describe in plain English how Caleb's algorithm works, and provide the big-Oh running time.
+
+\Expecting{A few sentences describing how the algorithm Caleb wrote works in plain English, as well as $O(\cdots)$ where $\cdots$ is filled in with the proper running time.}
+
+\subsection{Your Proposal. \Points{10}}
+\label{subsec:second_proposal}
+After looking at Caleb's proposed algorithm, you realize that he's not taking advantage of the fact that the input array is sorted. Give an $O(\log n)$ algorithm that solves the same problem (eg, it finds the index $i$ such that $i = a_i$ or returns that such $i$ does not exist). If there are multiple such $i$s, your algorithm can return any of them \footnote{Consider a divide-and-conquer approach, similar to binary search! If you'd like to refresh your memory on binary search, see this \href{https://www.youtube.com/watch?v=P3YID7liBug}{video}.}.
+
+\Expecting{Pseudocode for you algorithm, similar to what Caleb wrote in Part \ref{subsec:first_proposal}, as well as a plain English description of what your algorithm is doing and why it is correct. You \textbf{do not} need to proof correcness.}
+
+
+\pagebreak
+\section{Interview Practice: Finding Medians \Points{40}}
+You are given two arrays, each of length $n$. Your goal is to find the median of all elements of the two arrays.
+
+
+\subsection{Unsorted Arrays \Points{10}}
+If the arrays \textbf{are not sorted}, give a $\Theta(n \log n)$ algorithm that returns the median of the combined arrays.
+
+\Expecting {A short English description of your approach, the pseudocode (similar to Part \ref{subsec:second_proposal}), and an explanation of your algorithm's runtime.}.
+
+
+\subsection{Unsorted Arrays But Faster \Points{10}} 
+
+If the arrays \textbf{are not sorted}, give an $\Theta(n)$ algorithm that returns the median of the combined arrays\footnote{Hint: You can use `Select(A, k)' directly, without explanation, since this was given in lecture}.
+
+\Expecting {A short English description of your approach, the pseudocode (similar to Part \ref{subsec:second_proposal}), and an explanation of your algorithm's runtime.}.
+
+
+\subsection{Sorted Arrays \Points{20}}
+
+If the arrays \textbf{are sorted}, give an $O(\log n)$ algorithm that returns the median of the combined arrays. Here are a few hints to help you. Try to look at these only after you've given the problem a bit of thought on your own.
+
+\begin{enumerate}[label=Hint \arabic*]
+    \item You probably want to use divide-and-conquer.
+    \item Calculating the median of a single sorted array can be done in $O(1)$ time (how?).
+    \item If the biggest element in one array (eg, the last element) is smaller than the smallest element in another array (eg, the first element), you can also compute the median $O(1)$ time (how?).
+    \item If you look at the medians of the two arrays, how does that help you split the problem into parts? What do you know if the median of the two arrays are equal? What if one is bigger than the other?
+\end{enumerate}
+
+\Expecting {A short English description of your approach, the pseudocode (similar to Part \ref{subsec:second_proposal}), and an explanation of your algorithm's runtime.}.
+
+\pagebreak
+\section {Randomized Algorithms \Points {10}} 
+\label{sec:last}
+
+In this exercise, we'll explore different types of randomized algorithms. We say that a randomized algorithm is a \textbf {Las Vegas algorithm} if it is always correct (that is, it returns the right answer with probability 1), but the running time is a random variable. We say that a randomized algorithm is a \textbf {Monte Carlo algorithm} if there is some probability that it is incorrect. For example, QuickSort (with a random pivot) is a Las Vegas algorithm, since it always returns a sorted array, but it might be slow if we get very unlucky. 
+
+We will visit the Majority Element problem to get more insight on randomized algorithms. The Majority Element problem is to find the element in a collection of elements that occurs at least half of the time. See Algorithm \ref{alg:isMajority} for how we would check if an element is the majority.
+
+We will assume that such an element always exists.
+
+\vspace{2em}
+\begin{minted}[linenos=true]{cpp}
+// Returns 2, because it occurs 4 times which is greater
+// than 6/2 = 3.
+findMajorityElement({2, 2, 2, 2, 3, 5});
+// Returns 10, because it occurs 3 times which is greater
+// than 5/2 = 2.5
+findMajorityElement({10, 10, 10, 2, 4});
+// Returns 4 because it occurs 3 times, which is greater
+// than 4/2 = 2.
+findMajorityElement({4, 4, 2, 4})
+\end{minted}
+
+\vspace{2em}
+\begin{center} 
+\begin{tabular}{|c|p{3cm}|p{2cm}|p{2cm}|p{4cm}|}
+\hline 
+Algorithm & Monte Carlo or Las Vegas? & Expected running time & Worst-case running time & Probability of returning a majority element \\
+\hline 
+\textbf {Algorithm 1} & & & & \\ 
+\hline 
+\textbf {Algorithm 2} & & & & \\
+\hline 
+\textbf {Algorithm 3} & & & & \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+\Expecting {Your filled in-table. You may use asymptotic notation for the running times.} \newpage 
+
+\begin{algorithm}[H]
+    \KwIn {A population $P$ of $n$ elements}
+    \While {true} { 
+        Choose a random $p \in P$\;
+        \If {\textsc {isMajority}($P$, $p$)}{
+            \Return { $p$}\; 
+        }
+    } 
+    \caption {\textsc {findMajorityElement1}}
+\end{algorithm} 
+
+\begin{algorithm}[H]
+    \KwIn {A population $P$ of $n$ elements}
+    \For {100 iterations} { 
+        Choose a random $p \in P$\;
+        \If {\textsc {isMajority}($P$, $p$)}{ 
+            \Return { $p$ }\;
+        } 
+    }
+    \Return { $P[0]$\;} 
+    \caption {\textsc {findMajorityElement2}}
+\end{algorithm} 
+
+\begin{algorithm}[H]
+    \KwIn {A population $P$ of $n$ elements}
+    Put the elements in $P$ in a random order.\; 
+    \tcc{Assume it takes time $\Theta (n)$ to put the $n$ elements in a random order}
+    \For { $p \in P$ } {
+        \If {\textsc {isMajority}($P$, $p$)}{
+            \Return { $p$ }\; 
+        }
+    }
+    \caption {\textsc {findMajorityElement3}}
+\end{algorithm} 
+
+\begin{algorithm}[H]
+    \KwIn {A population $P$ of $n$ elements and a element $p \in P$}
+    \KwOut {True if $p$ is a member of a majority species} 
+    count $\gets $ 0\;
+    \For { $q \in P$ } {
+        \If { $p = q$ }{
+            count ++\;
+        }
+    }
+    \If { count $> n/2$ }{
+        \Return {True}\;
+    } \Else {
+        \Return {False}\;
+    }
+    \caption {\textsc {isMajority}} 
+    \label{alg:isMajority}
+\end{algorithm} 
+
+
+
+\pagebreak
+\begin{Instruction}
+
+\paragraph{Coding Problems} The following questions are to be submitted as a ".zip" file on Gradescope. 
+
+\end{Instruction}
+
+\section{Coding \Points{50}}
+\Points{50} After completing the written portion of the assignment, you should submit to \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+You can get your starter code for the coding portion \href{https://replit.com/team/COMP285/HW2-Code}{here}.
+
+Note there are coding questions from LeetCode as well as on repl.it. Please reference the \texttt{README.md} included in your starter code for detailed instructions.
+
+\section*{Submitting the Assignment}
+
+This assignment is a combination of written and programming questions. Both portions of the assignment should be submitted through \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+The "Homework 3: Fun with Divide and Conquer, Sorting, and Medians" assignment is the written portion, for which you should submit a \textbf{typed} response to the non-coding questions (questions 1-\ref{sec:last}). Each response should clearly be marked with its corresponding number. You are free to use the provided templates, print the questions and write your answers, or to simply type your responses on a blank document (whatever works for you).
+
+The "Homework 3: Coding" is the programming portion of the assignment. For this portion, download the ".zip" file from replit and upload this ".zip" file as your answer to \href{https://www.gradescope.com/courses/350304}{Gradescope}. You can upload the assignment as many times as you want.
+
+
+To summarize, do the following:
+\begin{enumerate}
+    \item Submit your \textbf{typed} responses to the non-coding portion of the assignment on Gradescope for "HomewFun with Divide and Conquer, Sorting, and Medians"
+    \item Submit your \textbf{code files} as a ".zip" to Gradescope for "Homework 3: Coding".
+    \item Fill out this \textbf{Google Form} (\href{https://forms.gle/ELVUbA9Tawrr4oFU8}{https://forms.gle/ELVUbA9Tawrr4oFU8}) to help me track your thoughts on the homework.
+\end{enumerate}
+
+\end {document} 
