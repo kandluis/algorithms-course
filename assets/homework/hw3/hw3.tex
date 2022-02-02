@@ -73,7 +73,21 @@
 
 \end{Instruction}
 
-\section{Exercise: A faster MergeSort? \Points{20}}
+\section{Getting to Know You \Points{10}}
+
+As part of this homework assignment, I'd like to get to know each of you.
+
+Do the following:
+
+\begin{itemize}
+    \item \Points{5} Schedule a 10 minute conversation with me in the available slots \href{https://calendly.com/comp285-prof/get-to-know-you?month=2022-02}{here}.
+    \item \Points{5} When you're done with the homework, complete this \href{https://forms.gle/KpC8RJ3gvkPgQPYY7}{form}.
+\end{itemize}
+
+\Expecting{You should have scheduled a meeting with me for an available slot and submit the form. All of this is tracked and this is how we'll confirm to give you credit for this question.}
+
+\pagebreak
+\section{Exercise: A faster MergeSort? \Points{10}}
 Inspired by all of our discussion on recursion and sorting, Miah, Ryan, and Jordan get together to try and figure out a faster\footnote{We will not cover in class, but it has been proven that there is no deterministic algorithm faster than $\theta(n \log n)$ for sorting numbers using comparisons.} way to sort! After many attempts, they write down the following sorting function:
 
 \vspace{2em}
@@ -99,12 +113,12 @@ std::vector<int> mergeSortN(const std::vector<int>& input) {
 }
 \end{minted}
 
-\subsection{What is this doing!? \Points{10} }
+\subsection{What is this doing!? \Points{5} }
 In your own words, describe that the algorithm above is doing. This should not take more than a few sentences, but should highlight how this is different from the normal implementation of \texttt{MergeSort}.
 
 \Expecting{A few sentences describing, in plain English, what the algorithm above does.}
 
-\subsection{How fast is it?! \Points{10}}
+\subsection{How fast is it?! \Points{5}}
 Jordan claims this version of \texttt{MergeSort} is much faster than any versions we've seen before. This is his argument:
 
 \begin{displayquote}
