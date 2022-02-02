@@ -8,6 +8,9 @@ notes_source: "/assets/lectures/lecture9.tex"
 slides_pdf: "https://drive.google.com/file/d/13481i_MaUtiLletDVLOvkkh1Lr45tAzf/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/1WyxUQI1YSlrieSBIOSxEwxUfKCNuhNP1JXwpPV5ir0g/edit?usp=sharing"
 textbook: CLRS 5.1, 5.2, 5.3, 7
+recording: "https://ncat.zoom.us/rec/share/NkZrlSmSOWXGO6EvXtWb8PwI5vIVyyQ8tx_2qyR7qynE2jLtIB3tsRhJYjF6rbkR.gIghfAFlrOc1KuWp?startTime=1643821171000"
+passcode: "v%92@Hkg"
+youtube: "https://youtu.be/lQRvZt68nmw"
 ---
 
 ##### Code

@@ -19,6 +19,3 @@ Feb 18
 Feb 21
 : **Lecture**{: .label .label-purple}[Graphs Review & Practice]({{"Graphs Review & Practice" | slugify | prepend: "/lectures/#" | relative_url }})
 
-Feb 22
-: **Homework Due @ 11:59pm**{: .label .label-red}[HW5]({{ "/homework/#hw5" | relative_url }})
-

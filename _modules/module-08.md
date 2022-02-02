@@ -4,6 +4,7 @@ title: Midterm & Spring Break
 
 Mar 2
 : **Lecture**{: .label .label-blue}[Midterm Review]({{"Midterm Review" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Homework Due @ 11:59pm**{: .label .label-red}[HW6]({{ "/homework/#hw6" | relative_url }})
 : **HW7 released**{: .label .label-blue}[HW7]({{ "/homework/#hw7" | relative_url }})
 
 Mar 4
