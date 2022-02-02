@@ -3,6 +3,10 @@ title: Week 3 Announcement
 week: 2
 date: 2022-01-31
 ---
+#### HW3 Released
+See [Homework 3: Fun with Divide and Conquer, Sorting, and Medians]({{ "/homework/#hw3" | absolute_url }}) for the full details! It is due Wednesday 2/9 @ 11:59PM! Please *start early* to catch issues. If you have questions, please make a post on [Piazza](https://piazza.com/north_carolina_at_state_university/spring2022/comp285/home)!
+
+
 #### Evening Office Hours on Tuesday 2/1.
 
 As requested by a few students I will reschedule my student hours to later in the evening.
