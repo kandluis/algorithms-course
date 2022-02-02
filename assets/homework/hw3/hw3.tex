@@ -47,7 +47,7 @@
 \vspace {1em} 
 \begin {Instruction} 
 
-\paragraph {Due.} Tuesday, February 8th, 2022 @ 11:59 PM!
+\paragraph {Due.} Tuesday, February 9th, 2022 @ 11:59 PM!
 \end {Instruction} 
 
 \vspace {1em} 
@@ -59,7 +59,7 @@
 
 \paragraph {Exercises} The following questions are exercises. We encourage you to work with a group and discuss solutions to make sure you understand the material.
 
-\paragraph {Points} This assignment is graded out of 100 points. However, you can get up to 140 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
+\paragraph {Points} This assignment is graded out of 100 points. However, you can get up to 120 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
 
 \end {Instruction} 
 
@@ -136,7 +136,7 @@ Sadly, Jordan's analysis is \textbf{wrong}. It was a valiant try, though. Let's 
 
 
 \pagebreak
-\section{Interview Practice: Finding Matching Elements \Points{20}}
+\section{Interview Practice: Finding Matching Elements \Points{10}}
 Caleb is working on a ``search'' algorithm at Foogle. He is given an array \texttt{input} of $n$ integers that is sorted in ascending order and contains only unique elements. That is to say, if his array is
 $$
 a = [a_1, a_2, \cdots, a_{n-1}, a_n]
@@ -146,7 +146,7 @@ then $a_1 < a_2 < \cdots < a_{n-1} < a_n$.
 
 His project is to search the above array and find the element such that its index is equal to its value, or returns that such $i$ does not exist. That is to say, the algorithm finds $i$ such that $i = a_i$.
 
-\subsection{A first proposal. \Points{10}}
+\subsection{A first proposal. \Points{5}}
 \label{subsec:first_proposal}
 Caleb proposes the following pseudo-code for an algorithm that solves the problem described above.
 
@@ -167,7 +167,7 @@ Describe in plain English how Caleb's algorithm works, and provide the big-Oh ru
 
 \Expecting{A few sentences describing how the algorithm Caleb wrote works in plain English, as well as $O(\cdots)$ where $\cdots$ is filled in with the proper running time.}
 
-\subsection{Your Proposal. \Points{10}}
+\subsection{Your Proposal. \Points{5}}
 \label{subsec:second_proposal}
 After looking at Caleb's proposed algorithm, you realize that he's not taking advantage of the fact that the input array is sorted. Give an $O(\log n)$ algorithm that solves the same problem (eg, it finds the index $i$ such that $i = a_i$ or returns that such $i$ does not exist). If there are multiple such $i$s, your algorithm can return any of them \footnote{Consider a divide-and-conquer approach, similar to binary search! If you'd like to refresh your memory on binary search, see this \href{https://www.youtube.com/watch?v=P3YID7liBug}{video}.}.
 
@@ -175,7 +175,7 @@ After looking at Caleb's proposed algorithm, you realize that he's not taking ad
 
 
 \pagebreak
-\section{Interview Practice: Finding Medians \Points{40}}
+\section{Interview Practice: Finding Medians \Points{30}}
 You are given two arrays, each of length $n$. Your goal is to find the median of all elements of the two arrays.
 
 
@@ -192,7 +192,7 @@ If the arrays \textbf{are not sorted}, give an $\Theta(n)$ algorithm that return
 \Expecting {A short English description of your approach, the pseudocode (similar to Part \ref{subsec:second_proposal}), and an explanation of your algorithm's runtime.}.
 
 
-\subsection{Sorted Arrays \Points{20}}
+\subsection{Sorted Arrays \Points{10}}
 
 If the arrays \textbf{are sorted}, give an $O(\log n)$ algorithm that returns the median of the combined arrays. Here are a few hints to help you. Try to look at these only after you've given the problem a bit of thought on your own.
 
@@ -206,7 +206,7 @@ If the arrays \textbf{are sorted}, give an $O(\log n)$ algorithm that returns th
 \Expecting {A short English description of your approach, the pseudocode (similar to Part \ref{subsec:second_proposal}), and an explanation of your algorithm's runtime.}.
 
 \pagebreak
-\section {Randomized Algorithms \Points {10}} 
+\section {Exercise: Randomized Algorithms \Points {10}} 
 \label{sec:last}
 
 In this exercise, we'll explore different types of randomized algorithms. We say that a randomized algorithm is a \textbf {Las Vegas algorithm} if it is always correct (that is, it returns the right answer with probability 1), but the running time is a random variable. We say that a randomized algorithm is a \textbf {Monte Carlo algorithm} if there is some probability that it is incorrect. For example, QuickSort (with a random pivot) is a Las Vegas algorithm, since it always returns a sorted array, but it might be slow if we get very unlucky. 
@@ -310,9 +310,11 @@ Algorithm & Monte Carlo or Las Vegas? & Expected running time & Worst-case runni
 \section{Coding \Points{50}}
 \Points{50} After completing the written portion of the assignment, you should submit to \href{https://www.gradescope.com/courses/350304}{Gradescope}.
 
-You can get your starter code for the coding portion \href{https://replit.com/team/COMP285/HW2-Code}{here}.
+You can get your starter code for the coding portion \href{https://replit.com/team/COMP285/HW3-Code}{here}.
 
-Note there are coding questions from LeetCode as well as on repl.it. Please reference the \texttt{README.md} included in your starter code for detailed instructions.
+Note that the starter code also include a few test cases you can run on repl.it. However, the full test suite is the one run on Gradescope.
+
+Please reference the \texttt{README.md} included in your starter code for detailed instructions.
 
 \section*{Submitting the Assignment}
 
@@ -322,12 +324,5 @@ The "Homework 3: Fun with Divide and Conquer, Sorting, and Medians" assignment i
 
 The "Homework 3: Coding" is the programming portion of the assignment. For this portion, download the ".zip" file from replit and upload this ".zip" file as your answer to \href{https://www.gradescope.com/courses/350304}{Gradescope}. You can upload the assignment as many times as you want.
 
-
-To summarize, do the following:
-\begin{enumerate}
-    \item Submit your \textbf{typed} responses to the non-coding portion of the assignment on Gradescope for "HomewFun with Divide and Conquer, Sorting, and Medians"
-    \item Submit your \textbf{code files} as a ".zip" to Gradescope for "Homework 3: Coding".
-    \item Fill out this \textbf{Google Form} (\href{https://forms.gle/ELVUbA9Tawrr4oFU8}{https://forms.gle/ELVUbA9Tawrr4oFU8}) to help me track your thoughts on the homework.
-\end{enumerate}
 
 \end {document} 
