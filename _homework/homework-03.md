@@ -6,4 +6,5 @@ due: 2022-02-09 23:59
 pdf: "/assets/homework/hw3/hw3.pdf"
 tex: "/assets/homework/hw3/hw3.tex"
 word: "/assets/homework/hw3/hw3.docx"
+walkthrough: "https://youtu.be/dGckrlCFF9g"
 ---
