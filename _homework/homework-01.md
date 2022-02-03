@@ -6,5 +6,5 @@ due: 2022-01-25 23:59
 pdf: "/assets/homework/hw1/hw1.pdf"
 tex: "/assets/homework/hw1/hw1.tex"
 word: "/assets/homework/hw1/hw1.docx"
-sulotion: ""
+solution: "https://blackboard.ncat.edu/webapps/blackboard/execute/content/file?cmd=view&mode=designer&content_id=_5222897_1&course_id=_3567742_1"
 ---
