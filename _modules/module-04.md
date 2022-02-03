@@ -13,4 +13,4 @@ Feb 2
 : **HW3 released**{: .label .label-blue}[HW3]({{ "/homework/#hw3" | relative_url }})
 
 Feb 4
-: **Lecture**{: .label .label-purple}[Bucket Sort and Other Sorts]({{"QuickSort and Bucket Sorts" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[QuickSort and Non-Comparison Sorts]({{"QuickSort and Non-Comparison Sorts" | slugify | prepend: "/lectures/#" | relative_url }})
