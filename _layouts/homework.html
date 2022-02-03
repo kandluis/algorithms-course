@@ -31,7 +31,7 @@
       {% endif %}
       {% if page.solution %}
       <li>
-        Solution: [<a href="{{ page.solution | absolute_url }}">Blackboard</a>]
+        Solution: [<a href="{{ page.solution | absolute_url }}">Blackboard</a>]{% if page.solution_walkthrough %}[<a href="{{ page.solution_walkthrough }}">YouTube</a>] {% endif %}
       </li>
       {% endif %}
     </ul>
