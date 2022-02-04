@@ -8,6 +8,9 @@ notes_source: "/assets/lectures/lecture10.tex"
 slides_pdf: "https://drive.google.com/file/d/13UvV-i8DWu2-vhYQQRdGHfptxDrcSUkD/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/1X7KhZmNQxhgzwM6SCWdhQb7oy3NSdXov2yuv2JmXjlw/edit?usp=sharing"
 textbook: CLRS 8.1, 8.2
+recording: "https://ncat.zoom.us/rec/share/a4xOjlyWWgt99GwHkr73j4XF3AKvNFy6Oz4sL9zc1mbwLFlVTjYkDEKPjPN753nj.gKl3wpG2O4O0dEV7?startTime=1643994042000"
+passcode: "ygf7b=Q!"
+youtube: "https://youtu.be/--hRw8h0WAk"
 ---
 
 ##### Additional Reading
