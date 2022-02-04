@@ -13,7 +13,7 @@ textbook: CLRS 8.1, 8.2
 ##### Additional Reading
 - [Avrim Blum’s notes on sorting lower bounds](http://www.cs.cmu.edu/~avrim/451f11/lectures/lect0913.pdf)
 
-#### Probability Review
+##### Probability Review
 - [Quick Review of Discrete Probability](https://www.youtube.com/watch?v=uLeIMwMHX5U&list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_&index=37)
 
 ##### Video Resources
