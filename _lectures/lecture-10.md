@@ -6,7 +6,7 @@ location: Graham Hall 210
 notes: "/assets/lectures/lecture10.pdf"
 notes_source: "/assets/lectures/lecture10.tex"
 slides_pdf: "https://drive.google.com/file/d/13UvV-i8DWu2-vhYQQRdGHfptxDrcSUkD/view?usp=sharing"
-slide_ppt: "https://docs.google.com/presentation/d/1X7KhZmNQxhgzwM6SCWdhQb7oy3NSdXov2yuv2JmXjlw/edit?usp=sharing"
+slides_ppt: "https://docs.google.com/presentation/d/1X7KhZmNQxhgzwM6SCWdhQb7oy3NSdXov2yuv2JmXjlw/edit?usp=sharing"
 textbook: CLRS 8.1, 8.2
 ---
 
