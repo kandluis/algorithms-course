@@ -1,6 +1,6 @@
 ---
 title: Week 3 Announcement
-week: 2
+week: 3
 date: 2022-01-31
 ---
 #### HW3 Released
@@ -15,7 +15,7 @@ I'll be hosting them on [Zoom](https://ncat.zoom.us/j/7927890938) from 5:00pm - 
 
 
 #### Quiz 2
-[Quiz 2](https://forms.gle/bZeYyCUZufpZk5rV9) will be released at the start of Lecture on Monday 1/24! It will close by end of day on Monday - you are required to fill it out! See our [Quiz Policy]({{ "/policies/#quiz-policy" | absolute_url }}) for details on how each quiz impact your grade.
+[Quiz 2](https://forms.gle/bZeYyCUZufpZk5rV9) will be released at the start of Lecture on Monday 1/31! It will close by end of day on Monday - you are required to fill it out! See our [Quiz Policy]({{ "/policies/#quiz-policy" | absolute_url }}) for details on how each quiz impact your grade.
 
 
 #### HW2 Due
