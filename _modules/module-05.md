@@ -3,7 +3,7 @@ title: Trees - How to efficiently organize data in databases
 ---
 
 Feb 7
-: **Lecture**{: .label .label-purple}[Tree Properties, Algorithms, and Traversals]({{"Tree Properties, Algorithms, and Traversals" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Radix Sort and Wrap-Up]({{"Radix Sort and Wrap-Up" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Feb 9
 : **Lecture**{: .label .label-purple}[Binary Trees]({{"Binary Trees" | slugify | prepend: "/lectures/#" | relative_url }})

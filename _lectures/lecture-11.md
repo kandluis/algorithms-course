@@ -1,5 +1,5 @@
 ---
-title: Tree Properties, Algorithms, and Traversals
+title: Radix Sort and Wrap-Up
 number: 11
 time: 2022-02-07 12:00
 location: Graham Hall 210
