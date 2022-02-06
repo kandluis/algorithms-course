@@ -3,11 +3,12 @@ title: Tree Properties, Algorithms, and Traversals
 number: 11
 time: 2022-02-07 12:00
 location: Graham Hall 210
+quiz: "https://forms.gle/gBaCJEuHYMiwqiaH6"
 notes: "assets/lectures/lecture11.pdf"
 notes_source: "assets/lectures/lecture11.tex"
 slides_pdf: "https://drive.google.com/file/d/11wimChUNOes7_9C0U8qlfut4uZWzjaoJ/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/11K7EyO060UgHGSNOAccZ1ILyOAmppL8sRDbJ7bqy14U/edit?usp=sharing"
-textbook: CLRS 8.1, 8.2,
+textbook: CLRS 8.1, 8.2
 ---
 
 #### Video Resources
