@@ -105,36 +105,6 @@ for the asymptotic running time?) Note that we might make a different choice of 
 So the running time of Radix Sort (in terms of $n$) depends on how large the numbers in the input are as a function of $n$. If the upper bound $M \leq n^c$ for some constant $c$, then the running time is $O(n)$. In this regime, Radix Sort beats MergeSort and Quicksort. On the other hand, if $M = 2^n$ , then the running time is $O(n^2/\log n)$. In this regime, we would not use Radix Sort.
 
 
-\section{Data Structures}
-
-Thus far in this course we have mainly discussed algorithm design, and have specified algorithms at a relatively high level. For example, in describing sorting algorithms, we often assumed that we could insert numbers into a list in constant time; we didn’t worry too much about the actual implementation of this, and took it as an assumption that this could actually be implemented (e.g. via a linked-list).
-
-
-We will wrap-up this lecture by talking about the actual design and implementation of some useful datastructures. The purpose is mainly to give you a taste of data-structure design. We won’t discuss this area too much more in the course, and will switch back to discussing higher-level algorithms. 
-
-To motivate the data structures that we will discuss in this course, consider the following table that lists a bunch of basic operations that we would like to perform on a set/list of numbers, together with the worst-case runtime of performing those operation for two of the data structures that you are (hopefully) familiar with: linked lists of n (unsorted) numbers, and an array of n sorted numbers. In this course, we will assume that all the numbers we store are unique.
-
-\begin{center}
-\begin{tabular}{|c|p{2.4cm}|c|}
-\hline \\
-Operation & Runtime with Unsorted Linked Lists & Runtime with Sorted Array \\
-\hline \\
-Search (ie, find 17) & $\Theta(n)$ & $\Theta(\log n)$(via binary search) \\
-Select (ie, find 12 smallest element) & $\Theta(n)$ & $\Theta(1)$ (just look at the 12th element) \\
-Rank (ie, \# elt. less than 17) & $\Theta(n)$ & $\Theta(\log n)$\\
-Predecessor/Successor & $\Theta(n)$ & $\Theta(1)$ \\
-Insert element & $\Theta(1)$ & $\Theta(n)$ \\
-Delete element & $\Theta(1)$ & $\Theta(n)$ \\
-\hline
-\end{tabular}
-\end{center}
-
-
-The above table makes Sorted Arrays look like a pretty decent data structure for \textit{static} data. In many applications, however, the data changes often, in which case the $\Theta(n)$ time it takes to insert or delete an element is prohibitive. This prompts the question: \textit{Is it possible to have one data structure that is the best of both worlds (logarithmic or constant time for all these operations)?} The answer is, essentially, ``Yes'', provided we don’t mind if some of the $\Theta(1)$’s turn into $\Theta(log n)$. 
-
-We will cover these data structures in more detail next lecture.
-
-
 
 
 

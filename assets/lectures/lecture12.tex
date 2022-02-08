@@ -51,8 +51,32 @@ Adapted From Virginia Williams' lecture notes.
 \section*{Data Structures: Heaps and Red-Black Trees}
 \end{centering}
 
-\section{Introduction}
-From last lecture, we learned about Sorted Arrays and Linked lists as data structures to store data. In this lecture, we'll sketch out another data structure. It should be mainly review from COMP 280, though we will go into more rigorous detail to proof our claims.
+\section{Data Structures Review}
+
+Thus far in this course we have mainly discussed algorithm design, and have specified algorithms at a relatively high level. For example, in describing sorting algorithms, we often assumed that we could insert numbers into a list in constant time; we didn’t worry too much about the actual implementation of this, and took it as an assumption that this could actually be implemented (e.g. via a linked-list).
+
+
+We will wrap-up this lecture by talking about the actual design and implementation of some useful datastructures. The purpose is mainly to give you a taste of data-structure design. We won’t discuss this area too much more in the course, and will switch back to discussing higher-level algorithms. 
+
+To motivate the data structures that we will discuss in this course, consider the following table that lists a bunch of basic operations that we would like to perform on a set/list of numbers, together with the worst-case runtime of performing those operation for two of the data structures that you are (hopefully) familiar with: linked lists of n (unsorted) numbers, and an array of n sorted numbers. In this course, we will assume that all the numbers we store are unique.
+
+\begin{center}
+\begin{tabular}{|c|p{2.4cm}|c|}
+\hline \\
+Operation & Runtime with Unsorted Linked Lists & Runtime with Sorted Array \\
+\hline \\
+Search (ie, find 17) & $\Theta(n)$ & $\Theta(\log n)$(via binary search) \\
+Select (ie, find 12 smallest element) & $\Theta(n)$ & $\Theta(1)$ (just look at the 12th element) \\
+Rank (ie, \# elt. less than 17) & $\Theta(n)$ & $\Theta(\log n)$\\
+Predecessor/Successor & $\Theta(n)$ & $\Theta(1)$ \\
+Insert element & $\Theta(1)$ & $\Theta(n)$ \\
+Delete element & $\Theta(1)$ & $\Theta(n)$ \\
+\hline
+\end{tabular}
+\end{center}
+
+
+The above table makes Sorted Arrays look like a pretty decent data structure for \textit{static} data. In many applications, however, the data changes often, in which case the $\Theta(n)$ time it takes to insert or delete an element is prohibitive. This prompts the question: \textit{Is it possible to have one data structure that is the best of both worlds (logarithmic or constant time for all these operations)?} The answer is, essentially, ``Yes'', provided we don’t mind if some of the $\Theta(1)$’s turn into $\Theta(log n)$. 
 
 We will sketch out the Binary Search Tree. Before talking about binary search trees, we sketch another data structure called Heap. Heaps are worse than both unsorted linked lists and sorted arrays in just about any parameter, except that they can allow for efficient ($O(\log n)$ time) insertions - still worse than linked lists. But there is one operation that Heaps do exceptionally well (again, $\Theta(\log n)$): \texttt{extract-min}, which outputs the minimum element, and then deletes it from the heap. Heaps (in their simple form that we consider here) still don't beat the asymptotic runtime of binary search trees for any operation, but they have two other advantages: they are much simpler, and if you only want to run insert and \texttt{extract-min} they are also much faster in practice.
 
