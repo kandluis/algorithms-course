@@ -8,6 +8,9 @@ notes_source: "assets/lectures/lecture12.tex"
 slides_pdf: "https://drive.google.com/file/d/13mobDlOpW8Oi2UuvIFz9MK1yWV5EWBEy/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/17Rn08NTu4Gt8LiqC-5XtPZkBD6JdHhJTS06cHyaVb1E/edit?usp=sharing"
 textbook: CLRS 12.1, 12.2, 12.3, 13
+recording: "https://ncat.zoom.us/rec/share/FimaD-iwbe6vhX216GP0-NXfb5frYSpmkN7aAjp0mpfl09ONGeNhsZOOnp2hJsoq.8JNK9iooPNQlNhV3?startTime=1644426022000"
+passcode: "q9N!@T&K"
+youtube: "https://youtu.be/euR7Kpm7WIo"
 ---
 
 #### Video Resources
