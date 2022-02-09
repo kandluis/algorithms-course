@@ -191,7 +191,7 @@ Look at each of the following examples of trees. If you can color the nodes red 
 As described in class, radix sort runs in $O(d(n + r ))$ where $n$ is the number of elements, $r$ is the base, and $d$ is the max length of the elements. For this problem, assume that radix sort uses counting sort, which does in fact run in $O(n + r)$ time. [\textbf{Note}: The question looks long
 but it is in fact very straightforward.]
 
-\subsection{Radix Sort on Characters \Points{5}}
+\subsection{Radix Sort on Characters \Points{4}}
 
 Pretend we want to use radix sort to sort a list of words $W$ in lexicographical (alphabetical) order. All words are padded with space characters (assume space comes before `a` lexicographically) to make them the same length. For the following set $W$, describe what the three variables $d$, $n$, and $r$ refer to (your explanation should include some reference to $W$ or its elements) and what their values would be for this problem.
 
@@ -201,21 +201,23 @@ $$
 
 \Expecting{values and descriptions for $d,n$ and $r$}
 
-\subsection{Radix Sort on Bit Strings \Points{5}}
+\subsection{Radix Sort on Bit Strings \Points{4}}
 Now suppose we convert each of the strings in $W$ to their ASCII representations ($8$-bit binary strings, with space mapping to $00100000$, so the word `the' becomes $40$ digits long - 8 digits per character plus 8 digits per padding space to make it as long as the longest word in $W$). We still want to use radix sort, and we want to treat these bit strings as literal strings (i.e., do not try to interpret the 8 bit strings into decimal
 numbers). Now what are the values for $d, n$, and $r$?
 
 \Expecting{values and description for $d,n$ and $r$}
 
-\subsection{Sorting with Dates \Points{5}} 
+\subsection{Sorting with Dates \Points{4}} 
 Now we're back to using the character strings from part (a), but you happen to have the date (day, month, year) that each word was first published in an English dictionary. You want to sort first by date, then use lexicographical ordering to breakties. You will do this by converting each of the original words in W into words with date information (digits) prepended, appended, or inserted somewhere in the string. Write the string you would use to represent the word ``jumps''jumps (first published November 19, 1562) so that it will be correctly sorted by radix sort for the given objective.
 
 \Expecting{ a string}
 
-\subsection{Binary Conversions Revisited \Points{5}}
+\subsection{Binary Conversions Revisited \Points{4}}
 You decide that because you only ever use the words in a certain list $V$ in everyday speech, you would like to save space and simply represent the first word in $V$ with the binary value `0', the second word with `1', the third with `10', etc., continuing to increment by one in binary (and no longer including date information). All subsequent occurences of a particular word $w$ receive the same binary assignment as the first occurence of $w$, all strings are padded with `0's to make them equal length. $V$ has n words in it, where $n > 2$. Give the time complexity of radix sort on the list $V$ with all words converted to their $0$-padded binary strings and explain (informally) why that is correct. Simplify your answer as much as possible where values of $d, n$, or $r$ are known.
 
-\subsection{One-Hot Encodings} 
+\Expecting{A runtime, and a brief justification}
+
+\subsection{One-Hot Encodings \Points{4}} 
 Not wanting to mess with binary conversions, you decide instead to represent the words in your vocabulary $V$ with "one-hot" vectors (vectors of length $n$ with all 0's except for a single `1' in a position corresponding to a particular word. For example, in $W$, the word ’the’ would be represented as the vector `10000000', since there are eight unique words in the list). Give the new worst-case time complexity of radix sort on the list $V$, again simplifying as much as possible and explaining (informally) why that is the correct complexity.
 
 \Expecting{A runtime, and a brief justification}
