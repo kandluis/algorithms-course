@@ -1,7 +1,7 @@
 ---
 title: Universal Hash Families and Intro to Graphs
 number: 14
-time: 2022-02-11 12:00
+time: 2022-02-16 12:00
 location: Graham Hall 210
 notes: "assets/lectures/lecture14.pdf"
 notes_source: "assets/lectures/lecture14.tex"
