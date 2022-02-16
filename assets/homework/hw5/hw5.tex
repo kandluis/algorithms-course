@@ -1,0 +1,297 @@
+% !TEX options=--shell-escape
+\documentclass [12pt]{article} 
+
+\usepackage {amsmath}
+\usepackage {amsthm}
+\usepackage {amssymb}
+\usepackage {graphicx} 
+\usepackage {float}
+\usepackage {multirow}
+\usepackage {xcolor}
+\usepackage {algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage {array} 
+\usepackage {booktabs} 
+\usepackage {url} 
+\usepackage {parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage {cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage {enumitem} 
+\usepackage {xparse} 
+\usepackage {verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage[cache=false]{minted}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usetikzlibrary{shapes.symbols}
+\newtheorem{theorem}{Theorem}
+
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+
+\DeclareTColorBox {Solution}{}{breakable, title={Solution}}
+\DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}}
+\DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
+\DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
+\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+\newcommand {\hint }[1]{\noindent {[\textbf {HINT:} \em #1 \em ]}} \newcommand {\pts }[1]{\textbf {(#1 pt.)}} 
+
+\begin{document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Homework 5} } 
+\vspace {1em} 
+\begin{Instruction} 
+
+\paragraph {Due.} Wednesday, February 23rd, 2022 @ 11:59 PM!
+\end{Instruction} 
+
+\vspace {1em} 
+\begin{Instruction} \paragraph {Homework Expectations:} Please see \href{https://www.comp285.ml/homework/#general-homework-information}{Homework}.
+\end{Instruction}
+
+\vspace {1em} 
+\begin{Instruction} 
+
+\paragraph {Exercises} The following questions are exercises. We encourage you to work with a group and discuss solutions to make sure you understand the material.
+
+\paragraph {Points} This assignment is graded out of 100 points. However, you can get up to 120 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
+
+\end{Instruction} 
+
+\begin{centering}
+\section*{Fun with Hashing}
+\end{centering}
+
+\begin{Instruction}
+
+\paragraph{Written Problems} The following questions are to be submitted in written/typed form to gradescope.
+
+\end{Instruction}
+
+\section{Interview Practice: Moose Tree \Points {20}} 
+
+A moose comes to you with the following claim. They say that they have come up with a new kind of binary search tree, called \texttt{mooseTree}, even better than red-black trees! 
+
+More precisely, \texttt{mooseTree} is a data structure that stores comparable elements in a binary search tree. It might also store other auxiliary information, but the moose won't tell you how it works. The moose claims that \texttt{mooseTree} supports the following operations: 
+
+\begin{itemize} 
+    \item \texttt{mooseInsert(k)} inserts an item with key $k$ into the \texttt{mooseTree}, maintaining the BST property. It does not return anything. It runs in time $O(1)$. 
+    \item \texttt{mooseSearch(k)} finds and returns a pointer to node with key $k$, if it exists in the tree. It runs in time $O(\log (n))$. 
+    \item \texttt{mooseDelete(k)} removes and returns a pointer to an item with key $k$, if it exists in the tree, maintaining the BST property. It runs in time $O(\log (n))$. 
+\end{itemize} 
+
+Above, $n$ is the number of items stored in the \texttt{mooseTree}. The moose says that all these operations are deterministic, and that \texttt{mooseTree} can handle arbitrary comparable objects. 
+
+
+\subsection{Making Moose Trees \Points{8}}
+
+You want to get a better understanding of the \texttt{mooseTree}. To do so, you think it'd be helpful to write an algorithm that takes as input a vector of unsorted elements and creates a mooseTree using the methods above. 
+
+
+We'll get you started.
+\begin{verbatim}
+algorithm makeMooseTree(A):
+    // Input: A is a vector of n comparable elements.
+    T = mooseTree() // creates an empty mooseTree.
+    // FILL THIS IN.
+    return T
+\end{verbatim}
+
+
+\Expecting{Completed pseudocode for the algorithm, the running time in $O(\cdots)$, and a short explanation justifying the running time.}
+
+\subsection{From Moose Trees to Sorted Vectors \Points{8}}
+
+Now that you understand how to make \texttt{mooseTree}s, you consider the opposite. How can you go from a \texttt{mooseTree} to an \textbf{sorted} vector?\footnote{If you're having trouble, take a look at Lecture 12, Slides 15-27}
+
+We'll get you started \footnote{Since the \texttt{mooseTree} is still a kind of binary search tree, you can access the root of \texttt{mooseTree} by calling \texttt{mooseTree.root()}.}.
+\begin{verbatim}
+algorithm getElements(T):
+    // Input: T is a mooseTree with n elements.
+    A = [] // an empty vector
+    // FILL THIS IN.
+    return A
+\end{verbatim}
+
+\Expecting{Completed pseudocode for the algorithm, the running time in $O(\cdots)$, and a short explanation justifying the running time.}
+
+
+\subsection{Wait a second... \Points{4}}
+You think the moose's logic is a bit loosey-moosey. How do you know the moose is wrong? 
+
+\textbf{Notes:} 
+\begin{itemize}
+    \item You may use results or algorithms that we have seen in class without further justification. 
+    \item Proofs that just say "since it's impossible to do these operations that fast in BST, this data structure can't exist" is not sufficient. 
+\end{itemize} 
+
+\Expecting {Use the results from the sections above (as well as results from class) to write a short explanation as to why the Moose is wrong.}
+
+
+\pagebreak
+\section{Interview Practice: Wise Duck \Points{20}} 
+
+A wise duck has knowledge of an array $A$ of length $n$, so that $A[i] \in \{1,\ldots ,k\}$ for all $i$ (note that the elements of $A$ are not necessarily distinct). You don't have direct access to the list, but you can ask the wise duck \em any \em yes/no questions about it. For example, you could ask ``If I remove $A[5]$ and swap $A[7]$ with $A[8]$, would the array be sorted?'' or ``are ducks related to grebes?'' 
+
+This time you did bring a paper and pencil, and your job is to write down all of the elements of $A$ in sorted order.\footnote {Note that you don't have any ability to change the array $A$ itself, you can only ask the wise duck about it.} You are allowed to take all the time you need to do any computations on paper with the wise duck's answers, but the wise duck charges one bandito burrito per question. 
+\vspace {-.2cm} 
+\begin{center} 
+\begin{tikzpicture} 
+    \node (a) {
+        \includegraphics [width=2cm]{alice}
+    };
+    \node (b) at (8,.5) {
+        \includegraphics [width=2cm]{wiseduck}
+    };
+    \node [draw, cloud, cloud puffs=20.5, cloud ignores aspect,fill=white] at (11,2.5) {
+        $A = [6,2,4,3,3,5,2,1,2,6]$
+    }; 
+    \node (c) at (3,2.8) {Is $7$ in the array?};
+    \node (d) at (5,2) {\textbf {No.}};
+    \node (e) at (3.5,1) {
+        \begin{minipage}{3.5cm}
+            \begin{center} 
+            Do duck quacks echo?
+            \end{center}
+        \end{minipage}
+    };
+    \node (f) at (4.5,-.2) {\textbf {Yes.}};
+    \draw (c) -- (a);
+    \draw (e) -- (a);
+    \draw (d) -- (b);
+    \draw (f) -- (b); 
+\end{tikzpicture}
+\end{center} 
+\vspace {-.7cm} 
+
+Design an algorithm which outputs a sorted version of $A$ which uses $O(k\log n)$ badito burritos. You may assume that you know $n$ and $k$, although this is not necessary. 
+
+\Expecting{Pseudocode and a clear English explanation of what it is doing. An explanation of why the algorithm uses $O(k \log n)$ ice cream cones. You do not need to prove that your algorithm is correct.} 
+
+\hint{One approach is to think first about what you would do for $k=2$: that is, when $A$ contains only the numbers $1$ and $2$. What information do you need to write down a sorted version of $A$ in this case?} 
+ 
+
+\pagebreak
+\section{Exercise: Hash Functions \Points{10}}
+With 217 students currently enrolled in computer science\footnote{See \href{https://www.ncat.edu/coe/departments/cs/undergrad-programs/index.php}{here} if you'd like to see other years!} at North Carolina A\&T University, we would like to keep track of student records. 
+
+The key for each person will be their 9-digit Banner ID.
+
+\subsection{Our own hash functions! \Points{5}}
+Consider using a hash table of size $80$ and the hash function $h(N) =$ sum of each digits of $N$. For example, $h(012345678) = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36$. 
+
+Is this a good hash function to use? List two reasons supporting your decision.
+
+\Expecting{The answer to whether this is a good hash function or not, and two reasons explaining why.}
+
+\subsection{Good hash families \Points{5}}
+Consider a hash table of $99$ buckets. For $m \in \{1, \cdots , 1000\}$, let $h_m(x) =$ last two digits of $mx$.  For example, $h_4(01234567)=$ last two digits of $4\times01234567=4938268 = 68$. Define $\mathcal{H} = \{h_i: i \in \{1, \cdots, 1000\}\}$. 
+
+Is $H$ a good family of hash functions? Justify your decision.
+
+\Expecting{The answer to whether $\mathcal{H}$ is a good family of hash functions or not, and a brief justification.}
+
+\pagebreak
+\section{Interview Practice: DFS Basics \Points{10}}
+\label{sec:last}
+
+Consider the following directed acyclic graph (DAG): 
+
+\begin{center}
+\begin{tikzpicture}[scale=0.15] 
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (18.2,-24.6) circle (3);
+    \draw (18.2,-24.6) node {$A$}; 
+    \draw [black] (33.7,-17.6) circle (3);
+    \draw (33.7,-17.6) node {$B$};
+    \draw [black] (40.2,-32.8) circle (3);
+    \draw (40.2,-32.8) node {$C$};
+    \draw [black] (54.4,-23.6) circle (3);
+    \draw (54.4,-23.6) node {$D$};
+    \draw [black] (68.6,-23.6) circle (3);
+    \draw (68.6,-23.6) node {$E$};
+    \draw [black] (57.4,-23.6) -- (65.6,-23.6);
+    \fill [black] (65.6,-23.6) -- (64.8,-23.1) -- (64.8,-24.1);
+    \draw [black] (20.93,-23.37) -- (30.97,-18.83);
+    \fill [black] (30.97,-18.83) -- (30.03,-18.71) -- (30.44,-19.62);
+    \draw [black] (34.88,-20.36) -- (39.02,-30.04);
+    \fill [black] (39.02,-30.04) -- (39.17,-29.11) -- (38.25,-29.5);
+    \draw [black] (42.72,-31.17) -- (51.88,-25.23);
+    \fill [black] (51.88,-25.23) -- (50.94,-25.25) -- (51.48,-26.09);
+    \draw [black] (21.01,-25.65) -- (37.39,-31.75);
+    \fill [black] (37.39,-31.75) -- (36.81,-31) -- (36.46,-31.94);
+    \draw [black] (36.58,-18.44) -- (51.52,-22.76);
+    \fill [black] (51.52,-22.76) -- (50.89,-22.06) -- (50.61,-23.02);
+    \draw [black] (19.736,-22.025) arc (146.19641:36.07693:28.811);
+    \fill [black] (66.96,-21.09) -- (66.9,-20.15) -- (66.09,-20.74);
+    \draw [black] (66.48,-25.721) arc (-47.8655:-96.2357:29.916);
+    \fill [black] (66.48,-25.72) -- (65.55,-25.89) -- (66.22,-26.63);
+\end{tikzpicture} 
+\end{center} 
+
+In class, we saw how to use DFS to find a topological ordering of the the vertices; in the graph above, the unique topological ordering is $A,B,C,D,E$. We saw an example where we happened to start DFS from the first vertex in the topological order. In this exercise we'll see what happens when we start at a different vertex. Recall that when you run DFS, if it reached a node with no children (i.e. can’t go any further), then it will resume the search at an unvisited vertex. 
+
+
+\subsection {\Points {5}} 
+
+Run DFS starting at vertex $C$, breaking any ties by alphabetical order.\footnote {For example, if DFS has a choice between $B$ or $C$, it will always choose $B$. This includes when DFS is starting a new tree in the DFS forest.}
+
+\begin{enumerate}[label=(\alph *)]
+    \item What do you get when you order the vertices by \textbf {ascending} start time?
+    \item What do you get when you order the vertices by \textbf {descending} finish time?
+\end{enumerate} 
+
+\subsection {\Points {5}}
+
+Run DFS starting at vertex $C$, breaking any ties by \textbf {reverse} alphabetical order.\footnote {For example, when DFS has a choice between $B$ or $C$, it will always choose $C$. This includes when DFS is starting a new tree in the DFS forest.}
+
+\begin{enumerate}[label=(\alph *)]
+    \item What do you get when you order the vertices by \textbf {ascending} start time?
+    \item What do you get when you order the vertices by \textbf {descending} finish time?
+\end{enumerate} 
+
+\Expecting {For all four questions, an ordering of vertices. No justification is required.} 
+
+
+\pagebreak
+\section{Feedback: Homework Thoughts \Points{10}}
+
+In order to improve the homework in future iterations, complete this \href{https://forms.gle/LwMVLqf3FFuhJxVv7}{form}.
+
+
+\Expecting{You should submit the form with your @aggies.ncat.edu email to track your submission.}
+
+
+\begin{Instruction}
+
+\paragraph{Coding Problems} The following questions are to be submitted as a ".zip" file on Gradescope. 
+
+\end{Instruction}
+
+\section{Coding \Points{50}}
+After completing the written portion of the assignment, you should submit it to \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+For the coding portion, tou can get your starter code \href{https://replit.com/team/COMP285/HW5-Code}{here}.
+
+Note that the starter code also include a few test cases you can run on repl.it. However, the full test suite is the one run on Gradescope.
+
+Please reference the \texttt{README.md} included in your starter code for detailed instructions.
+
+\section*{Submitting the Assignment}
+
+This assignment is a combination of written and programming questions. Both portions of the assignment should be submitted through \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+The "Homework 5: Fun with " assignment is the written portion, for which you should submit a \textbf{typed} response to the non-coding questions (questions 1-\ref{sec:last}). Each response should clearly be marked with its corresponding number. You are free to use the provided templates, print the questions and write your answers, or to simply type your responses on a blank document (whatever works for you).
+
+The "Homework 5: Coding" is the programming portion of the assignment. For this portion, download the ".zip" file from replit and upload this ".zip" file as your answer to \href{https://www.gradescope.com/courses/350304}{Gradescope}. You can upload the assignment as many times as you want.
+
+
+\end{document} 

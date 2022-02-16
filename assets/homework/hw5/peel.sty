@@ -1,0 +1,48 @@
+% -- LaTeX 3
+
+\RequirePackage{expl3}
+\RequirePackage{xparse}
+\RequirePackage{l3keys2e}
+
+
+% -- Package declaration
+
+\ProvidesExplPackage
+	{peel}
+	{2021/12/20}
+	{1.0}
+	{Cultivated package for peeling certain parts of documents by Nima Anari}
+
+\keys_define:nn { peel } {
+	envs .clist_set:N = \l_peel_envs_clist,
+	output .tl_set:N = \l_peel_output_tl
+}
+
+\keys_set:nn { peel } {
+	envs = {Solution},
+	output = template.tex
+}
+
+\ProcessKeysOptions{peel}
+
+% -- Packages
+
+\RequirePackage{xparse}
+
+% -- Macros
+
+\tl_new:N \l_peel_tl
+
+\DeclareDocumentCommand{\PeelDocument}{+m}{
+	\tl_set:Nn \l_peel_tl {#1}
+	\tl_set_eq:NN \l_tmpa_tl \l_peel_tl
+	\exp_args:NNx \iow_open:Nn \g_tmpa_iow {\l_peel_output_tl}
+	\clist_map_inline:Nn \l_peel_envs_clist {
+		\regex_replace_all:nnN {\c{begin}\{##1\}.*?\c{end}{##1}} {} \l_tmpa_tl
+	}
+	\regex_replace_all:nnN {\c{par}} {\n} \l_tmpa_tl
+	\regex_replace_all:nnN {\#} {\cL(\#)} \l_tmpa_tl
+	\iow_now:Nx \g_tmpa_iow {\tl_to_str:N \l_tmpa_tl}
+	\iow_close:N \g_tmpa_iow
+	\l_peel_tl
+}
