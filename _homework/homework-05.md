@@ -1,8 +1,9 @@
 ---
 number: 5
-title: Binary Trees
+title: Fun with Trees, Hashing, and Graphs
 release: 2022-02-16 17:00
 due: 2022-02-23 23:59
-pdf:
-tex:
+pdf: "/assets/homework/hw5/hw5.pdf"
+tex: "/assets/homework/hw5/hw5.tex"
+word: "/assets/homework/hw5/hw5.docx"
 ---
