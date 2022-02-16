@@ -180,85 +180,25 @@ Design an algorithm which outputs a sorted version of $A$ which uses $O(k\log n)
  
 
 \pagebreak
-\section{Exercise: Hash Functions \Points{10}}
+\section{Exercise: Hash Functions \Points{20}}
 With 217 students currently enrolled in computer science\footnote{See \href{https://www.ncat.edu/coe/departments/cs/undergrad-programs/index.php}{here} if you'd like to see other years!} at North Carolina A\&T University, we would like to keep track of student records. 
 
 The key for each person will be their 9-digit Banner ID.
 
-\subsection{Our own hash functions! \Points{5}}
+\subsection{Our own hash functions! \Points{10}}
 Consider using a hash table of size $80$ and the hash function $h(N) =$ sum of each digits of $N$. For example, $h(012345678) = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36$. 
 
 Is this a good hash function to use? List two reasons supporting your decision.
 
 \Expecting{The answer to whether this is a good hash function or not, and two reasons explaining why.}
 
-\subsection{Good hash families \Points{5}}
+\subsection{Good hash families \Points{10}}
 Consider a hash table of $99$ buckets. For $m \in \{1, \cdots , 1000\}$, let $h_m(x) =$ last two digits of $mx$.  For example, $h_4(01234567)=$ last two digits of $4\times01234567=4938268 = 68$. Define $\mathcal{H} = \{h_i: i \in \{1, \cdots, 1000\}\}$. 
 
 Is $H$ a good family of hash functions? Justify your decision.
 
 \Expecting{The answer to whether $\mathcal{H}$ is a good family of hash functions or not, and a brief justification.}
 
-\pagebreak
-\section{Interview Practice: DFS Basics \Points{10}}
-\label{sec:last}
-
-Consider the following directed acyclic graph (DAG): 
-
-\begin{center}
-\begin{tikzpicture}[scale=0.15] 
-    \tikzstyle{every node}+=[inner sep=0pt]
-    \draw [black] (18.2,-24.6) circle (3);
-    \draw (18.2,-24.6) node {$A$}; 
-    \draw [black] (33.7,-17.6) circle (3);
-    \draw (33.7,-17.6) node {$B$};
-    \draw [black] (40.2,-32.8) circle (3);
-    \draw (40.2,-32.8) node {$C$};
-    \draw [black] (54.4,-23.6) circle (3);
-    \draw (54.4,-23.6) node {$D$};
-    \draw [black] (68.6,-23.6) circle (3);
-    \draw (68.6,-23.6) node {$E$};
-    \draw [black] (57.4,-23.6) -- (65.6,-23.6);
-    \fill [black] (65.6,-23.6) -- (64.8,-23.1) -- (64.8,-24.1);
-    \draw [black] (20.93,-23.37) -- (30.97,-18.83);
-    \fill [black] (30.97,-18.83) -- (30.03,-18.71) -- (30.44,-19.62);
-    \draw [black] (34.88,-20.36) -- (39.02,-30.04);
-    \fill [black] (39.02,-30.04) -- (39.17,-29.11) -- (38.25,-29.5);
-    \draw [black] (42.72,-31.17) -- (51.88,-25.23);
-    \fill [black] (51.88,-25.23) -- (50.94,-25.25) -- (51.48,-26.09);
-    \draw [black] (21.01,-25.65) -- (37.39,-31.75);
-    \fill [black] (37.39,-31.75) -- (36.81,-31) -- (36.46,-31.94);
-    \draw [black] (36.58,-18.44) -- (51.52,-22.76);
-    \fill [black] (51.52,-22.76) -- (50.89,-22.06) -- (50.61,-23.02);
-    \draw [black] (19.736,-22.025) arc (146.19641:36.07693:28.811);
-    \fill [black] (66.96,-21.09) -- (66.9,-20.15) -- (66.09,-20.74);
-    \draw [black] (66.48,-25.721) arc (-47.8655:-96.2357:29.916);
-    \fill [black] (66.48,-25.72) -- (65.55,-25.89) -- (66.22,-26.63);
-\end{tikzpicture} 
-\end{center} 
-
-In class, we saw how to use DFS to find a topological ordering of the the vertices; in the graph above, the unique topological ordering is $A,B,C,D,E$. We saw an example where we happened to start DFS from the first vertex in the topological order. In this exercise we'll see what happens when we start at a different vertex. Recall that when you run DFS, if it reached a node with no children (i.e. can’t go any further), then it will resume the search at an unvisited vertex. 
-
-
-\subsection {\Points {5}} 
-
-Run DFS starting at vertex $C$, breaking any ties by alphabetical order.\footnote {For example, if DFS has a choice between $B$ or $C$, it will always choose $B$. This includes when DFS is starting a new tree in the DFS forest.}
-
-\begin{enumerate}[label=(\alph *)]
-    \item What do you get when you order the vertices by \textbf {ascending} start time?
-    \item What do you get when you order the vertices by \textbf {descending} finish time?
-\end{enumerate} 
-
-\subsection {\Points {5}}
-
-Run DFS starting at vertex $C$, breaking any ties by \textbf {reverse} alphabetical order.\footnote {For example, when DFS has a choice between $B$ or $C$, it will always choose $C$. This includes when DFS is starting a new tree in the DFS forest.}
-
-\begin{enumerate}[label=(\alph *)]
-    \item What do you get when you order the vertices by \textbf {ascending} start time?
-    \item What do you get when you order the vertices by \textbf {descending} finish time?
-\end{enumerate} 
-
-\Expecting {For all four questions, an ordering of vertices. No justification is required.} 
 
 
 \pagebreak
