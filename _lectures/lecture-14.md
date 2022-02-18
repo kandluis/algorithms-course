@@ -9,9 +9,6 @@ notes_source: "assets/lectures/lecture14.tex"
 slides_pdf: "https://drive.google.com/file/d/14F7cIf5LBAY0p91KXVGbEMEeJclDidgZ/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/1HVWzKWBQLIqPblxi5EZ9QrIWw9rNbQ5lWJH4PSFIstA/edit?usp=sharing"
 textbook: CLRS 11, CLRS 22.1
-recording: "https://ncat.zoom.us/rec/share/IPdujKSnxjokw-2QTtLVje7hOS9e7Sj1CfkLkYrLg9x04BsDO3F74uIyOiUbrbM7.6ymEXrtYp6SKPqwJ?startTime=1644598854000"
-passcode: "%Y?F8e4b"
-youtube: "https://youtu.be/f1Hy2RBQ3YQ"
 ---
 
 ##### Video Resources
