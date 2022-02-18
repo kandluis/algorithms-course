@@ -1,12 +1,13 @@
 ---
-title: Applications of Breadth First Search and Strongly Connected Components
+title: Applications of Breadth-First Search and Strongly Connected Components
 number: 17
 time: 2022-02-23 12:00
 location: Graham Hall 210
-notes:
+notes: "assets/lectures/lecture17.pdf"
+notes_source: "assets/lectures/lecture17.tex"
 slides_pdf: "https://drive.google.com/file/d/14reSpVfh5MtCbvTWjI0g7UXOFDLBanoo/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/1DTnSn7istYqDxDGVW1n31iuwIYnZqnitChYBQh2DRJo/edit?usp=sharing"
-textbook:
+textbook: CLRS 22.3, 22.4, 22.5
 ---
 
 ##### Video Resources

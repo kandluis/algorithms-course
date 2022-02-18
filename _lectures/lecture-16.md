@@ -7,7 +7,7 @@ notes: "assets/lectures/lecture16.pdf"
 notes_source: "assets/lectures/lecture16.tex"
 slides_pdf: "https://drive.google.com/file/d/158bfTV-sc7upjsIriXdEP6Nrq-EYPt8Q/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/1I83NEbHLeBSza7rfOdnOSEP-LoV_DShwYj-k8nbb3ys/edit?usp=sharing"
-textbook: CLRS 22.1, 22.3, 22.4
+textbook: CLRS 22.2, 22.3, 22.4
 ---
 
 ##### Video Resources
