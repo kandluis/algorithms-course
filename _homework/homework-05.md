@@ -6,5 +6,5 @@ due: 2022-02-23 23:59
 pdf: "/assets/homework/hw5/hw5.pdf"
 tex: "/assets/homework/hw5/hw5.tex"
 word: "/assets/homework/hw5/hw5.docx"
-walkthrough: "https://www.youtube.com/watch?v=rKXfy-XHDd4"
+walkthrough: "https://youtu.be/pAlZ7rZGYmU"
 ---
