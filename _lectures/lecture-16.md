@@ -3,6 +3,7 @@ title: Applications of Depth-First Search and Intro to Breadth-First Search
 number: 16
 time: 2022-02-21 12:00
 location: Graham Hall 210
+quiz: "https://forms.gle/Zcmce96LdLb8BDKe8"
 notes: "assets/lectures/lecture16.pdf"
 notes_source: "assets/lectures/lecture16.tex"
 slides_pdf: "https://drive.google.com/file/d/158bfTV-sc7upjsIriXdEP6Nrq-EYPt8Q/view?usp=sharing"
