@@ -1,6 +1,6 @@
 ---
-title: Week 5 Announcement
-week: 5
+title: Week 6 Announcement
+week: 6
 date: 2022-02-21
 ---
 #### HW5 Walkthrough
