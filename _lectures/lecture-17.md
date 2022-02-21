@@ -1,5 +1,5 @@
 ---
-title: Applications of Breadth-First Search and Strongly Connected Components
+title: Breadth-First Search
 number: 17
 time: 2022-02-23 12:00
 location: Graham Hall 210
