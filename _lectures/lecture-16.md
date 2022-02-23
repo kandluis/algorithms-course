@@ -17,6 +17,3 @@ textbook: CLRS 22.2, 22.3, 22.4
 ##### Video Resources
 
 - [Topological Sort (Section 8.5)](https://www.youtube.com/watch?v=ozso3xxkVGU&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=8)
-- [Breadth-First Search (Section 8.2, Part 1)](https://www.youtube.com/watch?v=73qCvXsYkfk&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=4)
-- [BFS and Shortest Paths (Section 8.2, Part 2)](https://www.youtube.com/watch?v=AhEZ4yjkVxA&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=5)
-- [BFS and Undirected Connected Components (Section 8.3)](https://www.youtube.com/watch?v=vHqaiQlOzOw&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=6)

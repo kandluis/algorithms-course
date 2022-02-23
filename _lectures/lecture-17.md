@@ -11,6 +11,6 @@ textbook: CLRS 22.3, 22.4, 22.5
 ---
 
 ##### Video Resources
-- [Computing Strongly Connected Components (Part 1) (Section 8.6, Part 1)](https://www.youtube.com/watch?v=O98hLTYVN3c&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=9)
-- [Computing Strongly Connected Components (Part 2) (Section 8.6, Part 2)](https://www.youtube.com/watch?v=gbs3UNRJIYk&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=10)
-- [The Structure of the Web (Section 8.7)](https://www.youtube.com/watch?v=7YodysGShlo&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=11)
+- [Breadth-First Search (Section 8.2, Part 1)](https://www.youtube.com/watch?v=73qCvXsYkfk&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=4)
+- [BFS and Shortest Paths (Section 8.2, Part 2)](https://www.youtube.com/watch?v=AhEZ4yjkVxA&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=5)
+- [BFS and Undirected Connected Components (Section 8.3)](https://www.youtube.com/watch?v=vHqaiQlOzOw&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=6)
