@@ -8,6 +8,9 @@ notes_source: "assets/lectures/lecture17.tex"
 slides_pdf: "https://drive.google.com/file/d/14reSpVfh5MtCbvTWjI0g7UXOFDLBanoo/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/1DTnSn7istYqDxDGVW1n31iuwIYnZqnitChYBQh2DRJo/edit?usp=sharing"
 textbook: CLRS 22.3, 22.4, 22.5
+recording: "https://ncat.zoom.us/rec/share/PpxTj9L8bHXwiLIPV8uBI347fgZI_1RuqAfmiI5SqM_kN1tu8vdyPtiBJcfwaN2H.FHlXkWTuehr9OQR8?startTime=1645635690000"
+passcode: "6rw$CV$G)"
+youtube: "https://youtu.be/nIcCZnR860o"
 ---
 
 ##### Video Resources
