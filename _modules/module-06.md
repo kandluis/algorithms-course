@@ -11,7 +11,7 @@ Feb 21
 : **Lecture**{: .label .label-purple}[Applications of Depth-First Search]({{"Applications of Depth-First Search" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Feb 23
-: **Lecture**{: .label .label-purple}[Breadth-First Search](({{"Breadth-First Search" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Breadth-First Search]({{"Breadth-First Search" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Feb 25
 : **Lecture**{: .label .label-purple}[Strongly Connected Components]({{"Strongly Connected Components" | slugify | prepend: "/lectures/#" | relative_url }})
