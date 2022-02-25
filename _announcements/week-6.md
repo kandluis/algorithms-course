@@ -3,6 +3,12 @@ title: Week 6 Announcement
 week: 6
 date: 2022-02-21
 ---
+#### Midterm Next Friday
+The in-class, in-person, written midterm will take place during lecture, [Friday March 4th](/exams/#midterm)!
+
+[Practice Questions](/assets/midterm/practice_midterm.pdf) have been released, and we  will have a [Midterm Review Session](https://www.comp285.ml/lectures/#midterm-review) on Wednesday, March 2nd!
+
+
 #### HW5 Walkthrough
 The [Homework 5: Fun with Data Structures and Hashing]({{ "/homework/#hw5" | absolute_url }}) is on [YouTube](https://www.youtube.com/watch?v=pAlZ7rZGYmU).
 
