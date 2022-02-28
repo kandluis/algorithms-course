@@ -20,7 +20,7 @@ Feb 25
 
 
 Feb 28
-: **Lecture**{: .label .label-purple}[More Graphs]({{"More Graphs" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[SCCs in Linear Time, Weighed Graphs]({{"SCCs in Linear Time, Weighed Graphs" | slugify | prepend: "/lectures/#" | relative_url }})
 
 
 
