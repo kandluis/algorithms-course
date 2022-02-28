@@ -18,7 +18,7 @@ The midterm will take place in-class, during lecture. It is a 50-minute exam.
 ### What's covered?
 - Material from [Lecture 0](/lectures/#why-are-we-here) to [Lecture 18](/lectures/#strongly-connected-components)
 - Material from [Homework 0](/homework/#hw0) to [Homework 5](/homework/#hw5)
-- Material from [Quiz 0](/announcements/#quiz-0) to [Quiz 6](/announcements/#quiz-5)
+- Material from [Quiz 0](/announcements/#quiz-0) to [Quiz 6](/announcements/#quiz-6)
 
 ### Practice Midterm
 - [Questions](/assets/midterm/practice_midterm.pdf)
