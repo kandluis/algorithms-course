@@ -3,9 +3,8 @@ title: Midterm Review
 number: 20
 time: 2022-03-02 12:00
 location: Graham Hall 210
-notes:
-notes_source:
-slides_pdf:
+slides_pdf: "https://drive.google.com/file/d/17N0kuxiJZt0PYGzc3GwacDbix-MOhG83/view?usp=sharing"
+slides_ppt: "https://docs.google.com/presentation/d/12nUqb15SJaqXbWu7-HbZcxY4ge7UsxRU5E_JsafmPyA/edit?usp=sharing"
 textbook:
 ---
 The [midterm](/exams/#midterm) will take place in-class, in-person, on 3/4 (Friday Lecture). It is a 50-minute exam.
