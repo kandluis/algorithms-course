@@ -5,6 +5,9 @@ time: 2022-03-02 12:00
 location: Graham Hall 210
 slides_pdf: "https://drive.google.com/file/d/17N0kuxiJZt0PYGzc3GwacDbix-MOhG83/view?usp=sharing"
 slides_ppt: "https://docs.google.com/presentation/d/12nUqb15SJaqXbWu7-HbZcxY4ge7UsxRU5E_JsafmPyA/edit?usp=sharing"
+youtube: "https://youtu.be/Csivdc9ivgY"
+recording: "https://ncat.zoom.us/rec/share/cc8h1_-ZQrsoAw0zR8C-omPQa9CkNJWxHH7hjnwvM6lYzuqHhG5PtJuNUFC2R9rJ.4M-zn9CtC1DsLaPu?startTime=1646240489000"
+passcode: "Vv%d4qbF"
 textbook:
 ---
 The [midterm](/exams/#midterm) will take place in-class, in-person, on 3/4 (Friday Lecture). It is a 50-minute exam.
