@@ -15,8 +15,3 @@ Feb 11
 
 Feb 14
 : **No Lecture**{: .label .label-yellow}[Free Day](#)
-
-Feb 16
-: **Lecture**{: .label .label-purple}[Universal Hash Families and Intro to Graphs]({{"Universal Hash Families and Intro to Graphs" | slugify | prepend: "/lectures/#" | relative_url }})
-: **Homework Due @ 11:59pm**{: .label .label-red}[HW4]({{ "/homework/#hw4" | relative_url }})
-: **HW5 released**{: .label .label-blue}[HW5]({{ "/homework/#hw5" | relative_url }})

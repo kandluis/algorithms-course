@@ -1,15 +1,12 @@
 ---
-title: Midterm & Spring Break
+title: Graphs II - Advanced Graph Algorithms
 ---
 
-Mar 2
-: **Lecture**{: .label .label-blue}[Midterm Review]({{"Midterm Review" | slugify | prepend: "/lectures/#" | relative_url }})
+Feb 25
+: **Lecture**{: .label .label-purple}[Strongly Connected Components]({{"Strongly Connected Components" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Homework Due @ 11:59pm**{: .label .label-red}[HW5]({{ "/homework/#hw5" | relative_url }})
+: **HW6 released**{: .label .label-blue}[HW6]({{ "/homework/#hw6" | relative_url }})
 
-Mar 4
-: **Exam**{: .label .label-green} [In-Class Midterm]({{"/exams/#midterm" | relative_url }})
 
-Mar 7
-: **No Lecture**{: .label .label-yellow} Start of Spring Break
-
-Mar 14
-: **No Lecture**{: .label .label-yellow} Free Day
+Feb 28
+: **Lecture**{: .label .label-purple}[SCCs in Linear Time, Weighed Graphs]({{"SCCs in Linear Time, Weighed Graphs" | slugify | prepend: "/lectures/#" | relative_url }})
