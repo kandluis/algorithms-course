@@ -26,8 +26,10 @@ The midterm will take place in-class, during lecture. It is a 50-minute exam.
 
 ### Review Sessions
 
-- Additional review sessions will be held on Tuesday 3/1 and Thursday 3/3 from 3:30pm to 5:30pm in the Student Center.
-- [Review Session Recording](https://youtu.be/zOWaVtb2ax0)
+- Tuesday 3/1 from 3:00pm to 5:30pm in the Student Center
+- Thursday 3/3 from 3:30pm to 5:30pm in the Student Center.
+- Review Session Recording: [[YouTube](https://youtu.be/zOWaVtb2ax0)] [[Zoom](https://ncat.zoom.us/rec/share/sOy4_GO1nd56VpmLIwzoQ_s34fBMp_zTXPymAW8M24LJOObIOsSSQ7eQCx80Zg_h.r4693KORbplWPYJy?startTime=1646340124000)] [Passcode: #ZNv!nF9]
+
 
 </div>
 ```markdown
