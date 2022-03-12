@@ -13,3 +13,8 @@ Mar 7
 
 Mar 14
 : **No Lecture**{: .label .label-yellow} Free Day
+
+Mar 16
+: **Lecture**{: .label .label-purple}[Midterm Overview]({{"Midterm Overview" | slugify | prepend: "/lectures/#" | relative_url }})
+: **HW6 released**{: .label .label-blue}[HW6]({{ "/homework/#hw6" | relative_url }})
+
