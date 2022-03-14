@@ -14,6 +14,9 @@ youtube: "https://youtu.be/Ac9ooB3_ALQ"
 textbook: CLRS 22.2, 22.3, 22.4
 ---
 
+##### Code
+- [Depth-First Search and Topological Sort](https://replit.com/@laperez94/Lecture-15?v=1)
+
 ##### Video Resources
 
 - [Topological Sort (Section 8.5)](https://www.youtube.com/watch?v=ozso3xxkVGU&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=8)

@@ -13,6 +13,9 @@ youtube: "https://youtu.be/jMSJt_2hYes"
 textbook: CLRS 22.1, 22.3, 22.4
 ---
 
+##### Code
+- [Depth-First Search and Topological Sort](https://replit.com/@laperez94/Lecture-15?v=1)
+
 ##### Video Resources
 
 - [Graph Representations (Sections 7.3 and 7.4)](https://www.youtube.com/watch?v=b-Mfu8dPv9U&list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P&index=2)
