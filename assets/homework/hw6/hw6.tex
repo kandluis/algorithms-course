@@ -50,7 +50,7 @@
 \vspace {1em} 
 \begin{Instruction} 
 
-\paragraph {Due.} Wednesday, February 23rd, 2022 @ 11:59 PM!
+\paragraph {Due.} Wednesday, March 23rd, 2022 @ 11:59 PM!
 \end{Instruction} 
 
 \vspace {1em} 
@@ -67,7 +67,7 @@
 \end{Instruction} 
 
 \begin{centering}
-\section*{Fun with TOOD}
+\section*{Fun with Graphs}
 \end{centering}
 
 \begin{Instruction}
@@ -76,7 +76,7 @@
 
 \end{Instruction}
 
-\section{Interview Practice: DFS Basics \Points{10}}
+\section{Exercise: DFS Basics \Points{12}}
 \label{sec:last}
 
 Consider the following directed acyclic graph (DAG): 
@@ -113,29 +113,136 @@ Consider the following directed acyclic graph (DAG):
 \end{tikzpicture} 
 \end{center} 
 
-In class, we saw how to use DFS to find a topological ordering of the the vertices; in the graph above, the unique topological ordering is $A,B,C,D,E$. We saw an example where we happened to start DFS from the first vertex in the topological order. In this exercise we'll see what happens when we start at a different vertex. Recall that when you run DFS, if it reached a node with no children (i.e. can’t go any further), then it will resume the search at an unvisited vertex. 
+In class, we saw how to use DFS to find a topological ordering of the the vertices; in the graph above, the unique topological ordering is $A,B,C,D,E$. We saw an example where we happened to start DFS from the first vertex in the topological order. In this exercise we'll see what happens when we start at a different vertex. Recall that when you run DFS, if it reached a node with no children (i.e. can't go any further), then it will resume the search at an unvisited vertex. 
 
 
-\subsection {\Points {5}} 
+\subsection {\Points {6}} 
 
 Run DFS starting at vertex $C$, breaking any ties by alphabetical order.\footnote {For example, if DFS has a choice between $B$ or $C$, it will always choose $B$. This includes when DFS is starting a new tree in the DFS forest.}
 
 \begin{enumerate}[label=(\alph *)]
-    \item What do you get when you order the vertices by \textbf {ascending} start time?
-    \item What do you get when you order the vertices by \textbf {descending} finish time?
+    \item \Points{3} What do you get when you order the vertices by \textbf {ascending} start time?
+    \item \Points{3} What do you get when you order the vertices by \textbf {descending} finish time?
 \end{enumerate} 
 
-\subsection {\Points {5}}
+\subsection {\Points {6}}
 
 Run DFS starting at vertex $C$, breaking any ties by \textbf {reverse} alphabetical order.\footnote {For example, when DFS has a choice between $B$ or $C$, it will always choose $C$. This includes when DFS is starting a new tree in the DFS forest.}
 
 \begin{enumerate}[label=(\alph *)]
-    \item What do you get when you order the vertices by \textbf {ascending} start time?
-    \item What do you get when you order the vertices by \textbf {descending} finish time?
+    \item \Points{3} What do you get when you order the vertices by \textbf {ascending} start time?
+    \item \Points{3} What do you get when you order the vertices by \textbf {descending} finish time?
 \end{enumerate} 
 
 \Expecting {For all four questions, an ordering of vertices. No justification is required.} 
 
+
+\pagebreak
+\section{Exercise: The World as Graphs \Points{12}}
+For each of the following real-world problems, try to formulate this as a problem about graphs.
+
+Recall a graph is just a collection of vertices and edges.
+
+What algorithmic problem about graphs do we need to solve in order to solve the following
+problems? (Note, you don't actually have to solve these problems, just transform them into
+graph problems that we might then be able to solve).
+
+\begin{enumerate}
+    \item \Points{4} Among actors, a ``Bacon number'' is the number of degrees of separation from an actor to Kevin Bacon. For example, Kevin Bacon's Bacon number is $0$. If an actor works in a movie with Kevin Bacon, the actor's Bacon number is $1$. If an actor $A$ works with an actor $B$ who worked with Kevin Bacon in a movie, then actor $A$'s Bacon number is $2$, and so forth. How would you represent this as a graph so we could answer questions like: (a) What is Samuel L. Jackson's Bacon number? and (b) list all the people with Bacon number equal to 6.
+
+    \item \Points{4} You need to take a bunch of classes at North Carolina A\&T University, and some of them depend on each other. For example, you must take COMP 280 before taking COMP 285.Given a set of classes you need to take, and information about which class is a pre-requisite for which other class, generate an order in which to take all of the classes. Assume you can only take one class at a time. How would you repesent this as a graph so we can answer this question?
+
+    \item \Points{4} You are about to purchase a bunch of fish. You have two very large fishtanks. Unfortunately, some of these species of fish will fight if they are put in the same tank. For each pair of species, you know whether they will fight or whether they will peacefully co-exist. How would you represent this as a graph such that you can find a way to separate the fish into two peaceful fishtanks if it exists.
+\end{enumerate}
+
+\Expecting{For each of the three questions above, explain how you'd represent them as graphs. What are the nodes? What are the edges? Are the edges directed? Are they weighted?}
+
+\pagebreak
+\section{Exercise: Kosaraju’s algorithm \Points{16}}
+\begin{center}
+    \input{image}
+\end{center}
+
+In this question, we ask you to run Kosarju's SCC algorithm (see Lecture 18, Slide 45). We summarize the gist here:
+
+When running DFS, we will \textbf{break any ties by alphabetical order}. Remember that if DFS has reached a node with no un-visited children (i.e. can’t go any further), then it will resume the search at an unvisited vertex. We will decide which unexplored vertex to continue DFS by \textbf{alphabetical order}.
+
+
+\subsection{First DFS \Points {4}}
+What are the start and finish times of each node after running the first DFS from node $C$ on the \textbf {original} graph?
+
+\begin{tabular}{c| c| c}
+Node & Start Time & Finish Time \\ 
+\hline A & & \\ 
+\hline B & & \\ 
+\hline C & 0 & \\ 
+\hline D & & \\ 
+\hline E & & \\ 
+\end{tabular} 
+
+\Expecting {Fill in this table}  
+
+\subsection{Second DFS \Points {6}} 
+
+Next, we will run DFS from the node with the largest finish time on the \textbf{reversed} graph. What do you get when you order the vertices by \textbf{ascending} start time for the second DFS run? 
+
+\Expecting{An ordering of vertices. No justification is required}  
+
+\subsection{Connected components \Points{6}} 
+
+What are the strongly connected component(s) in this graph?
+
+\Expecting {A list of sets of nodes. No justification is required} 
+
+
+\pagebreak
+\section {Most Reliable Path \Points{20}} 
+You are planning for an exciting trip from the nice little town $s$ to the shining new city $t$ this summer! Sadly there is no direct flight from $s$ to $t$ so you need to take multiple flights to get to $t$. You created a directed graph $G(V,E)$ where each node represents an airport and each edge represents a flight connection from one airport to another. 
+
+Each flight connects two airports, but for each flight $e$ there is some probability $p_e$ that this flight can get cancelled due to COVID-19. Each $p_e$ is some value between 0 and 1, where $0$ means that this flight will always take place, and $1$ means that this flight will always get cancelled. You have to book your flights and hotels in advance. You can assume that all $p_e$ are independent of each other and \textbf{the graph has no cycles}. 
+
+
+\subsection{Measure of Reliability \Points{5}} 
+We can measure the reliability of a path $P$ as the probability having all flights in $P$ not being cancelled (eg, all the flights succeed). Suppose you decide to take the flights along the path $P$ with $k$ flights given by $e_1 \to e_2 \to \cdots \to e_k$. How reliable is this path, using $p_{e_1}, p_{e_2}, \cdots, p_{e_k}$.\footnote{For example, say I had a path that took flights $e_1$, $e_2$, and $e_3$. Then this whole trip succeeds only if $e_1$ \textbf{and} $e_2$ \textbf{and} $e_3$ are \textbf{not} cancelled. Since the events are independent, the reliability is given by $(1-p_{e_1})(1-p_{e_2})(1-p_{e_3})$}.
+
+\Expecting{A mathematical expression summarizing the reliability of the path $P$.}
+
+\subsection {Just to be safe? \Points {15}} 
+Create an algorithm to find the most reliable path between $s$ and $t$. By most reliable path, we mean that the path $P$ you find from $s$ to $t$ should have the highest probability of having all flights in $P$ not being cancelled. Having plenty of time for the trip, you \textbf {DO NOT} care about how long or how much it takes you to travel, but you hope to reach the destination with \textbf{exactly the route you planned}. 
+
+[Hint: Recall that $\log(A \times B) = \log(A) + \log(B)$, so you can convert multiplication into addition. It might help to recall Dijstra's Algorithm (Lecture 22). Lastly, note that $\log(x)$ where $0 \leq x \leq 1$ is negative, with smaller values of $x$ giving more negative results.]
+
+
+\Expecting{Pseudocode or a very clear English description of your algorithm, an informal justification that your algorithm is correct, and brief analysis of running time}.
+
+
+\subsection {Ethics \Points {5}} Imagine that, based on the excellent results of your flight planning algorithm, you have been hired by an online travel agency to give your expert advice on their route recommendation strategies. You discover that, by maximizing the reliability of suggested routes, the company would be overlooking other considerations such as carbon and time efficiency. Write a one-paragraph memo to the programming team explaining why these (or other) values should be taken into account.  
+
+\Expecting{two to four sentences explaining (1) what other measures are overlooked by an algorithm that maximizes reliability; and (2) the reasons why the airline should care about these measures, including some potential consequences of the omission} 
+
+
+\pagebreak
+\section{Summer Camp\Points{10}} 
+Some North Carolina A\&T bulldogs decided to hold a summer camp event at the Hanging Rock State Park. The camping ground is divided into an $m \times n$ grid, where each cell can accommodate one standard-sized tent. The North Carolina A\&T bulldogs put up their tents connected on the grid (considering four cardinal directions). The following day, they discover another connected collection of tents put up by bulldogs from UNCG. Two groups of bulldogs are willing to make friends with each other and connect their living places into a single collection by putting up some spare tents. Please help design an $O(mn)$ algorithm that calculates the \textbf{minimum number of spare tents} that the bulldogs need to put up.
+
+\paragraph {Example of camping ground layout} 
+
+If run your algorithm on this, the output should be 2 (We need to put up at least 2 tents to connect the two groups of tents). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{tent.png} 
+    \label{fig:my_label}
+\end{figure}
+
+\textbf{Input}: A nested array $A$ of $m \times n$ where 1 represents a tent and 0 represents an empty camping ground. 
+
+[hint: You might want to locate all tents in one connected collection of tent first.] 
+
+\Expecting{Pseudocode of the algorithm or a clear English description, \textbf{the algorithm should run in O(mn) time.}}
+
+
+\pagebreak
 \begin{Instruction}
 
 \paragraph{Coding Problems} The following questions are to be submitted as a ".zip" file on Gradescope. 
@@ -145,7 +252,7 @@ Run DFS starting at vertex $C$, breaking any ties by \textbf {reverse} alphabeti
 \section{Coding \Points{50}}
 After completing the written portion of the assignment, you should submit it to \href{https://www.gradescope.com/courses/350304}{Gradescope}.
 
-For the coding portion, tou can get your starter code \href{https://replit.com/team/COMP285/HW6-Code}{here}.
+For the coding portion, you can get your starter code \href{https://replit.com/team/COMP285/HW6-Code}{here}.
 
 Note that the starter code also include a few test cases you can run on repl.it. However, the full test suite is the one run on Gradescope.
 
@@ -155,7 +262,7 @@ Please reference the \texttt{README.md} included in your starter code for detail
 
 This assignment is a combination of written and programming questions. Both portions of the assignment should be submitted through \href{https://www.gradescope.com/courses/350304}{Gradescope}.
 
-The "Homework 6: Fun with " assignment is the written portion, for which you should submit a \textbf{typed} response to the non-coding questions (questions 1-\ref{sec:last}). Each response should clearly be marked with its corresponding number. You are free to use the provided templates, print the questions and write your answers, or to simply type your responses on a blank document (whatever works for you).
+The "Homework 6: Fun with Graphs" assignment is the written portion, for which you should submit a \textbf{typed} response to the non-coding questions (questions 1-\ref{sec:last}). Each response should clearly be marked with its corresponding number. You are free to use the provided templates, print the questions and write your answers, or to simply type your responses on a blank document (whatever works for you).
 
 The "Homework 6: Coding" is the programming portion of the assignment. For this portion, download the ".zip" file from replit and upload this ".zip" file as your answer to \href{https://www.gradescope.com/courses/350304}{Gradescope}. You can upload the assignment as many times as you want.
 
