@@ -7,6 +7,9 @@ notes:
 notes_source:
 slides_pdf: https://drive.google.com/file/d/10NlHDGMvuDQnA8LnuElQr5KQfzRXQHRK/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1aY6XhVD6fPCWIiTqBkNFFVPF0EawKIdSSSfUMtZLLEc/edit?usp=sharing
+youtube: https://youtu.be/o1Zbw2m1Uoc
+recording: https://ncat.zoom.us/rec/share/VQ6cxAei63tT1Kfe7x9d8B7x9HvuxQRcxSBahfH8NDdrMB0iDktTfKiWVDlst9fS.8bnIvfhpLHCg3iDT?startTime=1647446507000
+passcode: ^1$EG1K7
 textbook:
 ---
 
