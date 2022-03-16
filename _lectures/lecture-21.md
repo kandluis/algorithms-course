@@ -13,6 +13,10 @@ passcode: ^1$EG1K7
 textbook:
 ---
 
+#### Midterm Overview (Part 2)
+- [Zoom Part II](https://ncat.zoom.us/rec/share/QsAgxnSV3HjGXXEG0kkXwvrBM9BhLbZAH5LGUiJIxVKHx3oIpG6rHQArRCyazmeJ.JMtVQobeTCvHHh_Y?startTime=1647446507000) - Passcode: ^1$EG1K7
+- [YouTube Part II](https://youtu.be/0gNtJ-ccoS8)
+
 ##### Midterm Corrections
 - Due Friday 3/18!
 - Return the copy of your exam with your corrections.
