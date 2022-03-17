@@ -4,7 +4,7 @@ week: 8
 date: 2022-03-14
 ---
 #### HW6 Released
-The [Homework 6: Fun with Graphs]({{ "/homework/#hw4" | absolute_url }}) is released! Walkthrough is in-coming!
+The [Homework 6: Fun with Graphs]({{ "/homework/#hw6" | absolute_url }}) is released! Walkthrough is in-coming!
 
 
 #### Midterm Corrections
