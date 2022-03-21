@@ -1,5 +1,5 @@
 ---
-title: Knapsack, Independent Set
+title: Dynamic Programming III - Knapsack and Independent Set
 number: 25
 time: 2022-03-25 12:00
 location: Graham Hall 210
