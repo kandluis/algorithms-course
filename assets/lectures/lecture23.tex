@@ -50,7 +50,7 @@
 Adapted From Virginia Williams' lecture notes.
 \end {Instruction}  
 
-{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Lecture 22} } 
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Lecture 23} } 
 
 \begin{centering}
 \section*{Single-Source Shortest Paths with Negative Edge Weights}
@@ -72,19 +72,22 @@ Note $\pi(\cdot)$ is used to store the shortest paths found and $\pi(v )$ repres
 \caption{Bellman-Ford Algorithm}
 \label{alg:1}
 \begin{algorithmic}
-\STATE $\forall t \in V, d[t] \gets \infty$ \texttt{// set initial distance estimates}
-\STATE $d[s] \gets 0$
-\STATE $F \gets \{v \mid \forall v \in V\}$ \texttt{// F is the set of nodes that are yet to achieve final distances estimates}
-\STATE $D \gets \emptyset$ \texttt{// D will be the set of nodes that have achieved final distance estimates}
-\WHILE{$F \neq \emptyset$}
-    \STATE $x \gets$ elements in $F$ with minimum distance estimate
-    \FOR{$(x,y) \in E$}
-        \STATE $d[y] \gets \min\{d[y], d[x] + w(x,y)\}$ \texttt{// "relax" the estimate of y}
-        \STATE \texttt{// to maintain paths: if} $d[y]$ \texttt{changes, then } $\pi(y) \gets x$
-    \ENDFOR
-    \STATE $F \gets F \setminus \{x\}$
-    \STATE $D \gets D \cup \{x\}$
-\ENDWHILE
+\STATE $d[v] \gets \infty, \forall v \in V$ \texttt{// set initial distance estimates}
+\STATE \texttt{to maintain paths: set } $\pi(v) \gets $nill for all $v, \pi(v)$ represents the predecessor of $v$
+\STATE $d[s] \gets 0$ \texttt{// set distance to start node trivially as 0}
+\FOR{$i$ from $1 \to n - 1$}
+  \FOR{$(u,v) \in E$}
+    \STATE $d[v] \gets \min\{d[v], d[u] + w(u,v) \}$ \texttt{// update the distance estimates for v}
+    \STATE \texttt{to maintain paths, if } $d[v]$ \texttt{changes, then } $\pi(v) \gets u$
+  \ENDFOR
+\ENDFOR
+\STATE \texttt{// Negative Cycle Step}
+\FOR{$(u,v) \in E$}
+  \IF{$d[v] > d[u] + w(u,v)$}
+    \RETURN "Negative Cycle" \texttt{// negative cycle detected}
+  \ENDIF
+\ENDFOR
+\RETURN $d[v] \forall v \in V$
 \end{algorithmic}
 \end{algorithm}
 
@@ -104,6 +107,7 @@ $$
 
 
 \begin{figure}
+\centering
 \includegraphics[scale=0.5]{Cycle.png}
 \caption{A negative cycle reachable from source $s$}
 \label{fig:cycle}
