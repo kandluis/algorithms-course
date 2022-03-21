@@ -4,9 +4,8 @@ number: 23
 time: 2022-03-21 12:00
 location: Graham Hall 210
 quiz: https://forms.gle/QnLXkjco1C3LM1Xu6
-notes: assets/lectures/lecture23.pdf
+notes_pdf: assets/lectures/lecture23.pdf
 notes_source: assets/lectures/lecture23.tex
-notes_source:
 slides_pdf: https://drive.google.com/file/d/1Egoww_8lbRgumDz3u1C5jxgRgDFGz7rI/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1JfLcdbRLTr7rrzaN_QJo1A0GAmj8oIOrf75iRVspIZE/edit?usp=sharing
 textbook: CLRS 24.3
