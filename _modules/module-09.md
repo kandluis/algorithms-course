@@ -5,7 +5,6 @@ title: Dynamic Programming - How do we solve big problems using subproblems?
 Mar 18
 : **Lecture**{: .label .label-purple}[Dijkstra's Algorithm]({{"Dijkstra's Algorithm" | slugify | prepend: "/lectures/#" | relative_url }})
 
-
 Mar 21
 : **Lecture**{: .label .label-purple}[Dynamic Programming I with Bellan Ford]({{"Dynamic Programming with Bellan Ford" | slugify | prepend: "/lectures/#" | relative_url }})
 
@@ -17,3 +16,7 @@ Mar 23
 
 Mar 25
 : **Lecture**{: .label .label-purple}[Dynamic Programming III - More Examples]({{"Dynamic Programming III- More Examples" | slugify | prepend: "/lectures/#" | relative_url }})
+
+
+Mar 28
+: **Lecture**{: .label .label-purple}[Dynamic Programmig IV]({{"Dynamic Programmig IV" | slugify | prepend: "/lectures/#" | relative_url }})
