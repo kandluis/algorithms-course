@@ -1,5 +1,5 @@
 ---
-title: Dynamic Programming II with Floyd-Warshal and Longest Common Subsequence
+title: Dynamic Programming II with Floyd-Warshal
 number: 24
 time: 2022-03-23 12:00
 location: Graham Hall 210
