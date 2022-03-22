@@ -1,5 +1,5 @@
 ---
-title: Dynamic Programming II with Floyd-Warshal
+title: Dynamic Programming II with Floyd-Warshall
 number: 24
 time: 2022-03-23 12:00
 location: Graham Hall 210
