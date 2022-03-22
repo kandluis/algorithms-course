@@ -14,7 +14,7 @@ recording: https://ncat.zoom.us/rec/share/AgrRwLYF-uKaXPVu9ihrRMVHbsQn6F4Vd5UPVT
 passcode: w78=%saU
 ---
 
-#### Video Resources
+##### Video Resources
 - [The Bellman-Ford Algorithm (Part 1) (Section 18.2, Part 1)](https://www.youtube.com/watch?v=06OK99Aak60&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=55)
 - [The Bellman-Ford Algorithm (Part 2) (Section 18.2, Part 2)](https://www.youtube.com/watch?v=d1TWZa20Mkw&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=56)
 - [The Bellman-Ford Algorithm (Part 3) (Section 18.2, Part 3)](https://www.youtube.com/watch?v=HaXTsC8eOfo&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=57)
