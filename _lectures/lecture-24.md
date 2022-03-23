@@ -3,8 +3,8 @@ title: Dynamic Programming II with Floyd-Warshall
 number: 24
 time: 2022-03-23 12:00
 location: Graham Hall 210
-notes_pdf: assets/lectures/lecture24.pdf
-notes_source: assets/lectures/lecture24.tex
+notes: "assets/lectures/lecture24.pdf"
+notes_source: "assets/lectures/lecture24.tex"
 slides_pdf: https://drive.google.com/file/d/1EznWQ0Mzvxy4rSfo_VrCHYr6Kh1SVxdG/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1XNrFKNuyZZdAHeuAELene9THELvkzmKnnjDI9n1dsIM/edit?usp=sharing
 textbook: CLRS 25.2, 15.1

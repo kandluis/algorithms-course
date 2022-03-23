@@ -1,0 +1,182 @@
+% !TEX options=--shell-escape
+\documentclass [12pt]{article} 
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage{array} 
+\usepackage{booktabs} 
+\usepackage{url} 
+\usepackage{parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage{cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage{enumitem} 
+\usepackage{xparse} 
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage[cache=false]{minted}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usetikzlibrary{shapes.symbols}
+\newtheorem{theorem}{Theorem}
+
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+
+\DeclareTColorBox{Solution}{}{breakable, title={Solution}}
+\DeclareTColorBox{Solution*}{}{breakable, title={Solution (provided)}}
+\DeclareTColorBox{Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
+\DeclareDocumentCommand{\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
+\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+\newcommand {\hint }[1]{\noindent {[\textbf {HINT:} \em #1 \em ]}} \newcommand {\pts }[1]{\textbf {(#1 pt.)}} 
+
+\begin{document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Homework 7} } 
+\vspace {1em} 
+\begin{Instruction} 
+
+\paragraph {Due.} Wednesday, March 30th, 2022 @ 11:59 PM!
+\end{Instruction} 
+
+\vspace {1em} 
+\begin{Instruction} \paragraph {Homework Expectations:} Please see \href{https://www.comp285.ml/homework/#general-homework-information}{Homework}.
+\end{Instruction}
+
+\vspace {1em} 
+\begin{Instruction} 
+
+\paragraph {Exercises} The following questions are exercises. We encourage you to work with a group and discuss solutions to make sure you understand the material.
+
+\paragraph {Points} This assignment is graded out of 50 points. However, you can get up to 60 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
+
+\end{Instruction} 
+
+\begin{centering}
+\section*{More Fun with Graphs and Dynamic Programming}
+\end{centering}
+
+\begin{Instruction}
+
+\paragraph{Written Problems} The following questions are to be submitted in written/typed form to gradescope.
+
+\end{Instruction}
+
+\section{Interview Practice: Wake up, Sheeple! \Points{10}}
+
+You arrive on an island with $n$ sheep. The sheep have developed a pretty sophisticated society, and have a social media platform called Baaaahtter (it's like Twitter but for sheep\footnote {Also my new start-up idea}). Some sheep follow other sheep on this platform. Being sheep, they believe and repeat anything that they hear. That is, they will re-post anything that any sheep they are following said. We can represent this by a graph, where $(a) \to (b)$ means that $(b)$ will re-post anything that $(a)$ posted. For example, if the social dynamics on the island were: \begin{center}
+  \begin{tikzpicture}[xscale=2]
+    \node (a) at (0,0){\includegraphics [width=2cm]{sheep}};
+    \node at (0,-1){Shifra the sheep};
+    \node (b) at (2,2){\includegraphics [width=2cm]{sheep}};
+    \node (bb) at (2,1){Shakira the sheep};
+    \node (c) at (2,-2){\includegraphics [width=2cm]{sheep}};
+    \node at (2,-3){Sugar the sheep};
+    \node (d) at (4,0){\includegraphics [width=2cm]{sheep}};
+    \node at (4,-1){Sherman the sheep};
+    \draw [thick,->] (a) to (b);
+    \draw [thick,->] (b) to[bend right] (a);
+    \draw [thick,->] (a) to (c);
+    \draw [thick,->] (bb) to (c); 
+    \draw [thick,->] (c) to (d); 
+  \end{tikzpicture} 
+\end{center} 
+
+then Sherman the Sheep follows Sugar the Sheep, and Sugar follows both Shakira and Shifra, and so on. This means that Sherman will re-post anything that Sugar posts, Sugar will re-post anything by Shifra and Shikira, and so on. (If there is a cycle then each sheep will only re-post a post once). 
+
+For the parts below, let $G$ denote this directed, unweighted graph on the $n$ sheep. Let $m$ denote the number of edges in $G$. 
+
+\subsection{The influencer circle \Points{4}} 
+
+Call a sheep an \textbf{influencer} if anything that they post eventually gets re-posted by every other sheep on the island. In the example above, both Shifra and Shakira are influencers.
+
+Argue that, if there is at least one influencer, then all influencers are in the same strongly connected component of $G$, and every sheep in that component is an influencer. 
+\Expecting{A short argument explaning why the above is true.} 
+ 
+\subsection{Who is the influencer? \Points{6}} 
+
+Suppose that there is at least one influencer. Give an algorithm that runs in time $O(n + m)$ and finds an influencer. You may use any algorithm we have seen in class as a subroutine. 
+
+\Expecting{Pseudocode or a very clear English description of your algorithm, an informal justification that your algorithm is correct , an informal justification that the running time is $O(n+m)$.}  
+
+
+\pagebreak
+\section{Interview Practice: Arbitrage in the Market \Points{10}} 
+
+Suppose the various economies of the world use a set of currencies $C_1, \cdots , C_n$ — think of these as dollars, pounds, bitcoins, etc. Your bank allows you to trade each currency $C_i$ for any other currency $C_j$ at an exchange rate $r_{ij}$, that is, you can exchange each unit of $C_i$ for $r_{ij} > 0$ units of $C_j$. Due to fluctuations in the markets, it is occasionally possible to find a sequence of exchanges that lets you start with currency A, change into currencies, B, C, D, etc., and then end up changing back to currency A in such a way that you end up with more money than you started with. That is, there are currencies $C_{i_1} , \cdots , C_{i_k}$ such that 
+$$
+r_{i_1i_2} \times r_{i_2i_3} \times \cdots \times r_{i_{k-1}i_k} \times r_{i_k i_1} > 1
+$$.
+
+This is called an arbitrage opportunity, but to take advantage of it you need to be able to identify it quickly (before other investors leverage it and the exchange rates balance out again)! Devise an efficient algorithm to determine whether an arbitrage opportunity exists. Justify the correctness of your algorithm and its runtime.
+
+\Expecting{Pseudocode of your algorithm along with the running time and a short explanation.}
+
+\section{Concept Questions: A Clever Trick for Dijkstra's Algorithm \Points{5}}
+
+Pepper and Plucky have been talking. They’re working out whether they can modify Dijkstra’s algorithm to deal with negative edge weights. Here’s what they came up with: 
+
+Let $G = (V, E)$ be a weighted graph with negative edge weights, and let $w^*$ be the smallest (most negative) weight that appears in $G$. Consider a graph $G' = (V, E')$ with the same vertices as $G$. Then to construct the edges $E'$, we do the following: for every edge $e \in E$ with weight $w$, we add an edge $e' \in E'$ with weight $w - w^*$.
+
+Now all of the weights in $G'$ are non-negative, so we can apply Dijkstra’s algorithm. The shortest path in $G'$ will be the shortest path in $G$.
+
+Does this suggestion work? (That is, does it always return a shortest path from s to t in G if it exists?) Either prove that it is correct (that is, prove that this algorithm correctly finds shortest paths in weighted directed graphs), or give a counter-example.
+
+\Expecting{Either a proof that this modification to Dijkstra's Algorithm works and lets us handle negative edge weights, or a single example of a graph for which this does not work.}
+
+\section {Pruning Trees \Points{10}}
+\label{sec:last}
+
+Suppose you are given a \textbf {binary} tree with $n$ nodes, and each node has an associated weight, which is a positive integer. You would like to remove nodes from this tree such that the resulting tree has at most $k$ nodes, and you would like to maximize the sum of the weights of the remaining nodes. Additionally, at the end of the pruning, you must still have a tree rooted at the original root; in other words, if you remove a node, then all of that node's children/descendants must also be removed. 
+
+
+\begin{enumerate}
+  \item \Points{5} For any node $u$ of the original tree, and any positive integer $i \le k$, let $A[u,i]$ denote the maximum weight of any subtree rooted at node $u$ having at most $i$ nodes. Letting $r_u$ and $\ell _u$ denote the right and left children of node $u$ (they are NULL if $u$ does not have that child), and letting $w_u$ be the weight of node $u$, formally describe the optimal structure by giving a recurrence that expresses $A[u,i]$ in terms of the quantities $A[r_u,1],A[r_u,2],\ldots $ and $A[\ell _u,1],A[\ell _u,2],\ldots $. 
+  
+  \Expecting {An expression for the recurrence relation for $A[u, i]$. If you find it convenient, you may additionally define $A[u, 0]$ and/or $A[NULL, i]$ to be an appropriate value, and use them in the recurrence.} 
+  
+  \item \Points{5} Using the recurrence relation from the previous problem, define a dynamic programming algorithm that will efficiently solve the problem. (The algorithm only has to return the weight of the best tree. It doesn't have to return that best tree.) What is the runtime of your algorithm? 
+
+  \Expecting {A brief description or pseudocode of your algorithm, no justification of correctness required. Additionally, the runtime and a brief description of how you arrived at your answer.} 
+\end{enumerate}
+
+\pagebreak
+\begin{Instruction}
+
+\paragraph{Coding Problems} The following questions are to be submitted as a ".zip" file on Gradescope. 
+
+\end{Instruction}
+
+\section{Coding \Points{25}}
+After completing the written portion of the assignment, you should submit it to \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+For the coding portion, get your starter \href{https://replit.com/team/COMP285/HW7-Code}{C++ code} or \href{https://replit.com/team/COMP285/HW7-Code-Python}{Python code}.
+
+Note that the starter code also include a few test cases you can run on repl.it. However, the full test suite is the one run on Gradescope.
+
+Please reference the \texttt{README.md} included in your starter code for detailed instructions.
+
+\section*{Submitting the Assignment}
+
+This assignment is a combination of written and programming questions. Both portions of the assignment should be submitted through \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+The "Homework 6: Fun with Graphs" assignment is the written portion, for which you should submit a \textbf{typed} response to the non-coding questions (questions 1-\ref{sec:last}). Each response should clearly be marked with its corresponding number. You are free to use the provided templates, print the questions and write your answers, or to simply type your responses on a blank document (whatever works for you).
+
+The "Homework 6: Coding" is the programming portion of the assignment. For this portion, download the ".zip" file from replit and upload this ".zip" file as your answer to \href{https://www.gradescope.com/courses/350304}{Gradescope}. You can upload the assignment as many times as you want.
+
+
+\end{document} 
