@@ -50,10 +50,10 @@
 Adapted From Virginia Williams' lecture notes.
 \end {Instruction}  
 
-{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Lecture 23} } 
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Lecture 24} } 
 
 \begin{centering}
-\section*{Dynamic Programming II: Bellman-Ford and Floyd-Warshall}
+\section*{Dynamic Programming II: Bellman-Ford}
 \end{centering}
 
 
@@ -102,7 +102,7 @@ This idea of using the intermediate solutions is similar to the divide-and-conqu
 
 The idea of dynamic programming is to have a table of solutions of subproblems and fill it out in a particular order (e.g. left to right and top to bottom) so that the contents of any particular table cell only depends on the contents of cells before it. For example, in the Bellman-Ford algorithm, we filled out $d^{(k-1)}$ before we filled out $d^{(k)}$ ; and in order to fill out $d^{(k)}$ , we just had to look back at $d^{(k-1)}$, rather than compute anything new.
 
-In this lecture, we will discuss dynamic programming more, and also see another example: the Floyd-Warshall algorithm.
+In this lecture, we will discuss dynamic programming more.
 
 \subsection{Dynamic Programming Algorithm Recipe}
 Here, we give a general recipe for solving problems (usually optimization problems) by dynamic programming. Dynamic programming is a good candidate paradigm to use for problems with the following properties:
@@ -145,48 +145,6 @@ The above two properties lead to two different ways to implement dynamic program
   \item Top-down: In this approach, we will compute the optimal solution to the entire problem recursively. At each recursive call, we will end up looking up the answer or filling in the table if the entry has not been computed yet.
 \end{enumerate}
 In fact, these two methods are completely equivalent. Any dynamic programming algorithm can be formulated as an iterative table-filling algorithm or a recursive algorithm with look-ups.
-
-\section{Floyd-Warshall Algorithm} 
-
-The Floyd-Warshall Algorithm solves the All Pairs Shortest Path (APSP) problem: given  graph $G$, find the shortest path distances $d(s, t)$ for all $s$, $t \in V$ , and, for the purpose of storing the shortest paths, the predecessor $\pi(s, t)$ which is the node right before $t$ on th $s-t$ shortest path.
-
-Let's speculate about APSP for a moment. Consider the case when the edge weights ar nonnegative. We know we can compute APSP by running Dijkstra's algorithm on each nod $v \in V$ and obtain a total runtime of $O(mn +  n^2 \log n)$. The runtime of the Floyd-Warshal algorithm, on the other hand, is $O(n^3)$. We know that in the worst case $m = O(n^2)$, an thus, the Floyd-Warshall algorithm can be at least as bad as running Dijkstra's algorithm  $n$ times! Then why do we care to explore this algorithm? The reason is that the Floyd-Warshal algorithm is very easy to implement compared to Dijkstra's algorithm. The benefit of using simple algorithms is that they can often be extended and in practice can run relatively fast compared to algorithms that may have a huge overhead.
-
-An added benefit of the Floyd-Warshall algorithm is that it also supports negative edge weights, whereas Dijkstra's algorithm does not. 
-
-As mentioned, the optimum substructure with overlapping subproblems for shortest path is that for all node $k$ on an $s-t$ shortest path, $d(s, t) = d(s, k) + d(k, t)$. We refine this observation as follows. Suppose that the nodes of the graph are identified with the integer from $1 to n$. Then, if $k$ is the maximum node on an $s-t$ shortest path, then $d(s, t) =  d(s, k) + d(k, t)$ and moreover, the subpaths from $s$ to $k$ and from $k$ to $t$ only use nodes $u$ to $k - 1$ internally.
-
-We hence get independent subproblems in which we compute $d^{k}(s, t)$ for all $s, t$ that are the smallest weight of an $s-t$ path that only uses nodes $1, \cdots , k$ internally. This motivates th Floyd-Warshall algorithm, Algorithm \ref{alg:floyd-warshall} below (please note that we will refer to the nodes of G by the names $1, \cdots , n$).
-
-\begin{algorithm}
-\caption{Floyd-Warshall Algorithm(G,s)}
-\label{alg:floyd-warshall}
-\begin{algorithmic}
-\STATE $d_k(u,u) = 0, \forall u \in V, k \in \{0, \cdots, n\}$
-\STATE $d_k(u,v) = \infty, \forall u \in V, u\neq v, k \in \{0, \cdots, n\}$
-\STATE $d_0(u,v) = c(u,v), \forall (u,v) \in E$
-\STATE $d_0(u,v) = \infty, \forall (u,v) \notin E$
-\FOR{$k=1, \cdots, n$}
-  \FOR{$(u,v) \in V$}
-    \STATE $d_k(u,v) = \min\{ d_{k-1}(u,v), d_{k-1}(u,k) + d_{k-1}(k,v)$ \texttt{// update the estimate}
-  \ENDFOR
-\ENDFOR
-\RETURN $d_n(u,v), \forall u,v \in V$
-\end{algorithmic}
-\end{algorithm}
-
-We initialize each $d_0(u, v )$ as the edge weight $c(u, v )$ if $(u, v ) \in E$, else we set it to $\infty$ in the bottom-most row in our dynamic programming table. Now, as we increment $k$ to $1$, we effectively find the minimum distance path between $u, v \in V$ that go through node $1$, and populate the table with the results. We continue this process to find the shortest paths that go through nodes $1$ and $2$, then $1, 2,$ and $3$ and so on until we find the shortest path through all $n$ nodes. 
-
-\textbf{Negative cycles}. The Floyd-Warshall algorithm can be used to detect negative cycles: examine whether $d_n(u, u) < 0$ for any $u \in V$. If there exists $u$ such that $d_n(u, u) < 0$, there is a negative cycle, and if not, then there isn't. The reason for this is that if there is a simple path $P$ from $u$ to $u$ of negative weight (i.e., a negative cycle containing $u$), then $d_n(u, u)$ will be at most its weight, and hence, will be negative. Otherwise, no path can cause $d_n(u, u)$ to be negative. 
-
-\textbf{Runtime}. The runtime of the Floyd-Warshall algorithm is proportional to the size of the table $\{d_i (u, v )\}_{i,u,v}$ since filling each entry of the table only depends on at most two other entries filled in before it. Thus, the runtime is $O(n^3)$. 
-
-\textbf{Space usage}. Note that for both the algorithms we covered today, the Floyd-Warshall and Bellman-Ford algorithms, we can choose to store only two rows of the table instead of the complete table in order to save space. This is because the row being populated always depends only on the row right below it. This space saving optimization is not a general property of tables formed as a result of the dynamic programming method, and the slot dependencies in some dynamic programming problems may lie on arbitrary positions on the table thereby forcing us to store the complete table.
-
-
-\textbf{A Note on the Longest Path Problem}
-
-We discussed the shortest path problem in detail and provided algorithms for a number of variants of the problem. We might equally be interested in computing the longest simple path in a graph. A first approach is to formulate a dynamic programming algorithm. Indeed, consider any path, even the longest, between two nodes $s$ and $t$. Its length $\ell(s, t)$ equals the sum $\ell(s, k) + \ell(k, t)$ for any node $k$ on the path. However, this does not yield an optimal substructure: in general, neither subpath $s \to k$, $k \to t$ would be a longest path, and even if one is a longest path, the other one cannot use any nodes that appear on the first since the longest path is required to be simple. Hence the two subproblems $\ell(s, k)$ and $\ell(k, t)$ are not even independent! It turns out that finding the longest path does not seem to have any optimal substructure, which makes it difficult to avoid exhaustive search through dynamic programming. The longest path problem is actually a very difficult problem to solve and is NP-hard. The best known algorithm for it runs in exponential time.
 
 
 \section{Why is it called dynamic programming?}
