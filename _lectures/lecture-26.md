@@ -8,6 +8,9 @@ notes_source: "assets/lectures/lecture26.tex"
 slides_pdf: https://drive.google.com/file/d/1FYx8i6m8om2YqYy541Vg030Crqp0SEj1/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1xK8xq_DJVk-3ISgS6RzJsCUGdAJAaMcUyB1EVFQZZUw/edit?usp=sharing
 textbook: CLRS 15.4, CLRS 16.1
+youtube: https://youtu.be/2K8uWZ6hoKY
+recording: https://ncat.zoom.us/rec/share/qP4QphWx63IqGRIRlT5ymkwYUsOnIkAOue3dwZRvhujo-iGI7P0ybsTcWuGgC_XN.KbbcaPaIA8YU04BO
+passcode: !uf9T9*G
 ---
 
 ##### Video Resources
