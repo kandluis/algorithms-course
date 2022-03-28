@@ -10,9 +10,12 @@ Mar 21
 
 Mar 23
 : **Lecture**{: .label .label-purple}[Dynamic Programming II with Fibonacci]({{"Dynamic Programming II with Fibonacci" | slugify | prepend: "/lectures/#" | relative_url }})
-: **Homework Due @ 11:59pm**{: .label .label-red}[HW6]({{ "/homework/#hw6" | relative_url }})
 : **HW7 released**{: .label .label-blue}[HW7]({{ "/homework/#hw7" | relative_url }})
 
 
 Mar 25
 : **Lecture**{: .label .label-purple}[Dynamic Programming III - Floyd-Warshal, LCS, Knapsack]({{"Dynamic Programming III - Floyd-Warshal, LCS, Knapsack" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Homework Due @ 11:59pm**{: .label .label-red}[HW6]({{ "/homework/#hw6" | relative_url }})
+
+Mar 28
+: **Lecture**{: .label .label-purple}[Dynamic Programmig IV]({{"Dynamic Programmig IV and Greedy" | slugify | prepend: "/lectures/#" | relative_url }})
