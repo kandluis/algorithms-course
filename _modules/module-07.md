@@ -8,3 +8,6 @@ Feb 25
 
 Feb 28
 : **Lecture**{: .label .label-purple}[SCCs in Linear Time, Weighed Graphs]({{"SCCs in Linear Time, Weighed Graphs" | slugify | prepend: "/lectures/#" | relative_url }})
+
+Mar 18
+: **Lecture**{: .label .label-purple}[Dijkstra's Algorithm]({{"Dijkstra's Algorithm" | slugify | prepend: "/lectures/#" | relative_url }})
