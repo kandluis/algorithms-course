@@ -1,31 +1,29 @@
  \documentclass [12pt]{article} 
 
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{graphicx} 
-\usepackage{float}
-\usepackage{multirow}
-\usepackage{xcolor}
-\usepackage{array} 
-\usepackage{booktabs} 
-\usepackage{url} 
-\usepackage{parskip} 
-\usepackage[margin=1in]{geometry} 
-\usepackage[T1]{fontenc} 
-\usepackage{cmbright} 
-\usepackage[many]{tcolorbox} 
-\usepackage[colorlinks = true,
+\usepackage {amsmath}
+\usepackage {amsthm}
+\usepackage {amssymb}
+\usepackage {graphicx} 
+\usepackage {float}
+\usepackage {multirow}
+\usepackage {xcolor}
+\usepackage {algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage {array} 
+\usepackage {booktabs} 
+\usepackage {url} 
+\usepackage {parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage {cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
             linkcolor = blue,
             urlcolor  = blue,
             citecolor = blue,
             anchorcolor = blue]{hyperref} 
-\usepackage{enumitem} 
-\usepackage{xparse} 
-\usepackage{verbatim}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-
+\usepackage {enumitem} 
+\usepackage {xparse} 
+\usepackage {verbatim}
 \usepackage{listings}
 \usepackage{xcolor}
 \lstset { %
@@ -35,11 +33,11 @@
 }
 \newtheorem{theorem}{Theorem}
 \newtheorem{remark}{Remark}
-\newtheorem{proposition}{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{claim}{Claim}
+
 
 
 
@@ -56,172 +54,189 @@ Adapted From Virginia Williams' lecture notes.
 {\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Lecture 26} } 
 
 \begin{centering}
-\section*{Dynamic Programming IV: Independent Set \& Activity Selection}
+\section*{Dynamic Programmig IV - LCS, Unbounded Knapsack}
 \end{centering}
 
-\section{The Independent Set Problem}
 
-This problem is as follows: 
+\section{Longest Common Subsequence}
+We now consider the longest common \textit{subsequence} problem which has applications in spellchecking, biology (whether different DNA sequences correspond to the same protein), and more. 
 
-Say that we have an undirected graph $G = (V, E)$. We call a subset $S \subseteq V$ of vertices ``independent'' if there are no edges between vertices in $S$. Let vertex $i$ have weight $w_i$ , and denote $w(S)$ as the sum of weights of vertices in $S$. Given $G$, find an independent set of maximum weight $arg\max_{S\subseteq V} w(S)$.
+We say that a sequence $Z$ is a \textit{subsequence} of a sequence $X$ if $Z$ can be obtained from $X$ by deleting symbols. For example, \texttt{abracadabra} has \texttt{baab} as a \textit{subsequence}, because we can obtain \texttt{baab} by deleting a, r, cad, and ra. We say that a sequence $Z$ is a longest common \textit{subsequence} (LCS) of $X$ and $Y$ if $Z$ is a \textit{subsequence} of both $X$ and $Y$ , and any sequence longer than $Z$ is not a \textit{subsequence} of at least one of $X$ or $Y$ . For instance, the LCS of \texttt{abracadabra} and \texttt{bxqrabry} is \texttt{brabr}. 
 
-Actually, this problem is NP-hard for a general graph $G$. However, if our graph is a tree, then we can solve this problem in linear time. In the following figure, the maximum weight independent set is highlighted in blue.
+Using the definition of LCS, we define the LCS problem as follows: Given sequences $X$ and $Y$ , find the length of their LCS, $Z$ (and if we are proceeding to Step 4 of the outline above, output $Z$). In what follows, suppose that the sequence $X$ is $X = x_1x_2x_3 \cdots x_m$, so that $X$ has length $m$, and suppose that $Y = y_1y_2 \cdots y_n$ as length $n$. We'll use the notation $X[1 : k]$ as usual to denote the prefix $X[1 : k] = x_1x_2 \cdots x_k$ .
 
-\begin{remark}
-Dynamic programming is especially useful to keep in mind when you are solving a problem that involves trees. The tree structure often lends itself to dynamic programming solutions.
-\end{remark}
+\subsection{Steps 1 and 2: Identify optimal substructure, and write a recursive
+formulation}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.5]{max_is.png}
-\end{figure}
-
-As usual, the key question to ask is, ``What should our subproblem(s) be?'' Intuitively, if the problem has to do with trees, then subtrees often play an important role in identifying our subproblems. Let's pick any vertex $r$ and designate it as the root. Denoting the subtree rooted at $u$ as $T_u$, we define $A(u)$ to be the weight of the maximum weight independent set in $T_u$. How can we express $A(u)$ recursively? Letting $S_u$ be the maximum weight independent set of $T_u$, there are two cases:
+Our sub-problems will be to solve LCS on prefixes of $X$ and $Y$. To see how we can do this, we consider the following two cases. 
 
 \begin{enumerate}
-    \item If $u \notin S_u$, then $A(u) = \sum_{v} A(v )$ for all children $v$ of $u$.
-    \item If $u \in S_u$, then $A(u) = w_u + \sum_{v} A(v )$ for all grandchildren $v$ of $u$. 
+  \item \textbf{Case 1:} $x_m = y_n$. If $x_m = y_n = \ell$, then any LCS $Z$ has $\ell$ as its last symbol. Indeed, suppose that $Z'$ is any common subsequence that does not end in $\ell$: then we can always extend it by appending $\ell$ to $Z'$ to obtain another (longer) legal common subsequence. Thus, if $|Z| = k$ and $x_m = y_n = \ell$, we can write 
+
+  $$
+  Z[1 : k - 1] = \text{LCS}(X[1 : m - 1], Y [1 : n - 1])
+  $$ and 
+  $$
+  Z = Z[1 : k - 1] \circ \ell 
+  $$, 
+  where $\circ$ denotes the concatenation operation on strings.
+  \item \textbf{Case 2:} $x_m \neq y_n$. As above, let $Z$ be the LCS of $X$ and $Y$ . In this case, the last letter of $Z$ (call it $z_k$ ) is either not equal to $x_m$ or it is not equal to $y_n$. (Notice that this or is not an exclusive or; maybe $z_k$ isn't equal to either $x_m$ or $y_n$). In this case, at least one of $x_m$ or $y_n$ cannot appear in the LCS of $X$ and $Y$ ; this means that either 
+  $$
+    \text{LCS}(X, Y ) = \text{LCS}(X[1 : m - 1], Y )
+  $$ 
+  or 
+  $$
+  \text{LCS}(X, Y ) = \text{LCS}(X, Y [1 : n - 1])
+  $$,
+  whichever is longer. That is, we can shave one letter off the end of either $X$ or $Y$ . In particular, the length of $\text{LCS}(X, Y )$ is given by 
+  $$
+  \text{lenLCS}(X, Y ) = \max \{\text{lenLCS}(X[1 : m - 1], Y ), \text{lenLCS}(X, Y [1 : n - 1])\}
+  $$.
 \end{enumerate}
 
-To avoid solving the subproblem for trees rooted at grandchildren, we introduce $B(u)$ as the weight of the maximum weight independent set in $T_u \setminus \{u\}$. That is, $B(u) = \sum_{v} A(v )$ for all children $v$ of $u$. Equivalently, we have the following cases: 
-
-\begin{enumerate}
-    \item If $u \notin S_u$, then $A(u) = \sum_{v} A(v )$ for all children $v$ of $u$.
-    \item If $u \in S_u$, then $A(u) = w_u + \sum_{v} B(v )$ for all children $v$ of $u$. 
-\end{enumerate}
-
-So, we can calculate the weight of the maximum weight independent set:
+This immediately gives us our recursive formulation. Let's keep a table $C$, so that
 $$
-A(u) = \max\left\{w(u) + \sum_{v \in Children(u)} B(u), \sum_{v \in Children(u)} A(v)  \right\}
+C[i,j] = \text{length of LCS}(X[1:i], Y[1:j])
 $$
-
-To create an algorithm out of this recurrence, we can compute the $A(u)$ and $B(u)$ values in a bottom-up manner (a post-order traversal on the tree), arriving at the answer, $A(r)$. This
-takes $O(|V|)$ time.
-
-\begin{algorithm}
-\caption{MaxWeightIndependentSet(G)}
-\label{alg:MaxWeightIndependentSet}
-\begin{algorithmic}
-\State \texttt{// G is a tree}
-\State $r \gets \text{ArbitraryVertex}(G)$
-\State $T \gets \text{RootTreeAt}(r)$
-\Procedure{SolveSubtreeAt}{$u$}
-    \If{Children$(T, u) = \emptyset$}
-        \State $A(u) \gets w_u$
-        \State $B(u) \gets 0$
-    \Else
-        \For{$v \in \text{Children}(u)$}
-            \State \texttt{SolveSubTreeAt}(v)
-        \EndFor
-        \State $A(u) \gets \max\left\{\sum_{v \in \text{Children}(u)} A(v), w_u + \sum_{v \in \text{Children}(u)} B(v) \right\}$
-        \State $B(u) \gets \sum_{v \in \text{Children}(u)} A(v)$
-    \EndIf
-\EndProcedure
-\texttt{SolveSubtreeAt}$(r)$
-\Return $A(r)$
-\end{algorithmic}
-\end{algorithm}
-
-\section{Greedy Algorithms}
-
-Suppose we want to solve a problem, and we're able to come up with some recursive formulation of the problem that would give us a nice dynamic programming algorithm. But then, upon further inspection, we notice that any optimal solution only depends on looking up the optimal solution to one other subproblem. A greedy algorithm is an algorithm which exploits such a structure, ignoring other possible choices. Greedy algorithms can be seen as a refinement of dynamic programming; in order to prove that a greedy algorithm is correct, we must prove that to compute an entry in our table, it is sufficient to consider at most one other table entry; that is, at each point in the algorithm, we can make a “greedy”, locally-optimal choice, and guarantee that a globally-optimal solution still exists. Instead of considering multiple choices to solve a subproblem, greedy algorithms only consider a single subproblem, so they run extremely quickly – generally, linear or close-to-linear in the problem size. 
-
-Unfortunately, greedy algorithms do not always give the optimal solution, but they frequently give good (approximate) solutions. To give a correct greedy algorithm one must first identify optimal substructure (as in dynamic programming), and then argue that at each step, you only need to consider one subproblem. That is, even though there may be many possible subproblems to recurse on, given our selection of subproblem, there is always an optimal solution that contains the optimal solution to the selected subproblem.
-
-\subsection{Activity Selection} 
-
-One problem, which has a very nice (correct) greedy algorithm, is the Activity Selection Problem. 
-
-In this problem, we have a number of activities. Your goal is to choose a subset of the activities to participate in. Each activity has a start time and end time, and you can't participate in multiple activities at once. Thus, given $n$ activities $a_1, a_2, \cdots, a_n$ where $a_i$ has start time $s_i$ and finish time $f_i$ , we want to find a maximum set of non-conflicting activities. 
-
-The activity selection problem has many applications, most notably in scheduling jobs to run on a single machine.
-
-\subsubsection{Optimal Substructure} 
-
-Let's start by considering a subset of the activities. In particular, we'll be interested in
-considering the set of activities $S_{i ,j}$ that start after activity $a_i$ finishes and end before activity $a_j$ starts. That is, $S_{i ,j} = \{a_k \mid f_i \leq s_k , f_k \leq s_j\}$. We can participate in these activities between $a_i$ and $a_j$. Let $A_{i ,j}$ be a maximum subset of non-conflicting activities from the subset $S_{i ,j}$. Our first intuition would be to approach this by using dynamic programming. Suppose some $a_k \in A_{i ,j}$, then we can break down the optimal subsolution $A_{i ,j}$ as follows 
-$$
-|A_{i ,j}| = 1 + |A_{i ,k} | + |A_{k ,j}| 
-$$
-where $A_{i ,k}$ is the best set for $S_{i ,k}$(before $a_k$ ), and $A_{k ,j}$ is the best set for after $a_k$ . Another way of interpreting this expression is to say ``once we place $a_k$ in our optimal set, we can only consider optimal solutions to subproblems that do not conflict with $a_k$ .''
-
-Thus, we can immediately come up with a recurrence that allows us to come up with a dynamic programming algorithm to solve the problem. 
-$$
-|A_{i ,j}| = \max_{a_k \in S_{i ,j}} 1 + |A_{i ,k} | + |A_{k ,j}|
-$$.
-
-This problem requires us to fill in a table of size $n^2$, so the dynamic programming algorithm will run in $\Omega(n^2)$ time. The actual runtime is $O(n^3)$ since filling in a single entry might take $O(n)$ time. 
-
-But we can do better! We will show that we only need to consider the $a_k$ with the smallest finishing time, which immediately allows us to search for the optimal activity selection in linear time.
-
-\begin{proposition}For each $S_{i ,j}$, there is an optimal solution $A_{i ,j}$ containing $a_k \in Si ,j$ of minimum finishing time $f_k$.
-\end{proposition}
- 
-
-Note that if the proposition is true, when $f_k$ is minimum, then $A_{i ,k}$ is empty, as no activities can finish before $a_k$ ; thus, our optimal solution only depends on one other subproblem $A_{k ,j}$ (giving us a linear time algorithm). 
-
-
-Here, we prove the proposition.
-
-\begin{proof}
-
-Let $a_k$ be the activity of minimum finishing time in $S_{i ,j}$. Let $A_{i ,j}$ be some maximum set of non-conflicting activities. Consider $A'_{i ,j} = A_{i ,j} \setminus {a_l} \cup {a_k}$ where $a_l$ is the activity of minimum finishing time in $A_{i ,j}$. It’s clear that $|A'_{i ,j}| = |A_{i ,j}|$. We need to show that $A'_{i ,j}$ does not have conflicting activities. We know $a_l \in A_{i ,j} \subset S_{i ,j}$. This implies $f_l \geq f_k$ , since $a_k$ has the minimum finishing time in $S_{i ,j}$. 
-
-All $a_t \in A_{i ,j} \setminus {a_l}$ don’t conflict with $a_l $, which means that $s_t \geq f_l$ , which means that $s_t \geq f_k$ , so this means that no activity in $A_{i ,j} \setminus {a_l}$ can conflict with $a_k$ . Thus, $A'_{i ,j}$ is an optimal solution.
-\end{proof}
-
-Due to the above proposition, the expression for $A_{i ,j}$ from before simplifies to the following
-expression in terms of $a_k \subseteq S_{i ,j}$, the activity with minimum finishing time $f_k$ .
-
+Then we have the relationship:
 \begin{align*}
-|A_{i,j}| = 1 + |A_{k,j}| \\
-A_{i,j} = A_{k,j} \cup \{a_k \}
+C[i,j] = \begin{cases}
+  0 & i = 0 \text{ or } j = 0 \\
+  C[i-1, j-1] +1 & X[i] = Y[j], i,j > 0  \\
+  \max\{C[i-1, j], C[i, j-1] \} & X[i] \neq Y[j], i,j > 0
+\end{cases}
+\end{align*}
+Suppose we keep a table $C$, where $C[i, j]$ maintains the length of $\text{LCS}(X[1 : i], Y [1 : j])$, the longest common subsequence of $X[1 : i]$ and $Y [1 : j]$. Then, we can fill in the values of $C$ using the following recurrence:
+\begin{align*}
+C[i,j] = \begin{cases}
+  C[i-1, j-1] +1 & X[i] = Y[j]  \\
+  \max\{C[i-1, j], C[i, j-1] \} & \text{otherwise}
+\end{cases}
 \end{align*}
 
-Algorithm Greedy-AS assumes that the activities are presorted in nondecreasing order of their finishing time, so that if $i < j$, $f_i \leq f_j$.
+Technically, we should do a proof here to show that this recurrence is correct. See CLRS for the details, but it is true that if we define $C[i, j]$ recursively as above, then indeed, $C[i, j]$ is equal to the length of $\text{LCS}(X[1 : i], Y [1 : j])$. (Good exercise: prove this for yourself using induction).
+
+\subsection{Step 3: Define an algorithm using our recursive relationship.}
+The recursive relationship above naturally gives rise to a DP algorithm for filling out the table
+C:
+
+Note that there are only $n \times m$ entries in our table $C$. This is where the overlapping subproblems come in: we only need to compute each entry once, even though we may access it many times when filling out subsequent entries.
+
+We can also see that $C[i, j]$ only depends on three possible prior values: $C[i -1, j], C[i, j -1]$,
+and $C[i - 1, j - 1]$. This means that each time we compute a new value $C[i, j]$ from previous
+entries, it takes time $O(1)$.
 
 \begin{algorithm}
-\caption{Greedy-AS(a)}
-\label{alg:greed_as}
+\caption{lenLCS(X,Y)}
+\label{alg:len_lcs}
 \begin{algorithmic}
-\State $A \gets \{a_1\}$ \texttt{/* activity of min $f_i$}
-\State $k \gets 1$
-\For{$m = 2 \to n$}
-    \If{$s_m \geq f_k$}
-        \State \texttt{// $a_m$ starts after last activity in A}
-        \State $A \gets A \cup \{a_m\}$
-        \State $k \gets m$
-    \EndIf
-\EndFor
-\Return $A$
+\STATE Initialize an $n + 1 \times m + 1$ zero-indexed array $C$
+\STATE Set $C[0,j] = C[i, 0] = 0$ for all $i,j \in \{1, \cdots, m\} \times \{1, \cdots, n \}$
+\FOR{$i = 1, \cdots, m$}
+  \FOR{$j = 1, \cdots, n$}
+    \IF{$X[i] == Y[j]$}
+      \STATE $C[i, j] = 1 + C[i-1, j-1]$
+    \ELSE
+      \STATE $C[i,j]= \max\{C[i-1, j], C[i, j-1] \}$
+    \ENDIF
+  \ENDFOR
+\ENDFOR
+\RETURN C
 \end{algorithmic}
 \end{algorithm}
 
+Thus, we can start to see how to obtain an algorithm for filling in the table and obtaining the LCS. First, we know that any string of length $0$ will have an LCS of length $0$. Thus, we can start by filling out $C[0, j] = 0$ for all $j$ and similarly, $C[i, 0] = 0$ for all $i$. Then, we can fill out the rest of the table, filling the rows from bottom up ($i$ from $1$ to $m$) and filling each row from left to right ($j$ from $1$ to $n$). The pseudocode is given in Algorithm \ref{alg:len_lcs}.
 
-By the above claim, this algorithm will produce a legal, optimal solution via a greedy selection of activities. There may be multiple optimal solutions, but there always exists a solution that includes $a_k$ with the minimum finishing time. The algorithm does a single pass over the activities, and thus only requires $O(n)$ time – a dramatic improvement from the trivial dynamic programming solution. If the algorithm also needed to sort the activities by $f_i$ , then its runtime would be $O(n \log n)$ which is still better than the original dynamic programming solution.
-
-
-
+As mentioned above, in order to fill each entry, we only need to perform a constant number of lookups and additions. Thus, we need to do a constant amount of work for each of the $m \times n$ entries, giving a running time of $O(mn)$.
 
 
+\subsection{Step 4: Recovering the actual LCS} 
+Algorithm \ref{alg:len_lcs} only computes the length of the LCS of $X$ and $Y$ . What if we want to recover the actual longest common subsequence? In Algorithm \ref{alg:lcs}, we show how we can construct the actual LCS, given the dynamic programming table $C$ that we've filled out in Algorithm 1.
 
+In this algorithm, we start from the end of $X$ and $Y$ and work backward, using our table $C$ as a guide. We start with $i = m$ and $j = m$. If at some point $(i, j)$, we see that $X[i] = Y[j]$, then decrement both $i$ and $j$. On the other hand, if $X[i] \neq Y[j]$, then we know that we need to drop a symbol from either $X$ or $Y$ . The table $C$ will tell us which: if $C[i, j] = C[i, j - 1]$, then we can drop a symbol from $Y$ and decrement $j$. If $C[i, j] = C[i - 1, j]$, then we can drop a symbol from $X$ and decrement $i$. Of course, it might be the case that both of these hold; in this case it doesn't matter which we decrement, and our pseudocode will be default decrement $j$. 
 
+How long does this take? Notice that in each step, the sum $i + j$ is decremented by at least one (maybe two) and stops as soon as one of $i, j$ is equal to zero; this is at least before $i + j = 0$. Thus, the number of times we decrement $i + j$ is at most $m + n$, which was their total value to start.
 
+Because at each step of Algorithm \ref{alg:lcs}, the work is $O(1)$, the total running time is thus $O(n+m)$, which is subsumed by the runtime of $O(mn)$ necessary to fill in the table.
 
+\begin{algorithm}
+\caption{LCS(X,Y)}
+\label{alg:lcs}
+\begin{algorithmic}
+\STATE \texttt{// C is filled out already}
+\STATE $L \gets \empty$
+\STATE $i \gets m$
+\STATE $j \gets n$
+\WHILE{$i > 0$ and $j > 0$}
+  \IF{$X[i] = Y[j]$}
+    \STATE Append $X[i]$ to the beginning of $L$
+    \STATE $i \gets i -1$
+    \STATE $j \gets j -1$
+  \ELSIF{$C[i,j] = C[i, j-1]$}
+    \STATE $j \gets j - 1$
+  \ELSE
+    \STATE $i \gets i - 1$
+  \ENDIF
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
 
+The conclusion is that we can find $\text{LCS}(X, Y )$ of a sequence $X$ of length $m$ and a sequence $Y$ of length $n$ in time $O(mn)$.
 
+Interestingly, this simple dynamic programming algorithm is basically the best known algorithm or solving the LCS problem. It is conjectured that this algorithm may be essentially optimal. It turns out that giving an algorithm that (polynomially) improves the dependence on $m$ andn over the $O(mn)$ strategy outlined above would imply a major breakthrough in algorithmsfor the boolean satisfiability problem – a problem widely believed to be computationally hard to solve.
 
+\section{The Knapsack Problem}
+ 
+This is a classic problem, defined as the following:
 
+We have $n$ items, each with a value and a positive weight. The $i$-th item has weight $w_i$ and value $v_i$. We have a knapsack that holds a maximum weight of $W$. Which items do we put in our knapsack to maximize the value of the items in our knapsack? For example, let’s say that $W = 10$; that is, the knapsack holds a weight of at most 10. Also suppose that we have four items, with weight and value:
 
+\begin{table}[h!]
+\centering
+\begin{tabular}{c|c|c}
+Item & Weight & Value \\
+\hline
+A & 6 &  25 \\
+B & 3 & 13 \\
+C & 4 & 15 \\
+D & 2 & 8
+\end{tabular}
+\end{table}
 
+We will talk about two variations of this problem, one where you have infinite copies of each item (commonly known as Unbounded Knapsack), and one where you have only one of each item (commonly known as 0-1 Knapsack). 
 
+What are some useful subproblems? Perhaps it’s having knapsacks of smaller capacities, or maybe it’s having fewer items to choose from. In fact, both of these ideas for subproblems are useful. As we will see, the first idea is useful for the Unbounded Knapsack problem, and a combination of the two ideas is useful for the 0-1 Knapsack problem.
 
+\subsection{The Unbounded Knapsack Problem} 
 
+In the example above, we can pick two of item $B$ and two of item $D$. Then, the total weight is $10$, and the total value $42$. 
 
+We define $K(x)$ to be the optimal solution for a knapsack of capacity $x$. Suppose $K(x)$ happens to contain the $i$-th item. Then, the remaining items in the knapsack must have a total weight of at most $x -  w_i$ . The remaining items in the knapsack must be an optimum solution. (If not, then we could have replaced those items with a more highly valued set of items.) This gives us a nice subproblem structure, yielding the recurrence
+$$
+K(x) = \max_{i:w_i\leq x}(K(x - w_i ) + v_i )
+$$.
 
+Developing a dynamic programming algorithm around this recurrence is straightforward. We first initialize $K(0) = 0$, and then we compute $K(x)$ values from $x = 1, \cdots , W$. The overall runtime is $O(nW)$.
 
+\begin{algorithm}
+\caption{UnboundedKnapsack(W, n, w, v)}
+\label{alg:unboundedknapsack}
+\begin{algorithmic}
+\STATE $K[0]\gets 0$
+\FOR{$x = 1, \cdots, W$}
+  \STATE $K[x] \gets 0$
+  \FOR{$i = 1, \cdots, n$}
+    \IF{$w_i <= x$}
+      \STATE $K[x] \gets \max\{K[x-w_i] + v_i \}$
+    \ENDIF
+  \ENDFOR
+\ENDFOR
+\RETURN $K[W]$
+\end{algorithmic}
+\end{algorithm}
 
-
+\begin{remark}This solution is not actually polynomial in the input size because it takes $\log W)$ bits to represent $W$. We call these algorithms ``pseudo-polynomial.'' If we had a polynomial time algorithm for Knapsack, then a lot of other famous problems would have polynomial time algorithms. This problem is NP-hard.
+\end{remark}
 
 
 

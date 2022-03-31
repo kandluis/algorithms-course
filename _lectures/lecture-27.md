@@ -1,14 +1,13 @@
 ---
-title: Huffman Coding
+title: Dynamic Programming V - 0/1 Knapsack, Independent Set
 number: 27
 time: 2022-04-01 12:00
 location: Graham Hall 210
-notes:
-notes_source:
-quiz: https://forms.gle/uY8dZFPenjtN9JF18
+notes: "assets/lectures/lecture27.pdf"
+notes_source: "assets/lectures/lecture27.tex"
 slides_pdf: https://drive.google.com/file/d/1GAW9q1oqfksslZJl4uQ27Ix5jHHI5Ykm/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/14gh-5_GwIJEhItffdz82CdS1tdhxbSXAOkvSjMQTvGg/edit?usp=sharing
-textbook:
+textbook: CLRS 16.1, 16.4
 recording: https://ncat.zoom.us/rec/share/u9wIYlKILJShllrQaa0zVr1D7wmX1tjIzGFvOfrdpfE5dMN4e4pItsqkRPjMOhpN.e8AF73DCA-IfhICN?startTime=1648656199000
 passcode: 7^*n7k+K
 youtube: https://youtu.be/fA_ExukQgBs

@@ -1,5 +1,5 @@
 ---
-title: Dynamic Programming III - Floyd-Warshal, LCS, Knapsack
+title: Dynamic Programming III with Floyd-Warshal
 number: 25
 time: 2022-03-25 12:00
 location: Graham Hall 210
