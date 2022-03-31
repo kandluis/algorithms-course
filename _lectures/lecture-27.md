@@ -5,6 +5,7 @@ time: 2022-04-01 12:00
 location: Graham Hall 210
 notes:
 notes_source:
+quiz: https://forms.gle/uY8dZFPenjtN9JF18
 slides_pdf: https://drive.google.com/file/d/1GAW9q1oqfksslZJl4uQ27Ix5jHHI5Ykm/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/14gh-5_GwIJEhItffdz82CdS1tdhxbSXAOkvSjMQTvGg/edit?usp=sharing
 textbook:
