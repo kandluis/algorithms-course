@@ -13,3 +13,10 @@ recording: https://ncat.zoom.us/rec/share/A3UD8rsICB8r3sNIzYlVrI7oNmhn-lfPmrCOtb
 passcode: B=5VKmo#
 textbook: CLRS 16.1, 16.2, 16.3
 ---
+
+##### Video Resources
+
+- [The Weighted Independent Set Problem (Section 16.1)](https://www.youtube.com/watch?v=0awkct8SkxA&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=39)
+- [Introduction to Greedy Algorithms (Section 13.1)](https://www.youtube.com/watch?v=NTFmxA3qgoo&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=4&t=0s)
+- [A Scheduling Problem (Section 13.2)](https://www.youtube.com/watch?v=jK3d_GLzKQA&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=5)
+- [Developing a Greedy Algorithm (Section 13.3)](https://www.youtube.com/watch?v=AJOTgHYjL6A&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=6)
