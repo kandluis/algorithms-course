@@ -1,0 +1,105 @@
+% !TEX options=--shell-escape
+\documentclass [12pt]{article} 
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage{array} 
+\usepackage{booktabs} 
+\usepackage{url} 
+\usepackage{parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage{cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage{enumitem} 
+\usepackage{xparse} 
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage[cache=false]{minted}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usetikzlibrary{shapes.symbols}
+\newtheorem{theorem}{Theorem}
+
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+
+\DeclareTColorBox{Solution}{}{breakable, title={Solution}}
+\DeclareTColorBox{Solution*}{}{breakable, title={Solution (provided)}}
+\DeclareTColorBox{Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
+\DeclareDocumentCommand{\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
+\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+\newcommand {\hint }[1]{\noindent {[\textbf {HINT:} \em #1 \em ]}} \newcommand {\pts }[1]{\textbf {(#1 pt.)}} 
+
+\begin{document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Homework 7} } 
+\vspace {1em} 
+\begin{Instruction} 
+
+\paragraph {Due.} Friday, April 1st, 2022 @ 11:59 PM!
+\end{Instruction} 
+
+\vspace {1em} 
+\begin{Instruction} \paragraph {Homework Expectations:} Please see \href{https://www.comp285.ml/homework/#general-homework-information}{Homework}.
+\end{Instruction}
+
+\vspace {1em} 
+\begin{Instruction} 
+
+\paragraph {Exercises} The following questions are exercises. We encourage you to work with a group and discuss solutions to make sure you understand the material.
+
+\paragraph {Points} This assignment is graded out of 50 points. However, you can get up to 70 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
+
+\end{Instruction} 
+
+\begin{centering}
+\section*{Fun with Dynamic Programming}
+\end{centering}
+
+\begin{Instruction}
+
+\paragraph{Written Problems} The following questions are to be submitted in written/typed form to gradescope.
+
+\end{Instruction}
+
+
+\pagebreak
+\begin{Instruction}
+
+\paragraph{Coding Problems} The following questions are to be submitted as a ".zip" file on Gradescope. 
+
+\end{Instruction}
+
+\section{Coding \Points{25}}
+After completing the written portion of the assignment, you should submit it to \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+For the coding portion, get your starter \href{https://replit.com/team/COMP285/HW7-Code}{C++ code} or \href{https://replit.com/team/COMP285/HW7-Code-Python}{Python code}.
+
+Note that the starter code also include a few test cases you can run on repl.it. However, the full test suite is the one run on Gradescope.
+
+Please reference the \texttt{README.md} included in your starter code for detailed instructions.
+
+\section*{Submitting the Assignment}
+
+This assignment is a combination of written and programming questions. Both portions of the assignment should be submitted through \href{https://www.gradescope.com/courses/350304}{Gradescope}.
+
+The "Homework 8: Fun with Dynamic Programming" assignment is the written portion, for which you should submit a \textbf{typed} response to the non-coding questions (questions 1-\ref{sec:last}). Each response should clearly be marked with its corresponding number. You are free to use the provided templates, print the questions and write your answers, or to simply type your responses on a blank document (whatever works for you).
+
+The "Homework 8: Coding" is the programming portion of the assignment. For this portion, download the ".zip" file from replit and upload this ".zip" file as your answer to \href{https://www.gradescope.com/courses/350304}{Gradescope}. You can upload the assignment as many times as you want.
+
+
+\end{document} 
