@@ -8,7 +8,7 @@ Apr 1
 : **HW8 released**{: .label .label-blue}[HW8]({{ "/homework/#hw8" | relative_url }})
 
 Apr 4
-: **No Lecture**{: .label .label-yellow} Mental Health Day
+: **No Lecture**{: .label .label-yellow} Free Day
 
 Apr 6
 : **Lecture**{: .label .label-purple}[Quiz Review and Course Review]({{"Quiz Review and Course Review" | slugify | prepend: "/lectures/#" | relative_url }})
