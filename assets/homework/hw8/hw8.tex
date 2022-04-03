@@ -40,29 +40,29 @@
 \DeclareTColorBox{Solution}{}{breakable, title={Solution}}
 \DeclareTColorBox{Solution*}{}{breakable, title={Solution (provided)}}
 \DeclareTColorBox{Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
-\DeclareDocumentCommand{\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
-\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
-\newcommand {\hint }[1]{\noindent {[\textbf {HINT:} \em #1 \em ]}} \newcommand {\pts }[1]{\textbf {(#1 pt.)}} 
+\DeclareDocumentCommand{\Expecting }{+m}{\textbf{[We are expecting:} #1\textbf{]}}
+\DeclareDocumentCommand{\Points }{m}{\textbf{(#1 pt.)}} 
+\newcommand{\hint }[1]{\noindent{[\textbf{HINT:} \em #1 \em ]}} \newcommand{\pts }[1]{\textbf{(#1 pt.)}} 
 
 \begin{document} 
 
-{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Homework 7} } 
-\vspace {1em} 
+{\LARGE \textbf{COMP 285 (NC A\&T, Spr `22)}\hfill \textbf{Homework 8} } 
+\vspace{1em} 
 \begin{Instruction} 
 
-\paragraph {Due.} Friday, April 1st, 2022 @ 11:59 PM!
+\paragraph{Due.} Monday, April 11th, 2022 @ 11:59 PM!
 \end{Instruction} 
 
-\vspace {1em} 
-\begin{Instruction} \paragraph {Homework Expectations:} Please see \href{https://www.comp285.ml/homework/#general-homework-information}{Homework}.
+\vspace{1em} 
+\begin{Instruction} \paragraph{Homework Expectations:} Please see \href{https://www.comp285.ml/homework/#general-homework-information}{Homework}.
 \end{Instruction}
 
-\vspace {1em} 
+\vspace{1em} 
 \begin{Instruction} 
 
-\paragraph {Exercises} The following questions are exercises. We encourage you to work with a group and discuss solutions to make sure you understand the material.
+\paragraph{Exercises} The following questions are exercises. We encourage you to work with a group and discuss solutions to make sure you understand the material.
 
-\paragraph {Points} This assignment is graded out of 50 points. However, you can get up to 60 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
+\paragraph{Points} This assignment is graded out of 50 points. However, you can get up to 60 points if you complete everything. These are not bonus points, but rather points to help make-up any parts you miss.
 
 \end{Instruction} 
 
@@ -75,6 +75,110 @@
 \paragraph{Written Problems} The following questions are to be submitted in written/typed form to gradescope.
 
 \end{Instruction}
+
+\section{Longest Increasing Subsequence \Points{10}}
+
+Let $A$ be an array of length $n$ containing real numbers. A \em longest increasing subsequence \em (LIS) of $A$ is a sequence $0 \leq i_1 < i_2 < \ldots i_\ell < n$ so that $A[i_1] < A[i_2] < \cdots < A[i_\ell ]$, so that $\ell $ is as large as possible. For example, if $A = [6,3,2,5,6,4,8]$, then a LIS is $i_0 = 1, i_1 = 3, i_2 = 4, i_3 = 6$ corresponding to the subsequence $3,5,6,8$. (Notice that a longest increasing subsequence doesn't need to be unique). 
+
+In the following parts, we'll walk through the recipe that we saw in class for coming up with DP algorithms to develop an $O(n^2)$-time algorithm for finding an LIS. \footnote{If you're having trouble with this problem, take a look at Lecture 26 where we cover the Longest Common Subsequence problem. This problem is \textbf{not the same}, but is similar.}
+
+\begin{enumerate} 
+  \item \Points{2} \textbf{(Identify optimal sub-structure and a recursive relationship).} 
+  
+  We'll come up with the sub-problems and recursive relationship for you, although you will have to justify it. Let $D[i]$ be the length of the longest increasing subsequence of $[A[0], \ldots , A[i]]$ that ends on $A[i]$. Explain why 
+  $$
+    D[i] = \max \left (\{ D[k] + 1\,:\, 0 \leq k < i, A[k] < A[i] \} \cup \{1\} \right ). 
+  $$ 
+  \Expecting{A short informal explanation.} 
+
+  \item \Points{4} \textbf{(Develop a DP algorithm to find the value of the optimal solution)} Use the relationship about to design a dynamic programming algorithm returns the \em length \em of the longest increasing subsequence. Your algorithm should run in time $O(n^2)$ and should fill in the array $D$ defined above. 
+  
+  \Expecting{Pseudocode. No justification is required.} 
+
+  \item \Points{4} \textbf{(Adapt your DP algorithm to return the optimal solution)} Adapt your algorithm above to return an actual LIS instead of its length. Your algorithm should run in time $O(n^2)$. 
+
+  \Expecting{Pseudocode \textbf{AND} a short English explanation of what your algorithm is doing. You do not need to justify that it is correct.} 
+
+\end{enumerate} 
+
+\textbf{Note:} Actually, there is an $O(n\log (n))$-time algorithm to find an LIS, which is faster than the DP solution in this exercise! This algorithm uses divide-and-conquer! While not required for this exercise, you might find it helpful to think about this problem and see if you can come up with a solution!
+ 
+\section{Getting Greedy! \Points{5}}
+Sometimes it can be tricky to tell when a greedy algorithm applies. Say whether or not the greedy solution would work. If it wouldn’t, give a counter example.
+
+You have unlimited objects of different sizes, and you want to completely fill a bag with as few objects as possible.
+
+\textbf{Proposed Greedy Solution:} Keep putting in the largest object possible given the space you have left.
+
+\Expecting{Either 'WORKS' or 'DOES NOT WORK'. If it does not work, an example of where it doesn't work should be given as well.}
+
+
+\pagebreak
+\section{Housing Layout \Points{20}} 
+\label{sec:last}
+You own $n \geq 1$ consecutive plots of lands that you can build on, and you want to build a number of houses on these plots, with each plot having at most one house. However, due to some strange laws in your city, you cannot build two houses on two consecutive plots of lands. (The other plots of lands will just be wasted, unused.) 
+
+Each plot of land is different, so building the house in the right plots is important. You have estimated the profit you would get from building a house on each plot of land to be $p[1],\dots ,p[n]$, where $p[i]$ is a positive integer representing the profit, in dollars, you would get from building a house on the $i^{\text{th}}$ plot of land. 
+
+\paragraph{Example} if the input was $ p = [21,4,6,20,2,5],$ then you should build houses in the pattern 
+\begin{center} 
+  \begin{tikzpicture} 
+    \foreach \i in{1,2,3,4,5,6}{ 
+      \draw (\i -1, 0) rectangle (\i , 1); 
+    } 
+    \foreach \i in{1,4,6}{ 
+      \node at (\i -.5, .5){\includegraphics [width=.8cm]{OpenClipArt_House_1.png}}; 
+    } 
+  \end{tikzpicture} 
+\end{center} and you would profit by $21+20+5 = 46$ dollars. You would \textbf{not} be allowed to build houses in the pattern 
+
+\begin{center} 
+  \begin{tikzpicture} 
+    \foreach \i in{1,2,3,4,5,6}{
+      \draw (\i -1, 0) rectangle (\i , 1); 
+    }
+    \foreach \i in{1,2,4,6}{
+      \node at (\i -.5, .5){\includegraphics [width=.8cm]{OpenClipArt_House_1.png}}; 
+    } 
+  \end{tikzpicture} 
+\end{center} because there are two houses next to each other. 
+
+In this question, you will design a dynamic programming algorithm which runs in time $O(n)$ which takes as input the array $p$ and returns the maximum profit possible given $p$.\footnote{If you're having trouble with this question, revisit your `pickBerries' problem from \href{https://replit.com/@COMP285/HW2-Code}{HW2}. It's actually quite similar, but now you will implement it so that its efficient!}
+
+
+\subsection{Step 1 - Optimal Substructure \Points{4}} 
+What sub-problems will you use in your dynamic programming algorithm? To get you started, let use define $P[i]$ (an array of length $n$) which will start will all \texttt{NULL} values. What does $P[i]$ represent?
+
+\Expecting{A clear \textbf{English} description of the meaning of $P[i]$}.
+
+\subsection{Step 2 - Recursive Relation \Points{4}}
+What is the recursive relationship which is satisfied between the sub-problems? That is to say, how can we compute $P[i]$ using answers to ``smaller'' subproblems (depending on how you define $P[i]$, this expression will either involve $P[i-1], P[i-2]$ or $P[i+1], P[i+2]$).
+
+\Expecting{A mathematical expression for how to compute $P[i]$.}
+
+\subsection{Step 2 - Base Cases! \Points{2}}
+What are the base cases for this recursive relationship you defined above?
+
+\Expecting{The base cases for your recursion.}
+
+ 
+\subsection{Step 3 - The algorithm \Points{5}} 
+Write pseudocode for your algorithm. Your algorithm should take as input the array $p$, and return a single number which is the maximum profit possible. Your algorithm \textbf{does not} need to output the optimal way to build houses.
+
+\Expecting{Pseudocode \textbf{AND} a clear English description. You do not need to justify that your algorithm is correct, but correctness should follow from your reasoning in the previous part.}
+
+\subsection{Step 4 - Where do I build? \Points{3}} 
+Suppose we want to know not only the maximum profit possible, but I also want to know \textbf{which} houses to build. How would you modify your solution above to answer this question?
+
+\Expecting{A short description of what changes you'd make to your algorithm to track the houses we need to build}.
+
+\subsection{Step 5 - Saving Space \Points{2}}
+What is the space-complexity of your proposal above? If it is not $O(1)$, how would you improve your algorithm to use less space.
+
+\Expecting{A solution above that uses $O(1)$ space, or a short description of how you'd modify the algorithm to use only $O(1)$ space.}
+
+
+
 
 
 \pagebreak
