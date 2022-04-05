@@ -1,0 +1,155 @@
+% !TEX options=--shell-escape
+\documentclass [12pt]{article} 
+\usepackage {amsmath}
+\usepackage {amsthm}
+\usepackage {amssymb}
+\usepackage {graphicx} 
+\usepackage {float}
+\usepackage {multirow}
+\usepackage {xcolor}
+\usepackage {algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage {array} 
+\usepackage {booktabs} 
+\usepackage {url} 
+\usepackage {parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage {cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage {enumitem} 
+\usepackage {xparse} 
+\usepackage {verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage[cache=false]{minted}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usetikzlibrary{shapes.symbols}
+\newtheorem{theorem}{Theorem}
+
+\DeclareTColorBox {Solution}{}{breakable, title={Solution}}
+\DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}}
+\DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
+\DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
+\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+\newcommand {\hint }[1]{\noindent {[\textbf {HINT:} \em #1 \em ]}} \newcommand {\pts }[1]{\textbf {(#1 pt.)}} 
+
+\begin{document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Weekly Quiz 2} } 
+
+\section{} Which of the following is the correct recurrence relations for MergeSort?
+
+\begin{Solution}
+$T(n) = 2 \cdot T\left(\frac{n}{2}\right) + O(n)$
+\paragraph{} 
+ For each step, MergeSort divides the original problem by two, recursively calling itself to solve these two smaller problems. This is where $2 \cdot T(n)$ comes from. Once it has the answers, it merges the results which takes an additional $O(n)$ time, giving the recurrence above.
+\end{Solution}
+
+
+\section{} What's the closed-form solution for the running time of the following recurrence relation $T(n) = 5 \cdot T\left(\frac{n}{3}\right) + O(n)$ (Hint: You might want to use the Master Theorem) (Aside: This is the actual recurrence relation of Strassen's Multiplication Algorithm, an improvement to Karatsuba's)
+
+\begin{Solution}
+$$
+O(n^{\log_3 5})
+$$
+
+We can see that $a=5, b=3, d=1, a=5 > b^d=3$, so the result would be  $O(n^{\log_b a})$ = $O(n^{\log_3 5})$ according to the Master Theorem.
+\end{Solution}
+
+
+\section{} What's the closed-form solution for the running time of the following recurrence relation $T(n) = T\left(\frac{999n}{1000}\right) + O(n)$ (Hint: You might want to use the Master Theorem).
+
+\begin{Solution}
+$$O(n)$$
+
+$a=1, b=\frac{1000}{999}, d=1, a=1 < b^d=\frac{1000}{999}$, so the result would be $O(n)$ according to the Master Theorem.
+\end{Solution}
+
+
+\section{} Select the recurrence relations below for which you CANNOT directly apply the Master Theorem.
+
+\begin{Solution}
+\begin{itemize}
+  \item $T(n) = 2T(n-1) + O(n^2)$ because were are creating smaller problems of size $n - 1$. The Master Theore only works when the problems become a fraction of their original size.
+  \item $T(n) = 4T\left(\frac{9n}{10}\right) + O(n \log n)$ because the additional work we do to combine the problems is not polynomial (eg, $n^d$) but $n \log n$.
+  \item $T(n) = T\left(\frac{n}{5}\right) + T\left(\frac{7n}{10}\right) + O(n)$ because we don't split the original problem into subproblems of equal size.
+\end{itemize}
+\end{Solution}
+
+
+\section{} There is an $O(n)$ time algorithm for the k-Select Problem.
+
+\begin{Solution}
+Yes. Use divide-and-conquer recursive-based solution as we covered in class.
+\end{Solution}
+
+
+\section{} What is the running time of a mergesort-based solution to the k-Select problem?
+
+\begin{Solution}
+$$\Theta(nlogn)$$
+
+MergeSort will take $\Theta(n \log n)$ time.
+\end{Solution}
+
+
+\section{} In our divide-and-conquer recursive-based solution to the k-Select problem, what is the running time if we always pick the minimum as the pivot.
+
+\begin{Solution}
+$$\Theta(n^2)$$
+If we always pick the minimum(worst-case pivot), we are unable to divide the problem into half each time. The recurrence relation will be $T(n) = T(n-1) + O(n)$ which will end-up with a running time of $O(n^2)$.
+\end{Solution}
+
+
+\section{} In our divide-and-conquer recursive-based solution to the k-Select problem, what is the running time if we always pick the median as the pivot.
+
+\begin{Solution}
+$$\Theta(n)$$
+\paragraph{} 
+If we always pick the median(best-case pivot), we can divide the problem into half each time. The recurrence relation will be $T(n) = T\left(\frac{n}{2}\right) + O(n)$ which is $O(n)$ by the Master Theorem.
+\end{Solution}
+
+
+\section{} The running time of our trivial implementation of k-Select using MergeSort is always slower than the running time of a divide-and-conquer solution that randomly selects the pivot element.
+
+\begin{Solution}
+False
+\paragraph{} 
+The running time of k-Select using MergeSort is $\Theta(n \log n)$, and in worst-case the divide-and-conquer solution would take $\Theta(n^2)$ time, which is slower than $\Theta(n \log n)$.
+\end{Solution}
+
+
+\section{} In practice, it's often best to simply pick the pivot randomly rather than implement a more sophisticated, deterministic pivot selection method.
+
+\begin{Solution}
+True
+\paragraph{} 
+If there is a bad guy who gets to see our pivot choices, that’s just as bad as the worst-case pivot.
+
+\end{Solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 

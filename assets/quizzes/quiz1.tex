@@ -1,0 +1,151 @@
+% !TEX options=--shell-escape
+\documentclass [12pt]{article} 
+\usepackage {amsmath}
+\usepackage {amsthm}
+\usepackage {amssymb}
+\usepackage {graphicx} 
+\usepackage {float}
+\usepackage {multirow}
+\usepackage {xcolor}
+\usepackage {algorithmic}
+\usepackage [ruled,vlined,commentsnumbered,titlenotnumbered]{algorithm2e} \usepackage {array} 
+\usepackage {booktabs} 
+\usepackage {url} 
+\usepackage {parskip} 
+\usepackage [margin=1in]{geometry} 
+\usepackage [T1]{fontenc} 
+\usepackage {cmbright} 
+\usepackage [many]{tcolorbox} 
+\usepackage [colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} 
+\usepackage {enumitem} 
+\usepackage {xparse} 
+\usepackage {verbatim}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage[cache=false]{minted}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usetikzlibrary{shapes.symbols}
+\newtheorem{theorem}{Theorem}
+
+\DeclareTColorBox {Solution}{}{breakable, title={Solution}}
+\DeclareTColorBox {Solution*}{}{breakable, title={Solution (provided)}}
+\DeclareTColorBox {Instruction}{}{boxrule=0pt, boxsep=0pt, left=0.5em, right=0.5em, top=0.5em, bottom=0.5em, arc=0pt, toprule=1pt, bottomrule=1pt}
+\DeclareDocumentCommand {\Expecting }{+m}{\textbf {[We are expecting:} #1\textbf {]}}
+\DeclareDocumentCommand {\Points }{m}{\textbf {(#1 pt.)}} 
+\newcommand {\hint }[1]{\noindent {[\textbf {HINT:} \em #1 \em ]}} \newcommand {\pts }[1]{\textbf {(#1 pt.)}} 
+
+\begin{document} 
+
+{\LARGE \textbf {COMP 285 (NC A\&T, Spr `22)}\hfill \textbf {Weekly Quiz 1} } 
+
+\section{} Recall the definitions of big-Oh, big-Omega, and big-Theta. Based on these definitions, select all statements below which are true. 
+
+\begin{Solution}
+The below are all trust statements.
+\begin{enumerate}
+    \item Big-Oh is an upper bound. That is, intuitively, $T(n) = O(f(n))$ means $T(n) \leq c f(n)$ for some $c$. 
+    \item Big-Theta provides both upper and lower bounds.
+    \item Big-Omega is a lower bound.
+\end{enumerate}
+
+The above are by definition.
+\end{Solution}
+
+
+\section{} What is the running time of the following function:
+$T(n) = 13 + 12nlog(n) + 3n^2$
+
+\begin{Solution}
+$\Theta(n^2)$ because $n^2$ is both upper and bower bounds. The other terms grow much more slowly, which means for large $n$, they do not impact the result much.
+\end{Solution}
+
+
+\section{} Which of the following is the correct English description of $f(n) = O(g(n))$?
+
+\begin{Solution}
+There is some $c > 0$ and some $n_0$, such that for all $n \geq n0$ we have $f (n) \leq c \cdot g(n)$.
+\end{Solution}
+
+
+\section{} Suppose that $f (n) = O(g(n))$. Which of the following is implied by this fact?
+
+\begin{Solution}
+$g(n) = \Omega(f(n))$. Intuitively, $f(n) = O(g(n))$ means that $f(n) \leq c g(n)$ for some $c$ and large enough $n$. This means that $g(n) \geq \frac{1}{c} f(n)$ for large enough $n$ (divide both sides by $c$), which fits the definition of $g(n) = \Omega(f(n))$.
+\end{Solution}
+
+
+\section{} What is the smallest exponent x such that $n^2 + n^3 - n = O(n^x)$
+
+\begin{Solution}
+3. Because the asymptotic upper bound is $n^3$
+\end{Solution}
+
+
+\section{} Is Merge Sort’s worst case runtime asymptotically faster than Insertion Sort’s worst case runtime?
+
+\begin{Solution}
+Yes. Merge Sort’s worst case runtime is $O(n \log n)$, and Insertion Sort’s worst case runtime is $O(n^2)$.
+\end{Solution}
+
+
+\section{} Which of the following describes $\frac{n(n+1)(n+2)}{6}$
+
+\begin{Solution}
+
+\begin{itemize}
+    \item {$O(n^4)$:}  $\frac{n(n+1)(n+2)}{6} = \frac{n^3 + 3n^2 + 2n}{6}$ so the asymptotic upper bound should be $O(n^3)$. Since $O(n^4)$ grows faster than $O(n^3)$, it can be the upper bound.
+    \item {$O(n^3)$:} It's the asymptotic upper bound.
+    \item {$\Theta(n^3)$:} It's both the upper bound and the lower bound.
+    \item {$\Omega(n^2))$:} Since $O(n^2)$ grows slower than $O(n^3)$, it can be the lower bound.
+\end{itemize}
+
+\end{Solution}
+
+
+\section{}  Is Merge Sort faster than Insertion Sort on some arrays?
+
+\begin{Solution}
+Yes, Merge Sort’s worst case runtime is $O(n \log n)$, and Insertion Sort’s worst case runtime is $O(n^2)$.
+
+In particular, Insertion Sort will take $\Theta(n^2)$ steps on an array thats sorted in reverse order, while merge sort will that $\Theta(n \log n)$ steps.
+\end{Solution}
+
+
+\section{} Is Merge Sort faster than Insertion Sort on all input arrays?
+
+\begin{Solution}
+No. Merge Sort’s best case runtime is$ O(n \log n)$, and Insertion Sort’s best case runtime is $O(n)$.
+
+In particular, Insertion Sort will take $\Theta(n)$ steps on an array that's already sorted, while merge sort will take $\Theta(n \log n)$ steps.
+\end{Solution}
+
+\section{} The Merge operation takes two arrays A and B of size $n$ which are already sorted and outputs the union of the two in sorted order. What is the smallest bound on the runtime of the Merge algorithm?
+
+\begin{Solution}
+$O(n)$. The Merge operation needs to walk through every element in A and B.
+\end{Solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
