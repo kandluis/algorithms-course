@@ -21,3 +21,4 @@ textbook:
 - [Quiz 5]({{ "/assets/quizzes/quiz5.pdf" | absolute_url }})
 - [Quiz 6]({{ "/assets/quizzes/quiz6.pdf" | absolute_url }})
 - [Quiz 8]({{ "/assets/quizzes/quiz8.pdf" | absolute_url }})
+- [Quiz 9]({{ "/assets/quizzes/quiz9.pdf" | absolute_url }})
