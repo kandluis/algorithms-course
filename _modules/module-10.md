@@ -11,7 +11,7 @@ Apr 4
 : **No Lecture**{: .label .label-yellow} Free Day
 
 Apr 6
-: **Lecture**{: .label .label-purple}[Quiz Review and Course Review]({{"Quiz Review and Course Review" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Quiz Review]({{"Quiz Review" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Apr 8
 : **Lecture**{: .label .label-purple}[Huffman Coding and Minimal Spanning Trees]({{"Minimal Spanning Trees and " | slugify | prepend: "/lectures/#" | relative_url }})
