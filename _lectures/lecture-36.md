@@ -1,5 +1,5 @@
 ---
-title: Approximation Algorithms
+title: P vs NP
 number: 36
 time: 2022-04-27 12:00
 location: Graham Hall 210

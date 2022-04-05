@@ -1,5 +1,5 @@
 ---
-title: NP & Approximation Practice
+title: Approximation Algorithms
 number: 37
 time: 2022-04-29 12:00
 location: Graham Hall 210

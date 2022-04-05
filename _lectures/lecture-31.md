@@ -1,7 +1,7 @@
 ---
-title: Stable Matchings and Gale Shapley
+title: Max Flow - Ford-Fulkerson I
 number: 31
-time: 2022-04-08 12:00
+time: 2022-04-11 12:00
 location: Graham Hall 210
 notes:
 noutes_source:
