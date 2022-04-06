@@ -1,5 +1,5 @@
 ---
-title: Deferred Acceptance
+title: Stable Matchings
 number: 34
 time: 2022-04-22 12:00
 location: Graham Hall 210
