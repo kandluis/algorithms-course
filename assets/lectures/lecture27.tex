@@ -104,8 +104,8 @@ So, our recurrence relation is: $K(x, j) = \max\{K(x -w_j , j -1) +v_j , K(x, j 
     $K[x, 0] \gets 0$
 }
 \State \For{$x = 1, \cdots, W$} {
-  \For{$j = 1, \cdots, n$} {
-    $K[x, j] \gets K[x, j-1]$
+  \State \For{$j = 1, \cdots, n$} {
+    \State $K[x, j] \gets K[x, j-1]$
     \State \If {$w_j <= x$} {
         $K[x, j] = \max\{K[x - w_j, j-1] + v_j, K[x, j] \}$
     }
@@ -167,18 +167,18 @@ takes $O(|V|)$ time.
 \State $T \gets \text{RootTreeAt}(r)$
 \Procedure{SolveSubtreeAt}{$u$}
     \State \eIf{Children$(T, u) = \emptyset$} {
-        $A(u) \gets w_u$
-        $B(u) \gets 0$
+        \State $A(u) \gets w_u$
+        \State $B(u) \gets 0$
     }{
-        \For{$v \in \text{Children}(u)$} {
-            \texttt{SolveSubTreeAt}(v)
+        \State \For{$v \in \text{Children}(u)$} {
+            \State \texttt{SolveSubTreeAt}(v)
         }
-        $A(u) \gets \max\left\{\sum_{v \in \text{Children}(u)} A(v), w_u + \sum_{v \in \text{Children}(u)} B(v) \right\}$
-        $B(u) \gets \sum_{v \in \text{Children}(u)} A(v)$
+        \State $A(u) \gets \max\left\{\sum_{v \in \text{Children}(u)} A(v), w_u + \sum_{v \in \text{Children}(u)} B(v) \right\}$
+        \State $B(u) \gets \sum_{v \in \text{Children}(u)} A(v)$
     }
 \EndProcedure
 \State \texttt{SolveSubtreeAt}$(r)$
-\Return $A(r)$
+\State \Return $A(r)$
 \end{algorithmic}
 \end{algorithm}
 

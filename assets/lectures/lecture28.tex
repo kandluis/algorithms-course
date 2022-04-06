@@ -37,6 +37,7 @@
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{claim}{Claim}
+\newtheorem{proposition}{Proposition}
 
 
 
@@ -90,7 +91,8 @@ This problem requires us to fill in a table of size $n^2$, so the dynamic progra
 
 But we can do better! We will show that we only need to consider the $a_k$ with the smallest finishing time, which immediately allows us to search for the optimal activity selection in linear time.
 
-\begin{proposition}For each $S_{i ,j}$, there is an optimal solution $A_{i ,j}$ containing $a_k \in Si ,j$ of minimum finishing time $f_k$.
+\begin{proposition}
+For each $S_{i ,j}$, there is an optimal solution $A_{i ,j}$ containing $a_k \in S_{i ,j}$ of minimum finishing time $f_k$.
 \end{proposition}
  
 
@@ -122,16 +124,18 @@ Algorithm Greedy-AS assumes that the activities are presorted in nondecreasing o
 \begin{algorithmic}
 \State $A \gets \{a_1\}$ \texttt{/* activity of min $f_i$}
 \State $k \gets 1$
-\For{$m = 2 \to n$}
-    \If{$s_m \geq f_k$}
+\State \For{$m = 2 \to n$} {
+    \State \If{$s_m \geq f_k$} {
         \State \texttt{// $a_m$ starts after last activity in A}
         \State $A \gets A \cup \{a_m\}$
         \State $k \gets m$
-    \EndIf
-\EndFor
-\Return $A$
+    }
+}
+\State \Return $A$
 \end{algorithmic}
 \end{algorithm}
 
 
 By the above claim, this algorithm will produce a legal, optimal solution via a greedy selection of activities. There may be multiple optimal solutions, but there always exists a solution that includes $a_k$ with the minimum finishing time. The algorithm does a single pass over the activities, and thus only requires $O(n)$ time – a dramatic improvement from the trivial dynamic programming solution. If the algorithm also needed to sort the activities by $f_i$ , then its runtime would be $O(n \log n)$ which is still better than the original dynamic programming solution.
+
+\end{document}
