@@ -7,9 +7,9 @@ notes:
 noutes_source:
 slides_pdf:
 slides_ppt:
-youtube:
-recording:
-passcode:
+youtube: https://youtu.be/EgE1CDZk5iE
+recording: https://ncat.zoom.us/rec/share/fIdhU6CGVdo9obGEKp3kFoBQKB3P8jirqLsX4GGF1jc_ubd4enJncPmMQ7PYabNn.8-1EmsxTb52KdYlR?startTime=1649261381000
+passcode: 6xR5*89z
 textbook:
 ---
 ##### Quiz Recap
