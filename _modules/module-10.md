@@ -14,8 +14,13 @@ Apr 6
 : **Lecture**{: .label .label-purple}[Quiz Review]({{"Quiz Review" | slugify | prepend: "/lectures/#" | relative_url }})
 
 Apr 8
-: **Lecture**{: .label .label-purple}[Huffman Coding and Minimal Spanning Trees]({{"Minimal Spanning Trees and " | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Activity Selection, Scheduling, and Huffman Coding]({{"Activity Selection, Scheduling, and Huffman Coding" | slugify | prepend: "/lectures/#" | relative_url }})
+
+Apr 11
+: **Lecture**{: .label .label-purple}[Minimal Spanning Trees]({{"Minimal Spanning Trees" | slugify | prepend: "/lectures/#" | relative_url }})
+
 : **Homework Due @ 11:59pm**{: .label .label-red}[HW8]({{ "/homework/#hw8" | relative_url }})
 : **HW9 released**{: .label .label-blue}[HW9]({{ "/homework/#hw9" | relative_url }})
+
 
 
