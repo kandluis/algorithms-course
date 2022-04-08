@@ -7,9 +7,9 @@ notes: "assets/lectures/lecture30.pdf"
 notes_source: "assets/lectures/lecture30.tex"
 slides_pdf: https://drive.google.com/file/d/19S2CUP7rebMoGbjrG7t5svzER9to5eBM/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1vPRRv5iYqtkSzbhkXVftFDOxqK8YWO4K2KnqdBxdTAM/edit?usp=sharing
-youtube:
-recording:
-passcode:
+youtube: https://youtu.be/nrxG2cyeGu0
+recording: https://ncat.zoom.us/rec/share/SsAJBa2qsJK6f0u52yI_48Bc4BV--5egaqj757wQaBLY62VNo4USGTbQltL_Mgho.L_cAJ4PqooavVnfc?startTime=1649441534000
+passcode: INiv8Nm$
 textbook: CLRS 16.1, 16.2, 16.3
 ---
 
