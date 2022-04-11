@@ -26,9 +26,9 @@ Additional online-only student hours are:
 
 ## TA Student Hours
 
-- Monday: 1:00pm - 2:00pm in [Zoom](https://ncat.zoom.us/s/93471622385)
-- Wednesday: 1:00pm - 2:00pm in [Zoom](https://ncat.zoom.us/s/93471622385)
-- Friday: 1:00pm - 2:00pm in [Zoom](https://ncat.zoom.us/s/93471622385)
+- Monday: 1:00pm - 2:00pm in [Zoom](https://us05web.zoom.us/j/83882389260?pwd=ZkZGRi9VVndnZTNPMEdxM016OWhJQT09)
+- Wednesday: 1:00pm - 2:00pm in [Zoom](https://us05web.zoom.us/j/83882389260?pwd=ZkZGRi9VVndnZTNPMEdxM016OWhJQT09)
+- Friday: 1:00pm - 2:00pm in [Zoom](https://us05web.zoom.us/j/83882389260?pwd=ZkZGRi9VVndnZTNPMEdxM016OWhJQT09)
 
 
 ### Regular Student Hours
