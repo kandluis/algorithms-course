@@ -5,6 +5,7 @@ time: 2022-04-11 12:00
 location: Graham Hall 210
 notes: "assets/lectures/lecture31.pdf"
 notes_source: "assets/lectures/lecture31.tex"
+quiz: https://forms.gle/fjgQUjeN7hBg3Xj89
 slides_pdf: https://drive.google.com/file/d/19ZSU_8naopbxw0zrRtYmZHZB9o-OTEzk/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1BsjTDeChPW9FR_CgzrCIQiHwrqyM6JgwdR3kK5kMKoI/edit?usp=sharing
 youtube:
