@@ -15,8 +15,8 @@ textbook: CLRS 26.1, 26.2, 26.3,
 
 ##### Video Resources
 
-- [Kruskal's MST Algorithm (Section 15.5)](#)
-- [Speeding Up Kruskal's Algorithm via Union-Find (Part 1) (Section 15.6, Part 1)](#)
-- [Speeding Up Kruskal's Algorithm via Union-Find (Part 2) (Section 15.6, Part 2)](#)
-- [Lazy Unions (Section 15.6, Part 3)](#)
-- [Kruskal's Algorithm: Correctness Proof (Section 15.7)](#)
+- [Kruskal's MST Algorithm (Section 15.5)](https://www.youtube.com/watch?v=SZuCspj5AJc&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=17)
+- [Speeding Up Kruskal's Algorithm via Union-Find (Part 1) (Section 15.6, Part 1)](https://www.youtube.com/watch?v=SZuCspj5AJc&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=18)
+- [Speeding Up Kruskal's Algorithm via Union-Find (Part 2) (Section 15.6, Part 2)](https://www.youtube.com/watch?v=SZuCspj5AJc&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=19)
+- [Lazy Unions (Section 15.6, Part 3)](https://www.youtube.com/watch?v=SZuCspj5AJc&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=20)
+- [Kruskal's Algorithm: Correctness Proof (Section 15.7)](https://www.youtube.com/watch?v=SZuCspj5AJc&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=21)
