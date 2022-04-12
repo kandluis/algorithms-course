@@ -8,9 +8,9 @@ notes_source: "assets/lectures/lecture31.tex"
 quiz: https://forms.gle/fjgQUjeN7hBg3Xj89
 slides_pdf: https://drive.google.com/file/d/19ZSU_8naopbxw0zrRtYmZHZB9o-OTEzk/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1BsjTDeChPW9FR_CgzrCIQiHwrqyM6JgwdR3kK5kMKoI/edit?usp=sharing
-youtube:
-recording:
-passcode:
+youtube: https://youtu.be/_cTrjb8xGkc
+recording: https://ncat.zoom.us/rec/share/o3BlJvxjlw0C4NH85YueQl20uSi2LmRnQmsTCeXoZWC1tHV9fGa2ucveURI8Ae4P.1IjagtABCcrwoByj?startTime=1649692959000
+passcode: oB1^Yh9Q
 textbook: CLRS 23
 ---
 
