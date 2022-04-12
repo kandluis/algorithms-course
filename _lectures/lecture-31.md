@@ -14,9 +14,11 @@ passcode: oB1^Yh9Q
 textbook: CLRS 23
 ---
 
+##### Video Resources 
+
 - [Minimum Spanning Trees: Problem Definition (Section 15.1)](https://www.youtube.com/watch?v=tDj9BkaQDO8&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=10)
 - [Prim's MST Algorithm (Section 15.2)](https://www.youtube.com/watch?v=jsvOPssDVJA&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=11)
 - [Speeding Up Prim's Algorithm via Heaps (Part 1) (Section 15.3, Part 1)](https://www.youtube.com/watch?v=cDtQnXMZGtg&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=15)
 - [Speeding Up Prim's Algorithm via Heaps (Part 2) (Section 15.3, Part 2)](https://www.youtube.com/watch?v=cDtQnXMZGtg&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=16)
-- [Prim's Algorithm: Correctness Proof (Part 1) (Section 15.4, Part 1) [Note: this video provides an - alternative treatment to that in the book.](https://www.youtube.com/watch?v=cDtQnXMZGtg&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=17)
-- [Prim's Algorithm: Correctness Proof (Part 2) (Section 15.4, Part 2) [Note: this video provides an - alternative treatment to that in the book.](https://www.youtube.com/watch?v=cDtQnXMZGtg&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=18)
+- [Prim's Algorithm: Correctness Proof (Part 1) (Section 15.4, Part 1)](https://www.youtube.com/watch?v=cDtQnXMZGtg&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=17)
+- [Prim's Algorithm: Correctness Proof (Part 2) (Section 15.4, Part 2)](https://www.youtube.com/watch?v=cDtQnXMZGtg&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=18)
