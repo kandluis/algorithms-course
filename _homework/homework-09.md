@@ -1,6 +1,6 @@
 ---
 number: 9
-title: Network Flow
+title: Fun with Greedy
 release: 2022-04-13 17:00
 due: 2022-04-20 23:59
 pdf: "/assets/homework/hw9/hw9.pdf"
