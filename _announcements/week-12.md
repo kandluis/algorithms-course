@@ -4,6 +4,10 @@ week: 12
 date: 2022-04-11
 ---
 
+#### HW9 Released
+The [Homework 9: Fun with Greedy]({{ "/homework/#hw9" | absolute_url }}) is released! Walkthrough is in-coming!
+
+
 #### HW8 New Due Date
 See [Homework 8: Fun with Dynamic Programming]({{ "/homework/#hw8" | absolute_url }}) for the full details! The assignment is now due 4/13gi @ 11:59PM!
 
