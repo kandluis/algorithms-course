@@ -19,8 +19,4 @@ Apr 8
 Apr 11
 : **Lecture**{: .label .label-purple}[Minimal Spanning Trees]({{"Minimal Spanning Trees" | slugify | prepend: "/lectures/#" | relative_url }})
 
-: **Homework Due @ 11:59pm**{: .label .label-red}[HW8]({{ "/homework/#hw8" | relative_url }})
-: **HW9 released**{: .label .label-blue}[HW9]({{ "/homework/#hw9" | relative_url }})
-
-
 
