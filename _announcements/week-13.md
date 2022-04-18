@@ -4,8 +4,8 @@ week: 13
 date: 2022-04-18
 ---
 
-#### Quiz 11
-[Quiz 11](#) will be released at the start of Lecture on Wednesday 4/20! It will close by end of day on Wednesday - you are required to fill it out! See our [Quiz Policy]({{ "/policies/#quiz-policy" | absolute_url }}) for details on how each quiz impacts your grade.
+#### Quiz 12
+[Quiz 12](https://forms.gle/F4mPy3PsyfKSQcn6A) will be released at the start of Lecture on Wednesday 4/20! It will close by end of day on Wednesday - you are required to fill it out! See our [Quiz Policy]({{ "/policies/#quiz-policy" | absolute_url }}) for details on how each quiz impacts your grade.
 
 
 #### HW9 Due
