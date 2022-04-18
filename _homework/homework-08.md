@@ -7,4 +7,5 @@ pdf: "/assets/homework/hw8/hw8.pdf"
 tex: "/assets/homework/hw8/hw8.tex"
 word: "/assets/homework/hw8/hw8.docx"
 walkthrough: https://youtu.be/lpn47Rx_iSQ
+solution: "https://blackboard.ncat.edu/webapps/blackboard/execute/content/file?cmd=view&mode=designer&content_id=_5287535_1&course_id=_3567742_1"
 ---
