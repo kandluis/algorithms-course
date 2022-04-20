@@ -18,12 +18,14 @@ Apr 18
 
 Apr 20
 : **Lecture**{: .label .label-purple}[Max Flow and Minimum Cuts]({{"Max Flow and Minimum Cuts" | slugify | prepend: "/lectures/#" | relative_url }})
+
+Apr 21
 : **Homework Due @ 11:59pm**{: .label .label-red}[HW9]({{ "/homework/#hw9" | relative_url }})
 : **HW10 released**{: .label .label-blue}[HW10]({{ "/homework/#hw10" | relative_url }})
 
 
 Apr 22
-: **Lecture**{: .label .label-purple}[Stable Matchings]({{"Stable Matchings" | slugify | prepend: "/lectures/#" | relative_url }})
+: **Lecture**{: .label .label-purple}[Max Flow, Minimum Cuts II]({{"Max Flow, Minimum Cuts II" | slugify | prepend: "/lectures/#" | relative_url }})
 
 
 Apr 25

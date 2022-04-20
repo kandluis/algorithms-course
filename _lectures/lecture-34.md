@@ -1,5 +1,5 @@
 ---
-title: Stable Matchings
+title: Max Flow, Minimum Cuts II
 number: 34
 time: 2022-04-22 12:00
 location: Graham Hall 210
