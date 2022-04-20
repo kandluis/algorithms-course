@@ -45,5 +45,5 @@ The final exam will be in person. The location of the final exam will be Graham 
 
 </div>
 ```markdown
-12:00pm - 2:00pm on Wednesday, May 12th.
+12:00pm - 2:00pm on Wednesday, May 11th.
 ```
