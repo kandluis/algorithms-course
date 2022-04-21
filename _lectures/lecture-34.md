@@ -15,6 +15,6 @@ textbook: CLRS 26.1, 26.2, 26.3
 
 ##### Video Resources
 
-- [Max Flow Ford Fulkerson | Network Flow | Graph Theory](https://www.youtube.com/watch?v=LdOnanfc5TM)
+- [Max Flow Ford Fulkerson, Network Flow, Graph Theory](https://www.youtube.com/watch?v=LdOnanfc5TM)
 - [Network Flows: Max-Flow Min-Cut Theorem (& Ford-Fulkerson Algorithm)](https://www.youtube.com/watch?v=oHy3ddI9X3o)
 - [Ford-Fulkerson in 5-minutes - Step by step example](https://www.youtube.com/watch?v=Tl90tNtKvxs)
