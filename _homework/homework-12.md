@@ -1,8 +1,11 @@
 ---
 number: 12
-title: NP & Approximation Algos
-release: 2022-05-04 17:00
-due: 2022-05-11 23:59
+title: Advanced Topics
+release: N/A
+due: N/A
 pdf:
 tex:
 ---
+Free 100 :) 
+
+Thanks for stopping by this course!
