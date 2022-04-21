@@ -21,11 +21,11 @@ Apr 20
 
 Apr 21
 : **Homework Due @ 11:59pm**{: .label .label-red}[HW9]({{ "/homework/#hw9" | relative_url }})
-: **HW10 released**{: .label .label-blue}[HW10]({{ "/homework/#hw10" | relative_url }})
 
 
 Apr 22
 : **Lecture**{: .label .label-purple}[Max Flow, Minimum Cuts II]({{"Max Flow, Minimum Cuts II" | slugify | prepend: "/lectures/#" | relative_url }})
+: **HW10 released**{: .label .label-blue}[HW10]({{ "/homework/#hw10" | relative_url }})
 
 
 Apr 25
