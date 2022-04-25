@@ -7,9 +7,9 @@ notes: "assets/lectures/lecture34.pdf"
 notes_source: "assets/lectures/lecture34.tex"
 slides_pdf: https://drive.google.com/file/d/19jKLjeuQ8hWG2AqrTGJ3I_1CQPeWUB7t/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1Iaak-AgJdjMjxpKRGBhheBEYc8xQ88zN17o7O5gXf8Q/edit?usp=sharing
-youtube:
-recording:
-passcode:
+youtube: https://youtu.be/CuSYgAVlJrI
+recording: https://ncat.zoom.us/rec/share/QVI1aDiVk_4fAfJob32VcOW4bo5bY18hX9TPwXJCpBzj90nr5G6bv_CyPQZuNfRl.kd5SMfRSuQOjulzd?startTime=1650643286000
+passcode: %VaZ#K4b
 textbook: CLRS 26.1, 26.2, 26.3
 ---
 
