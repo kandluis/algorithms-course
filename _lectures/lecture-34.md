@@ -1,5 +1,5 @@
 ---
-title: Max Flow, Minimum Cuts II
+title: "Max Flow, Minimum Cuts II"
 number: 34
 time: 2022-04-22 12:00
 location: Graham Hall 210
@@ -9,7 +9,7 @@ slides_pdf: https://drive.google.com/file/d/19jKLjeuQ8hWG2AqrTGJ3I_1CQPeWUB7t/vi
 slides_ppt: https://docs.google.com/presentation/d/1Iaak-AgJdjMjxpKRGBhheBEYc8xQ88zN17o7O5gXf8Q/edit?usp=sharing
 youtube: https://youtu.be/CuSYgAVlJrI
 recording: https://ncat.zoom.us/rec/share/QVI1aDiVk_4fAfJob32VcOW4bo5bY18hX9TPwXJCpBzj90nr5G6bv_CyPQZuNfRl.kd5SMfRSuQOjulzd?startTime=1650643286000
-passcode: %VaZ#K4b
+passcode: "%VaZ#K4b"
 textbook: CLRS 26.1, 26.2, 26.3
 ---
 
