@@ -165,6 +165,9 @@ algorithm union(x, y)
   x = find(x)
   y = find(y)
 
+  if x == y:
+    return
+
   if x.rank > y.rank
     y.parent = x
   else
