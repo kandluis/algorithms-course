@@ -12,3 +12,7 @@ recording: https://ncat.zoom.us/rec/share/kYiF7PKZArC9tRzogYDgiczCr_l44Bpnf1poh3
 passcode: "d*zEw72A"
 textbook: N/A
 ---
+
+##### Additional Readings
+
+- [Lecture Notes by Tim Roughgarden](https://timroughgarden.org/f16/l/l2.pdf)
