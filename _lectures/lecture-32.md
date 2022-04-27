@@ -20,3 +20,13 @@ textbook: CLRS 26.1, 26.2, 26.3
 - [Speeding Up Kruskal's Algorithm via Union-Find (Part 2) (Section 15.6, Part 2)](https://www.youtube.com/watch?v=SZuCspj5AJc&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=19)
 - [Lazy Unions (Section 15.6, Part 3)](https://www.youtube.com/watch?v=SZuCspj5AJc&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=20)
 - [Kruskal's Algorithm: Correctness Proof (Section 15.7)](https://www.youtube.com/watch?v=SZuCspj5AJc&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=21)
+
+##### Optional Resources
+- [Union-by-Rank](https://www.youtube.com/watch?v=6HI120fms84&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=25)
+- [Analysis of Union-by-Rank](https://www.youtube.com/watch?v=6HI120fms84&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=26)
+- [Path Compression](https://www.youtube.com/watch?v=6HI120fms84&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=27)
+- [Path Compression: The Hopcroft-Ullman Analysis (Part 1)](https://www.youtube.com/watch?v=6HI120fms84&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=28)
+- [Path Compression: The Hopcroft-Ullman Analysis (Part 2)](https://www.youtube.com/watch?v=6HI120fms84&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=29)
+- [The Ackermann Function](https://www.youtube.com/watch?v=_xzMZdwohF4&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=30)
+- [Path Compression: Tarjan's Analysis (Part 1)](https://www.youtube.com/watch?v=_xzMZdwohF4&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=31)
+- [Path Compression: Tarjan's Analysis (Part 2)](https://www.youtube.com/watch?v=_xzMZdwohF4&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=32)

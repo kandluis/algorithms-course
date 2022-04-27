@@ -13,3 +13,7 @@ recording:
 passcode:
 textbook:
 ---
+
+##### Video Resources
+
+- [Linear Programming and Beyond](https://www.youtube.com/watch?v=amIMkE61blA&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=94)

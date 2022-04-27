@@ -12,6 +12,9 @@ recording: https://ncat.zoom.us/rec/share/kYiF7PKZArC9tRzogYDgiczCr_l44Bpnf1poh3
 passcode: "d*zEw72A"
 textbook: N/A
 ---
+##### Video Resources
+- [Stable Matching](https://www.youtube.com/watch?v=i7ToV7qG6mQ&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=92)
+- [Matching, Flows, and Braess's Paradox](https://www.youtube.com/watch?v=i7ToV7qG6mQ&list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6&index=93)
 
 ##### Additional Readings
 
