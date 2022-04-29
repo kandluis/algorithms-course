@@ -8,6 +8,32 @@ We will have two exams this semester. The midterm will make up 20% of the total 
 
 <div class="code-example" markdown="1">
 
+## Final Exam
+
+The final exam will online through blackboard. It will be a 2-hour **online** final exam.
+
+### What's covered?
+- Material from [Lecture 0](/lectures/#why-are-we-here) to [Lecture 37](/lectures/#p-vs-np)
+- Material from [Homework 0](/homework/#hw0) to [Homework 10](/homework/#hw10)
+- Material from [Quiz 0](/announcements/#quiz-0) to [Quiz 13](/announcements/#quiz-13)
+
+
+### Practice Final
+- [Questions](/assets/final/practice_final.pdf)
+- [Solutions](/assets/final/practice_final_solutions.pdf)
+
+
+### Review Sessions
+- Monday 5/2 during our lecture time (in Graham from 12:00-12:50)
+- Wednesday 5/4 during our lecture time (in Graham from 12:00-12:50)
+
+</div>
+```markdown
+12:00pm - 2:00pm on Wednesday, May 11th.
+```
+
+<div class="code-example" markdown="1">
+
 ## Midterm
 
 The midterm will take place in-class, during lecture. It is a 50-minute exam.
@@ -34,31 +60,4 @@ The midterm will take place in-class, during lecture. It is a 50-minute exam.
 </div>
 ```markdown
 12:00pm - 12:50pm on March 4th.
-```
-
-
-<div class="code-example" markdown="1">
-
-## Final Exam
-
-The final exam will online through blackboard. It will be a 2-hour **online** final exam.
-
-### What's covered?
-- Material from [Lecture 0](/lectures/#why-are-we-here) to [Lecture 37](/lectures/#p-vs-np)
-- Material from [Homework 0](/homework/#hw0) to [Homework 10](/homework/#hw10)
-- Material from [Quiz 0](/announcements/#quiz-0) to [Quiz 13](/announcements/#quiz-13)
-
-
-### Practice Final
-- [Questions](/assets/final/practice_final.pdf)
-- [Solutions](/assets/final/practice_final_solutions.pdf)
-
-
-### Review Sessions
-- Monday 5/2 during our lecture time (in Graham from 12:00-12:50)
-- Wednesday 5/4 during our lecture time (in Graham from 12:00-12:50)
-
-</div>
-```markdown
-12:00pm - 2:00pm on Wednesday, May 11th.
 ```
