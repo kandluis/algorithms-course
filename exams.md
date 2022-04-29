@@ -41,7 +41,22 @@ The midterm will take place in-class, during lecture. It is a 50-minute exam.
 
 ## Final Exam
 
-The final exam will be in person. The location of the final exam will be Graham Hall 210 (same room as lecture).
+The final exam will online through blackboard. It will be a 2-hour **online** final exam.
+
+### What's covered?
+- Material from [Lecture 0](/lectures/#why-are-we-here) to [Lecture 37](/lectures/#p-vs-np)
+- Material from [Homework 0](/homework/#hw0) to [Homework 10](/homework/#hw10)
+- Material from [Quiz 0](/announcements/#quiz-0) to [Quiz 13](/announcements/#quiz-13)
+
+
+### Practice Final
+- [Questions](/assets/final/practice_final.pdf)
+- [Solutions](/assets/final/practice_final_solutions.pdf)
+
+
+### Review Sessions
+- Monday 5/2 during our lecture time (in Graham from 12:00-12:50)
+- Wednesday 5/4 during our lecture time (in Graham from 12:00-12:50)
 
 </div>
 ```markdown
