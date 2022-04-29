@@ -7,9 +7,9 @@ notes:
 notes_source:
 slides_pdf: https://drive.google.com/file/d/19w7km05pFXdJQevvjenkrbesoRSKf5oh/view?usp=sharing
 slides_ppt: https://docs.google.com/presentation/d/1f3wOZg-XGSQfzA-pXdGBaZK4ot0loHlILzuSPbtegPI/edit?usp=sharing
-youtube:
-recording:
-passcode:
+youtube: https://www.myregistry.com/wishlist/valerie-morales-and-ellen-zeng-morrisville-nc/3260494/giftlist
+recording: https://ncat.zoom.us/rec/share/iDluzpDcgHtbk6PoPG-At1pMaQkTQAkAK7-qyr8IOnubVwTa_efgPzXrVToL7fuL.slCdBpkexMxqbHgY?startTime=1651248148000
+passcode: 1gjR^ksG
 textbook:
 ---
 
