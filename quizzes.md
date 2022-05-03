@@ -15,3 +15,6 @@ description: A list of all course quizzes.
 - [Quiz 6](https://forms.gle/bA21TsRXFUqzzb6d7) [[Solution]({{ "/assets/quizzes/quiz6.pdf" | absolute_url }})]
 - [Quiz 8](https://forms.gle/QnLXkjco1C3LM1Xu6) [[Solution]({{ "/assets/quizzes/quiz8.pdf" | absolute_url }})]
 - [Quiz 9](https://forms.gle/uY8dZFPenjtN9JF18) [[Solution]({{ "/assets/quizzes/quiz9.pdf" | absolute_url }})]
+- [Quiz 10](https://forms.gle/jznwT68FFnCAbPyJA)
+- [Quiz 12](https://forms.gle/KZUZDe3nHDZhmX6u5)
+- [Quiz 13](https://forms.gle/fNLJyYw5jh6apg6n8)
