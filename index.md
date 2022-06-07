@@ -1,10 +1,10 @@
 ---
 layout: home
-title: COMP 285 - Analysis of Algorithms
+title: COMP 285 - Algorithm Foundations for AI and Cyber-security
 nav_exclude: true
 seo:
   type: Course
-  name: COMP 285 - Analysis of Algorithms
+  name: COMP 285 - Algorithm Foundations for AI and Cyber-security
 ---
 
 # {{ site.tagline }}
