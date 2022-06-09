@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 'COMP 285'
-tagline: 'Analysis of Algorithms'
+tagline: 'Algorithm Foundations for AI and Cyber-security'
 description: 'North Carolina A&T University, Spring 2022'
 author: Luis A. Perez
 baseurl: '' # the subpath of your site, e.g. /blog
